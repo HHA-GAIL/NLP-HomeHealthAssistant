@@ -1,0 +1,472 @@
+Illness
+Trauma
+Date
+Resolution
+Health Risk Factor
+Hypertension
+Hypotension
+Pericarditis
+Endocarditis
+Myocarditis
+Mitral valve disorder
+Aortic Valve disorder
+Tricuspid Valve disorder
+Pulmonary Valve disorder
+Cardiomyopathy
+Atrioventricular Block
+Heart Block
+Tachycardia
+Atrial Fibrillation
+Ventricular Fibrillation
+Atrial flutter
+Cardiac Arrest
+Premature Beats
+Rhythm Disorder
+Congestive Heart Failure
+Heart failure
+Heart Disease
+Rheumatic Fever
+Rheumatic disease
+Aneurysm of the Heart
+Pulmonary Heart Disease
+Complications of Pregnancy
+Congenital Anomalies
+Congenital heart Problem
+Diabetes
+Cystic Fibrosis
+Anemia
+Sickle-Cell Anemia
+Coagulation Disorder
+Hemophilia
+Sleep Disorder
+Scoliosis
+Muscular Dystrophy
+Epilepsy
+Bronchitis
+Asthma
+Pneumonia
+Influenza
+gastroenteritis
+Colitis
+Gastritis
+Enteritis
+Diverticulitis
+Hemorrhage in Pregnancy
+Abortion
+Separation of Placenta
+Premature labor
+Spina Bifida
+Esophagitis
+Reflux
+Ulcer
+Gastric Ulcer
+Peptic Ulcer
+Stomach 
+Dyspepsia
+Appendicitis
+Hernia
+Diarrhea
+Peritonitis
+Colostomy
+Intestine
+Cirrhosis of the liver
+Cirrhosis
+Hepatitis
+Liver
+Gallbladder
+Gall stones
+Pancreas
+Pancreatic Cancer
+Cellulitis
+Abcess
+Cyst
+Dermatitis
+Eczema
+Sunburn
+Rosacea
+Lupus
+Psoriasis
+Rosea
+Corn
+Keratosis
+Ingrown nail
+Alopecia
+Hyperthyroid
+Hypothyroid
+Goiter
+Diabetes mellitus
+Hypoglycemic
+Hyperparathyroid
+Hypoparathyroid
+Cushing�s syndrome
+Adrenal hypofunction
+Adrenal glands
+Ovarian hyperfunction
+Testicular hyperfunction
+Testicular hypofunction
+Endocrine dysfunction
+Endocrine disorder
+Vitamin A deficiency
+Thiamine and Niacin deficiency
+Beriberi
+B-complex deficiency
+B6 deficiency
+Ascorbic acid deficiency
+Vitamin C deficiency
+Vitamin D deficiency
+Rickets
+Vitamin K deficiency
+Vitamin deficiency
+Mineral deficiency
+Gout
+Cystic Fibrosis
+Obesity
+Immunoglobulin deficiency
+Nephritis
+Renal failure
+Kidney Infection
+Kidney stones
+Incontinence
+Urethritis
+Bladder Infection
+Urinary Tract Infection
+Prostatitis
+Infertility
+Breast cancer
+Vaginitis
+Endometriosis
+Polyps
+Genitourinary disorder
+Excessive Menstruation
+Frequent Menstruation
+Abnormal Bleeding
+Menopause
+Infertility
+Iron Deficiency
+AIDS
+Cholera
+Typhoid
+Salmonella
+Food Poisoning
+Meningitis
+Shigella
+Staph Infection
+Staphylococcus
+Botulism
+E Coli Infection
+Enteritis
+Virus
+Intestinal Infection
+Colitis
+Tuberculosis
+Plague
+Tularemia
+Pneumonia
+Pleurisy
+Brucella
+Diphtheria
+Laryngitis
+Whooping Cough
+Scarlet fever
+Encephalitis
+Tetanus
+Septicemia
+Strep
+Streptococcus
+HIV
+Polio
+Poliomyelitis
+Smallpox
+Cowpox
+Chickenpox
+Herpes
+Herpes Zoster
+Hemorrhagic Fever
+Measles
+Rubella
+Yellow Fever
+Dengue Fever
+Encephalitis
+Hepatitis
+Rabies
+Mumps
+Conjunctivitis
+Wart
+Vertigo
+Chlamydia
+Typhus
+Malaria
+Lyme Disease
+Syphilis
+Cystitis
+Endometriosis
+Venereal Disease
+Chlamydia
+Urethritis
+Scabies
+Skull Fracture
+Spinal injury
+Rotator Cuff
+Torn Ligament
+Pneumothorax
+Burns
+Poisoning
+Psychosis
+Senile
+Dementia
+Delusional
+Depression
+Bipolar
+Delirium
+Schizophrenia
+Paranoid
+Manic
+Manic-depressive
+Paranoia
+Autism
+Neurotic
+Anxiety
+Panic
+Hysteria
+Amnesia
+Multiple Personality
+Phobia
+Agoraphobia
+Social Phobia
+Obsessive-compulsive
+Hypochondria
+Personality Disorder
+Schizoid
+Introverted
+Compulsive
+Antisocial
+Narcissistic
+Passive-aggressive
+Drug Dependence
+Alcohol Addiction
+Alcoholism
+Drug Addiction
+Stuttering
+Anorexia
+Tic
+Tourette�s
+Sleep Disorder
+Eating Disorder
+Bulimia
+Headache
+Migraine
+Separation Anxiety
+Socially Withdrawn
+Shyness
+Sensitive
+Identity Disorder
+ADD
+Attention Deficit Disorder
+Dyslexia
+Mentally Retarded
+Lupus
+Sclerosis
+Arthritis
+Rheumatoid arthritis
+Dislocated Shoulder
+Dislocated joint
+Dislocated Elbow
+Dislocated Knee
+Joint Pain
+Joint Stiffness
+Myelopathy
+Ruptured Disc
+Degeneration of Disc
+Sciatica
+Backache
+Scoliosis
+Bursitis
+Tendinitis
+Rupture of Achilles Tendon
+Rupture of Tendon
+Torn Tendon
+Plantar Fascia
+Torn Ligament
+Rheumatism
+Cramps
+Osteoporosis
+Deformed Foot
+Curvature of Spine
+Cancer of Esophagus
+Cervical Cancer
+Stomach Cancer
+Appendicitis
+Cancer of the Colon
+Liver Cancer
+Gallbladder Cancer
+Cancer of the Pancreas
+Pancreatic Cancer
+Cancer of the larynx
+Cancer of the Spleen
+Cancer of the Trachea
+Cancer of the Thymus
+Cancer of the Lip
+Neoplasm
+Malignant
+Malignant Neoplasm
+Breast Cancer
+Skin Cancer
+Melanoma
+Lymphoma
+Ovarian Cancer
+Uterine Cancer
+Cancer of the Uterus
+Testicular Cancer
+Bladder Cancer
+Kidney Cancer
+Eye Cancer
+Brain Cancer
+Adrenal Gland Cancer
+Tumor
+Cancer of the Large Intestine
+Bone Cancer
+Hodgkin�s Disease
+Leukemia
+Benign Tumor
+Carcinoma
+Meningitis
+Pneumococcal meningitis
+Streptococcal meningitis
+Staphylococcal meningitis
+Encephalitis
+Abscess
+Phlebitis
+Alzheimer�s
+Parkinson�s 
+Parkinson�s disease
+Huntington�s chorea
+Tonsillitis
+Muscular Dystrophy
+Palsy
+Sclerosis
+Multiple Sclerosis
+Myelopathy
+Epilepsy
+Convulsions
+Petit mal seizure
+Grand mal Seizure
+Neuralgia
+Carpal Tunnel Syndrome
+Hypertension
+Macular Degeneration
+Retinal Dystrophy
+Glaucoma
+Cataract
+Myopia
+Near Sighted
+Far Sighted
+Astigmatism
+Blind
+Blind in Right Eye
+Blind if Left Eye
+Keratitis
+Conjunctivitis
+Eczema
+Dermatitis
+Otitis
+Ear Infection
+Ringing in the Ears
+Tinnitus
+Obstruction of Eustachian Tube
+Hearing Loss
+Vertigo
+Sinusitis
+Tonsillitis
+Laryngitis
+Bronchitis
+Pneumonia
+Viral Pneumonia
+Bacterial Pneumonia
+Pleurisy
+Deviated septum
+Nasal Polyp
+Pharyngitis
+Rhinitis
+Adenoids
+Influenza
+Flu
+Emphysema
+Asthma
+Pulmonary Edema
+Difficulty Breathing
+Pneumothorax
+Respiratory Failure
+Tracheostomy
+Convulsions
+Sleep Apnea
+Fever
+Malaise
+Fatigue
+Lack of Coordination
+Edema
+Edema in Ankles
+Edema in Hands
+Cyanosis
+Anorexia
+Aphasia
+Tachycardia
+Palpitations
+Heart Murmur
+Gangrene
+Shock
+Enlargement of Lymph Nodes
+Chest Pain
+Dyspnea
+Heart Burn
+Reflux
+Cough
+Hiccough
+Nausea
+Vomiting
+Heartburn
+Gas Pain
+Flatulence
+Incontinence
+Urinary Incontinence
+Diarrhea
+Renal Colic
+Retention of Urine
+Leakage
+Urinary Frequency
+Slow Urinary Stream
+High Blood Sugar
+High Cholesterol
+Elevated PSA
+Irregular Heart Beat
+Over active Thyroid
+High Blood Pressure
+Low Blood Pressure
+Polio
+Smallpox
+Cholera
+Rubella
+Tuberculosis
+Rabies
+VD
+Venereal Disease
+Communicable Disease
+Typhoid
+Diphtheria
+Gonorrhea
+Tetanus
+Strep
+Staph Infection
+Measles
+Yellow Fever
+Mumps
+Cold
+Encephalitis
+Leukemia
+Alcoholism
+Malaria
+Peptic Ulcer
+Heart Transplant
+Liver Transplant
+Colostomy
+Breast Implant
+Pace Maker

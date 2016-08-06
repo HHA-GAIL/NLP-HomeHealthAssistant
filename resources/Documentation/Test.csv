@@ -1,0 +1,13 @@
+nodeID,Question,deleted,clusterID,listeningFor,Event
+1,"What would you like to do",0,1,ANSWER,0
+2,"What is your family members name?",0,2,PERSON,1
+3,"What is your relation to them?",0,2,FAMILY,2
+4,"Do they have any major disorders?",0,2,BINARY,3
+5,"What Major disorders do they have?",0,2,FAMILY,4
+6,"Do they have any more major disorders?",0,2,BINARY,5
+7,"Do they have any minor disorders?",0,2,BINARY,6
+8,"What specific disorders do they have?",0,2,FAMILY,7
+9,"Do they have any more specific disorders?",0,2,BINARY,8
+10,"Do they live with you?",0,2,BINARY,9
+11,"Are they Alive?",0,2,BINARY,10
+12,"Would you like to add another family member?",0,2,BINARY,11

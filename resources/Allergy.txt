@@ -1,0 +1,229 @@
+Allergy
+Allergen
+Allergic Reaction
+Sinus
+Sinus Infection
+Ear infection
+Glands
+Lymphoid tissue
+Swelling
+Swelling Around Eye
+Swollen Eyes
+Swollen Feet
+Swollen Hands
+Swollen Lips
+Swelling Around Lips
+Antigen
+Antibodies
+Angioedema
+Histamine
+Anti-Inflammatory
+Asthma
+Bronchial Tubes
+Lungs
+Airways
+Hard to Breath
+Breathing
+Congestion
+Sneezing
+Runny Nose
+Bronchodilators
+Conjunctivitis
+Pinkeye
+Dander
+Dust
+Pet Dander
+Dermatitis
+Inflamed skin
+Inflamed Eyes
+Congestion
+Mucus
+Decongestant
+Itching
+Redness
+Blistering
+Irritation
+ELISA
+Enzyme-Linked Immunosorbent Assay
+Epinephrine
+Anaphylactic Shock
+Insect Bites
+Insect Stings
+Bee Stings
+Wasp Bites
+Rayweed
+Grasses
+HEPA
+Hypoallergenic
+Immune System
+Immunotherapy
+Skin
+Health Risk Factor
+Start Date
+End Date
+Date
+Pollen
+Chloral Hydrate
+Dog
+Cat
+Bee String
+Dust Mites
+Eggs
+Fish
+Mollusks
+Nuts
+Penicillin
+Pollen
+Ragweed
+Shellfish
+Soy
+Trees
+Grass
+Grasses
+Wheat
+Gluten
+Wool
+Hay Fever
+Hives
+Latex
+Latex Allergy
+Rubber
+Mast Cell
+MDI
+Metered Dose Inhaler
+Mold
+Parasites
+Fungus
+Fungi
+Mold Count
+Pollen count
+Myringotomy
+Nasal Endoscopy
+Nasal Sprays
+Otitis Media
+RAST
+Skin Scratch Test
+Skin Prick Test
+Sinusitis
+Food Allergy
+Milk
+Milk Allergy
+Eggs
+Egg Allergy
+Wheat
+Wheat Allergy
+Nut Allergy
+Nuts
+Peanuts
+Cashews
+Walnuts
+Fish Allergy
+Shellfish Allergy
+Sulfite Allergy
+Soy Allergy
+Soybean Allergy
+Casein Allergy
+Poison Ivy
+Poison Oak
+Poison Sumac
+Bee Stings
+Bee
+Wasp yellow Jacket
+Hornet
+Ant
+Fire Ant
+Sun
+Aspirin
+Aspirin Allergy
+Cosmetic Allergy
+Preservatives
+Fragrances
+Nickel
+Nickel Allergy
+Chemical Allergy
+Shampoos
+Cosmetics
+Detergents
+Allergy Medications
+Antihistamines
+Decongestants
+Anticholinergic Nasal Allergy Sprays
+Steroid Nasal Sprays
+Auto-Injector
+EpiPen
+Twinject
+Auvi-Q
+Dehumidifier
+Allergy Shots
+Allergy Eye Drops
+Leukotriene Inhibitors
+Mast Cell Inhibitors
+Anaphylaxis
+Anaphylactic Shock
+Sneezing
+Runny Nose
+Postnasal Drip
+Watery Eyes
+Itchy Eyes
+Itchy Nose 
+Itchy throat
+Sulphites
+Sulphur dioxide
+Sodium sulphite
+Sodium bisulphite
+Potassium bisulphite
+Potassium metasulphite
+Benzoic Acid
+Parabens
+Sodium Benzoate
+Methylparaben
+Propylparaben
+Heptylparaben
+Antioxidants
+Butylated Hdroxyanisole
+BHA
+Butylated Hydroxytoluene
+BHT
+Aspartame
+Monosodium Glutamate
+MSG
+Food Colorings
+Nitrates
+Nitrites
+Serotonin
+Tyramine
+Caffeine
+Salicylates
+Honey
+Tea
+Almonds
+Berries
+Apricots
+Ginger
+Rash
+Acute urticarial
+Eczema
+Dermititis
+Sulphur Dioxide
+Cough
+Wheezing
+Allergic Rhinitis
+Inflammation
+Saline Spray
+Nasal Passage
+Nasal Passages
+Thyme
+Mugwort Pollen
+Cross-Reactions
+Melon
+Hypersensitive
+Hypersensitivity
+Allergic Hypersensitivity
+Tissue Swelling
+Immunoglobulin
+Mucus
+Smoke
+Oak tree dust
+Oak trees
+Yeast
+Sugar

@@ -1,0 +1,55 @@
+tetanus
+diphtheria
+pertussis
+polio
+Hepatitis B
+Measles
+Mumps
+Rubella
+Haemophilus influenzae type B
+Influenza
+MMR 
+yellow fever
+varicella
+rotavirus
+Smallpox
+Variolla
+Anthrax
+Cholera
+Meningococcal disease
+Hepatitis A
+Pertussis
+Tuberculosis
+Hepatitis B
+Pneumoccocal disease
+Typhoid fever
+Hepatitis E
+Poliomyelitis
+Tick-borne encephalitis
+Rabies
+herpes zoster (shingles)
+Human papilloma-virus
+Rotavirus gastroenteritis
+Japanese encephalitis
+Vaccine
+Date
+Month 
+Year
+Batch Number
+Delivery
+Vaccination
+Intramuscular
+Subcutaneous
+Intradermal
+Oral
+IM
+IV
+Nasal
+PO
+PR
+SQ
+Topical
+Vaccinated
+Syringe
+Needle
+Transdermal

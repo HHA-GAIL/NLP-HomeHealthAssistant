@@ -1,0 +1,162 @@
+Living
+Deceased
+Cancer
+Cardiovascular
+Domestic violence
+Drug Abuse
+Hereditary
+Metabolic
+Lipid
+relative
+Mother
+Father
+Sister
+Brother
+Grandmother
+Maternal Grandmother
+Paternal Grandmother
+Maternal Grandfather
+Paternal Grandfather
+Grandfather
+Cousin
+Uncle
+Aunt
+Disorder
+Major disorder
+Specific disorder
+Alive
+Dead
+Deceased
+Expired
+Health Risk Factor
+heart disease
+heart attack
+myocardial infarction
+heart failure
+high blood pressure
+stroke
+cancer
+breast cancer
+ovarian cancer
+lung cancer
+bladder cancer
+colon cancer
+brain cancer
+prostate cancer
+colorectal cancer
+melanoma
+lymphoma
+non-hodgkin lymphoma
+thyroid cancer
+endometrial cancer
+tumor
+diabetes
+cystic fibrosis
+sickle cell disease
+Alzheimer's disease/dementia
+arthritis
+asthma
+blood clots 
+depression
+high cholesterol
+pregnancy losses
+birth defects
+ethnic origin
+place of birth
+name
+first name
+last name
+cardiac death
+sudden cardiac death
+brothers
+sisters
+step brother
+step sister
+number of siblings
+siblings
+bipolar
+anxiety
+headache
+headaches
+migraine
+migraines
+coronary heart disease
+psychiatric disorder
+schizophrenic
+psychotic
+psychosis
+mentally ill
+mental
+neurosis
+Adjustment Disorder 
+Agoraphobia 
+Alcohol/Substance Abuse 
+Anorexia Nervosa 
+Anorexia
+Antisocial Personality Disorder 
+Attention-Deficit Disorder
+ADD
+ADHD 
+Autistic Disorder 
+Autistic
+Avoidant Personality Disorder 
+Bipolar Disorder 
+Borderline Personality Disorder 
+Bulimia Nervosa 
+Bulimia
+Conduct Disorder 
+Cyclothymia Disorder 
+Delusional Disorder 
+Delusional
+Dementia
+Dependent Personality Disorder 
+Dissociative Identity Disorder 
+Dysthymic Disorder 
+Generalized Anxiety Disorder 
+Histrionic Personality Disorder 
+Histrionic
+Major Depressive Disorder 
+Narcissistic Personality Disorder 
+Narcissist
+Obsessive-Compulsive Disorder 
+Obsessive-Compulsive Personality Disorder 
+Obsessive-Compulsive
+Oppositional-Defiant Disorder 
+Panic Disorder 
+Paranoid Personality Disorder 
+Paranoid
+Post-Traumatic Stress Disorder (PTSD) 
+Schizoaffective Disorder 
+Schizoid Personality Disorder 
+Schizoid
+Schizophrenia 
+Schizotypal Personality Disorder 
+Separation Anxiety Disorder 
+Social Phobia 
+Specific Phobia 
+Phobia
+Tourette's Disorder
+Mental Illness
+Anxiety Disorders 
+Panic Disorder 
+AIDS
+Depression 
+Domestic Violence 
+Eating Disorders 
+Substance Abuse 
+Suicide
+Teenage Suicide
+Sleep disorder
+Sleep problem
+Can�t sleep
+Obesity
+Substance abuse
+Thyroid disease
+Hemochromatosis
+Broken Arm
+Broken Leg
+Broken Rib
+Broken Ankle
+Broken Wrist
+Broken Finger
+Broken Nose
