@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: gale
+-- Host: localhost    Database: gale
 -- ------------------------------------------------------
--- Server version	5.7.11-log
+-- Server version	5.7.13-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,12 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `gale`
+-- Table structure for table `cluster`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `gale` /*!40100 DEFAULT CHARACTER SET utf8 */;
+DROP TABLE IF EXISTS `cluster`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cluster` (
+  `clusterID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) NOT NULL,
+  PRIMARY KEY (`clusterID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-USE `gale`;
+--
+-- Dumping data for table `cluster`
+--
+
+LOCK TABLES `cluster` WRITE;
+/*!40000 ALTER TABLE `cluster` DISABLE KEYS */;
+INSERT INTO `cluster` VALUES (1,'Root'),(2,'Family Interview');
+/*!40000 ALTER TABLE `cluster` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `decision`
@@ -32,12 +48,11 @@ DROP TABLE IF EXISTS `decision`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `decision` (
   `DecisionID` int(11) NOT NULL AUTO_INCREMENT,
-  `Answer` text,
-  `EventCode` text,
+  `Answer` varchar(45) DEFAULT NULL,
+  `EventCode` varchar(45) DEFAULT NULL,
   `DetermineNode` int(11) DEFAULT NULL,
-  `Deleted` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`DecisionID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,9 +61,27 @@ CREATE TABLE `decision` (
 
 LOCK TABLES `decision` WRITE;
 /*!40000 ALTER TABLE `decision` DISABLE KEYS */;
-INSERT INTO `decision` VALUES (1,'Reset','0,0',1,0),(2,'Begin Family Interview','0,1',2,0);
+INSERT INTO `decision` VALUES (1,'Family Interview','1',2),(2,'Reset','0',1),(3,'FOUND','2',3),(4,'FOUND','3',4),(5,'YES','4',5),(6,'NO','5',7),(7,'FOUND','6',6),(8,'YES','7',8),(9,'NO','8',10),(10,'FOUND','9',9),(11,'FOUND','10',11),(12,'FOUND','11',12),(13,'YES','12',2),(14,'NO','13',NULL);
 /*!40000 ALTER TABLE `decision` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `decisionsfornodes`
+--
+
+DROP TABLE IF EXISTS `decisionsfornodes`;
+/*!50001 DROP VIEW IF EXISTS `decisionsfornodes`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `decisionsfornodes` AS SELECT 
+ 1 AS `nodeID`,
+ 1 AS `DecisionID`,
+ 1 AS `NodeQuestion`,
+ 1 AS `Answer`,
+ 1 AS `NodeEvent`,
+ 1 AS `DecisionEvent`,
+ 1 AS `DetermineNode`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Table structure for table `node`
@@ -58,11 +91,16 @@ DROP TABLE IF EXISTS `node`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `node` (
-  `NodeID` int(11) NOT NULL AUTO_INCREMENT,
-  `Question` text,
-  `deleted` tinyint(4) DEFAULT '0',
-  PRIMARY KEY (`NodeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `nodeID` int(11) NOT NULL AUTO_INCREMENT,
+  `Question` varchar(45) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT NULL,
+  `clusterID` int(11) NOT NULL,
+  `listeningFor` varchar(45) DEFAULT NULL,
+  `Event` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`nodeID`),
+  KEY `fk_Node_Cluster_idx` (`clusterID`),
+  CONSTRAINT `fk_Node_Cluster` FOREIGN KEY (`clusterID`) REFERENCES `cluster` (`clusterID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +109,7 @@ CREATE TABLE `node` (
 
 LOCK TABLES `node` WRITE;
 /*!40000 ALTER TABLE `node` DISABLE KEYS */;
-INSERT INTO `node` VALUES (1,'Hello, what can I do for you?',0),(2,'May I interview you for your family history',0);
+INSERT INTO `node` VALUES (1,'What would you like to do',0,1,'ANSWER','0'),(2,'What is your family members name?',0,2,'PERSON','1'),(3,'What is your relation to them?',0,2,'FAMILY','2'),(4,'Do they have any major disorders?',0,2,'BINARY','3'),(5,'What Major disorders do they have?',0,2,'FAMILY','4'),(6,'Do they have any more major disorders?',0,2,'BINARY','5'),(7,'Do they have any minor disorders?',0,2,'BINARY','6'),(8,'What specific disorders do they have?',0,2,'FAMILY','7'),(9,'Do they have any more specific disorders?',0,2,'BINARY','8'),(10,'Do they live with you?',0,2,'BOOLEAN','9'),(11,'Are they Alive?',0,2,'BOOLEAN','10'),(12,'Would you like to add another family member?',0,2,'BINARY','11');
 /*!40000 ALTER TABLE `node` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,13 +121,13 @@ DROP TABLE IF EXISTS `node_has_decision`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `node_has_decision` (
-  `node_NodeID` int(11) NOT NULL,
+  `Node_nodeID` int(11) NOT NULL,
   `Decision_DecisionID` int(11) NOT NULL,
-  PRIMARY KEY (`node_NodeID`,`Decision_DecisionID`),
-  KEY `fk_node_has_Decision_Decision1_idx` (`Decision_DecisionID`),
-  KEY `fk_node_has_Decision_node1_idx` (`node_NodeID`),
-  CONSTRAINT `fk_node_has_Decision_Decision1` FOREIGN KEY (`Decision_DecisionID`) REFERENCES `decision` (`DecisionID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_node_has_Decision_node1` FOREIGN KEY (`node_NodeID`) REFERENCES `node` (`NodeID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`Node_nodeID`,`Decision_DecisionID`),
+  KEY `fk_Node_has_Decision_Decision1_idx` (`Decision_DecisionID`),
+  KEY `fk_Node_has_Decision_Node1_idx` (`Node_nodeID`),
+  CONSTRAINT `fk_Node_has_Decision_Decision1` FOREIGN KEY (`Decision_DecisionID`) REFERENCES `decision` (`DecisionID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Node_has_Decision_Node1` FOREIGN KEY (`Node_nodeID`) REFERENCES `node` (`nodeID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,25 +137,58 @@ CREATE TABLE `node_has_decision` (
 
 LOCK TABLES `node_has_decision` WRITE;
 /*!40000 ALTER TABLE `node_has_decision` DISABLE KEYS */;
-INSERT INTO `node_has_decision` VALUES (1,1),(2,1),(1,2);
+INSERT INTO `node_has_decision` VALUES (1,1),(1,2),(2,3),(3,4),(4,5),(6,5),(4,6),(6,6),(5,7),(7,8),(9,8),(7,9),(9,9),(8,10),(10,11),(11,12),(12,13),(12,14);
 /*!40000 ALTER TABLE `node_has_decision` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'gale'
---
 
 --
 -- Dumping routines for database 'gale'
 --
 
 --
--- Current Database: `dbo`
+-- Final view structure for view `decisionsfornodes`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dbo` /*!40100 DEFAULT CHARACTER SET utf8 */;
+/*!50001 DROP VIEW IF EXISTS `decisionsfornodes`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `decisionsfornodes` AS select `n`.`nodeID` AS `nodeID`,`d`.`DecisionID` AS `DecisionID`,`n`.`Question` AS `NodeQuestion`,`d`.`Answer` AS `Answer`,`n`.`Event` AS `NodeEvent`,`d`.`EventCode` AS `DecisionEvent`,`d`.`DetermineNode` AS `DetermineNode` from ((`node` `n` join `node_has_decision` `nhd` on((`n`.`nodeID` = `nhd`.`Node_nodeID`))) join `decision` `d` on((`nhd`.`Decision_DecisionID` = `d`.`DecisionID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-USE `dbo`;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-08-13  9:33:36
+-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+--
+-- Host: localhost    Database: dbo
+-- ------------------------------------------------------
+-- Server version	5.7.13-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `allergyhistorytable`
@@ -773,7 +844,7 @@ CREATE TABLE `familyhistorytable` (
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`FamilyID`),
   KEY `I_PatientID` (`PatientID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -782,7 +853,7 @@ CREATE TABLE `familyhistorytable` (
 
 LOCK TABLES `familyhistorytable` WRITE;
 /*!40000 ALTER TABLE `familyhistorytable` DISABLE KEYS */;
-INSERT INTO `familyhistorytable` VALUES (1,1,'Jon','Dad',1,0,'N/A','',0,1),(2,1,'Joyce','Mother',1,1,'Cancer','',0,0),(3,1,'Katies','Sister',1,0,'Autsim','',0,0),(4,1,'Sarah','Wife',1,1,'','',0,0),(5,1,'Brain','Self',1,1,'PITA','',0,0);
+INSERT INTO `familyhistorytable` VALUES (1,1,'Jon','Dad',1,0,'N/A','',0,1),(2,1,'Brian Miller','Father',1,1,'Cancer',NULL,0,0),(3,1,'Joyce Miller','Mother',1,1,'Cancer','',0,0),(4,1,'Katie Miller','Sister',1,1,NULL,NULL,0,0);
 /*!40000 ALTER TABLE `familyhistorytable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1140,7 +1211,7 @@ CREATE TABLE `immunizationshistorytable` (
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`ImmunizationsID`),
   KEY `I_PatientID` (`PatientID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1149,7 +1220,7 @@ CREATE TABLE `immunizationshistorytable` (
 
 LOCK TABLES `immunizationshistorytable` WRITE;
 /*!40000 ALTER TABLE `immunizationshistorytable` DISABLE KEYS */;
-INSERT INTO `immunizationshistorytable` VALUES (1,1,'Flue','2017-05-30','2017-06-02','shot','',1,0),(2,1,'Polio','2016-08-16','2017-08-16','Shot','Hello World!',1,0),(3,1,'Rabies','2016-06-02','2020-06-03','Shot','Ouch!',1,0),(4,1,'Distempor','2015-02-14','2017-06-04','Shot','Bark!',1,0),(5,1,'Flue','2017-05-30','2017-06-02','shot','',1,0);
+INSERT INTO `immunizationshistorytable` VALUES (1,1,'Flu','2017-05-30','2017-06-02','shot','',1,0),(2,1,'Polio','2016-08-16','2017-08-16','Shot','Hello World!',1,0),(3,1,'Rabies','2016-06-02','2020-06-03','Shot','Ouch!',1,0),(4,1,'Distemper','2015-02-14','2017-07-08','Shot','Bark!',1,0),(5,1,'Flu','2017-05-30','2016-06-10','shot','',1,0),(6,1,'Testing','2015-07-08','2017-07-08','shot','NOOOOo',1,0);
 /*!40000 ALTER TABLE `immunizationshistorytable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1237,6 +1308,36 @@ LOCK TABLES `msreplication_options` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `node`
+--
+
+DROP TABLE IF EXISTS `node`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `node` (
+  `NodeID` int(11) NOT NULL AUTO_INCREMENT,
+  `RootNodeID` int(11) DEFAULT NULL,
+  `ParentNodeID` int(11) DEFAULT NULL,
+  `Type` varchar(12) DEFAULT 'Internal',
+  `QuestionOrAnswer` text,
+  `DetailTextID` int(11) DEFAULT NULL,
+  `DescisionScriptID` int(11) DEFAULT NULL,
+  `deleted` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`NodeID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `node`
+--
+
+LOCK TABLES `node` WRITE;
+/*!40000 ALTER TABLE `node` DISABLE KEYS */;
+INSERT INTO `node` VALUES (1,NULL,NULL,'internal','Would you like to start?',NULL,NULL,0),(2,1,1,'internal','What would you like to talk about?',NULL,NULL,0),(3,1,2,'leaf','Thank you for talking to me.',NULL,NULL,0),(4,1,2,'internal','Are you ready to be interviewed for your medial history?',NULL,NULL,0),(5,4,4,'Internal','What is your name?',NULL,NULL,0);
+/*!40000 ALTER TABLE `node` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `occupationalhistorytable`
 --
 
@@ -1257,7 +1358,7 @@ CREATE TABLE `occupationalhistorytable` (
   `LastWorkDate` date DEFAULT NULL,
   PRIMARY KEY (`OccupationalID`),
   KEY `I_PatientID` (`PatientID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1266,8 +1367,33 @@ CREATE TABLE `occupationalhistorytable` (
 
 LOCK TABLES `occupationalhistorytable` WRITE;
 /*!40000 ALTER TABLE `occupationalhistorytable` DISABLE KEYS */;
-INSERT INTO `occupationalhistorytable` VALUES (1,1,'2016-06-04',NULL,'Testing',1,0,'',0,0,NULL),(2,1,'2016-07-08',NULL,'Hello',1,1,'pain',0,0,'2016-07-09');
+INSERT INTO `occupationalhistorytable` VALUES (1,1,'2016-06-04',NULL,'Testing',1,0,'',0,0,NULL),(2,1,'2016-07-08',NULL,'Hello',1,1,'pain',0,0,'2016-07-09'),(3,1,'2016-06-09',NULL,'Tech',1,0,'',0,0,NULL);
 /*!40000 ALTER TABLE `occupationalhistorytable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `parent_node`
+--
+
+DROP TABLE IF EXISTS `parent_node`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `parent_node` (
+  `parent_nodeID` int(11) NOT NULL AUTO_INCREMENT,
+  `NodeID` int(11) DEFAULT NULL,
+  `ParentID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`parent_nodeID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `parent_node`
+--
+
+LOCK TABLES `parent_node` WRITE;
+/*!40000 ALTER TABLE `parent_node` DISABLE KEYS */;
+INSERT INTO `parent_node` VALUES (1,2,1),(2,3,1),(3,3,2),(4,4,2),(5,4,1),(9,4,3),(10,5,3),(11,6,3);
+/*!40000 ALTER TABLE `parent_node` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2284,10 +2410,6 @@ LOCK TABLES `weightbyage` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'dbo'
---
-
---
 -- Dumping routines for database 'dbo'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2300,4 +2422,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-09 10:58:33
+-- Dump completed on 2016-08-13  9:33:37
