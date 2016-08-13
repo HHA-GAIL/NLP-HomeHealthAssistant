@@ -34,8 +34,10 @@ public class FamilyInterview extends Interview {
         switch (nodeAnswer) {
             case "YES":
                 liveWith = 1;
+                break;
             default:
                 liveWith = 0;
+                break;
         }
         return liveWith;
     }
@@ -44,6 +46,8 @@ public class FamilyInterview extends Interview {
     public void runEvent(int eventID) {
         currentDecision = cluster.getDecisionFromAnswer(decesionAnswer);
         switch (eventID) {
+            case 3:
+                break;
             case 9:
                 break;
             default:
@@ -166,6 +170,7 @@ public class FamilyInterview extends Interview {
 
     private void dEvent12() {
         writeFamily();
+        this.newFamily = new Family();
     }
 
     private void dEvent13() {

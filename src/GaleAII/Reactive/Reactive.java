@@ -38,7 +38,7 @@ public abstract class Reactive implements Runnable{
             case "BINARY":
                 if (userResponse.getFullSentence().equals("Yes")) {
                     nodeAnswer = "YES";
-                    decesionAnswer = "NO";
+                    decesionAnswer = "YES";
                 }else{
                     nodeAnswer = "NO";
                     decesionAnswer = "NO";
