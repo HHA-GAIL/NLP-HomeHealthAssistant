@@ -36,7 +36,6 @@ public abstract class Family implements History {
     private String specificTypeDisorder;
     private byte disorderHRF;
     private byte deleted;
-    
 
     //Constructors
     /**
@@ -120,7 +119,7 @@ public abstract class Family implements History {
             throw e;
         }
     }
-    
+
     /**
      * Adds the current family history object to the database.
      *
@@ -139,9 +138,10 @@ public abstract class Family implements History {
             throw e;
         }
     }
+
     public boolean addData(Family family) throws Exception {
         try {
-            changeCurrentFamily(family);            
+            changeCurrentFamily(family);
             fillvalueStrings();
             addData = new Add(valueStrings, columnStrings);
             return addData.perform(currentResultSet);
@@ -178,7 +178,7 @@ public abstract class Family implements History {
         } catch (Exception e) {
             throw e;
         }
-    }    
+    }
 
     @Override
     public boolean deleteData() throws Exception {
@@ -211,7 +211,7 @@ public abstract class Family implements History {
             familyID = resultSet.getInt("FamilyID");
             patientID = resultSet.getInt("PatientID");
             name = resultSet.getString("Name");
-            relative = resultSet.getString("Relation");            
+            relative = resultSet.getString("Relation");
             alive = resultSet.getByte("Alive");
             livesWithPatient = resultSet.getByte("Lives with patient");
             majorDisorder = resultSet.getString("MajorDisorder");
@@ -240,7 +240,7 @@ public abstract class Family implements History {
         } catch (Exception e) {
             throw e;
         }
-    }   
+    }
 
     public ArrayList<Interface.History.Family> createArrayList() throws Exception {
         ArrayList<Interface.History.Family> familyArrayList = new ArrayList<>(readData.getNumberOfRows());
@@ -258,12 +258,14 @@ public abstract class Family implements History {
 
         return familyArrayList;
     }
+
     /**
      * Fetches and returns the next family ID.
+     *
      * @return next primary key entry.
-     * @throws Exception 
+     * @throws Exception
      */
-    public int getNextID() throws Exception{
+    public int getNextID() throws Exception {
         try {
             return readData.getNextID(columnStrings[0]);
         } catch (Exception e) {
@@ -271,7 +273,7 @@ public abstract class Family implements History {
         }
     }
 
-    private void changeCurrentFamily(Family family) throws Exception{
+    private void changeCurrentFamily(Family family) throws Exception {
         familyID = family.getFamilyID();
         patientID = family.getPatientID();
         relative = family.getRelative();
@@ -283,13 +285,21 @@ public abstract class Family implements History {
         disorderHRF = family.getDisorderHRF();
         deleted = family.getDeleted();
         int row = findRow();
-        currentResultSet.absolute(row);
+        switch (row) {
+            case 0:
+                currentResultSet.beforeFirst();
+                break;
+            default:
+                currentResultSet.absolute(row);
+                break;
+        }
+
     }
 
     private int findRow() throws SQLException {
         int result = 0;
         int counter = 0;
-        currentResultSet.absolute(0);
+        currentResultSet.beforeFirst();
         while (currentResultSet.next()) {
             counter++;
             if (this.familyID == currentResultSet.getInt("familyID")) {
@@ -347,7 +357,6 @@ public abstract class Family implements History {
     public String getName() {
         return name;
     }
-    
 
     //Setters
     public void setFamilyID(int familyID) {
@@ -389,6 +398,5 @@ public abstract class Family implements History {
     public void setName(String name) {
         this.name = name;
     }
-    
 
 }

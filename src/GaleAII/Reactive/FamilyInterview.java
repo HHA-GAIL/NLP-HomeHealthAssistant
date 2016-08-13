@@ -181,6 +181,7 @@ public class FamilyInterview extends Interview {
         try {
             patientHistory.addFamilyHistory(newFamily);
         } catch (Exception e) {
+            System.err.println(e.toString());
         }
 
     }
