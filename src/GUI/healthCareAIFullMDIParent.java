@@ -9,6 +9,7 @@ import Interface.PatientMeta.GeneralInformation;
 import collections.History;
 import java.text.ParseException;
 import GaleAII.Gale;
+import GaleAII.Reactive.Core;
 import javax.swing.*;
 
 /**
@@ -20,6 +21,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     collections.History history;
     GeneralInformation currentPatient = new GeneralInformation();
     collections.Patient patient;
+    Gale gale;
     boolean firstUse = false;
 
     /**
@@ -29,10 +31,9 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         initComponents();
         try {            
             populatePatient();
-            populateHistory();
-            Gale gale = new Gale(this);
-           // runPatient();
-           // beginGale();
+            populateHistory();            
+            //runPatient();
+            beginGale();
         } catch (RuntimeException rx){
             firstUse();
         } 
@@ -40,6 +41,13 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
             
         }
 
+    }
+    private void beginGale(){
+        try {
+           gale = new Gale(); 
+        } catch (Exception e) {
+        }
+        
     }
     private void changeIconImage(){
         
@@ -185,7 +193,8 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     }//GEN-LAST:event_illnessMenuItemActionPerformed
 
     private void startGaleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGaleMenuItemActionPerformed
-        
+        Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
+        new Thread(coreEvent).start();
     }//GEN-LAST:event_startGaleMenuItemActionPerformed
     public final void populateHistory() {
         try {

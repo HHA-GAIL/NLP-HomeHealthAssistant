@@ -28,13 +28,28 @@ public class FamilyInterview extends Interview {
 
     }
 
+    private Byte convertNodeAnswer() {
+        byte liveWith;
+
+        switch (nodeAnswer) {
+            case "YES":
+                liveWith = 1;
+            default:
+                liveWith = 0;
+        }
+        return liveWith;
+    }
+
     @Override
     public void runEvent(int eventID) {
         currentDecision = cluster.getDecisionFromAnswer(decesionAnswer);
         switch (eventID) {
+            case 9:
+                break;
             default:
 
         }
+        runDecision(currentDecision.getEventCode());
     }
 
     @Override
@@ -47,33 +62,50 @@ public class FamilyInterview extends Interview {
         switch (eventID) {
             case 2:
                 dEvent2();
+                break;
             case 3:
                 dEvent3();
+                break;
             case 4:
                 dEvent4();
+                break;
             case 5:
                 dEvent5();
+                break;
             case 6:
                 dEvent6();
+                break;
             case 7:
                 dEvent7();
+                break;
             case 8:
                 dEvent8();
+                break;
             case 9:
                 dEvent9();
+                break;
             case 10:
                 dEvent10();
+                break;
             case 11:
                 dEvent11();
+                break;
             case 12:
                 dEvent12();
+                break;
             case 13:
                 dEvent13();
+                break;
             default:
+                break;
 
         }
-        cluster.moveToNode(currentDecision.getDetermineNode());
-        runCurrentNode();
+        if (currentDecision.getDetermineNode() != null) {
+            cluster.moveToNode(currentDecision.getDetermineNode());
+            this.currentNode = cluster.getCurrentNode();
+            runCurrentNode();
+        }
+
     }
 
     private void dEvent2() {
@@ -85,8 +117,7 @@ public class FamilyInterview extends Interview {
     }
 
     private void dEvent4() {
-       
-        
+
     }
 
     private void dEvent5() {
@@ -98,7 +129,7 @@ public class FamilyInterview extends Interview {
         if (newFamily.getMajorDisorder() != null) {
             majorDisorders = new StringBuilder(newFamily.getMajorDisorder());
             majorDisorders.append(",");
-        }else{
+        } else {
             majorDisorders = new StringBuilder();
         }
         majorDisorders.append(nodeAnswer);
@@ -118,7 +149,7 @@ public class FamilyInterview extends Interview {
         if (newFamily.getMajorDisorder() != null) {
             minorDisorders = new StringBuilder(newFamily.getSpecificTypeDisorder());
             minorDisorders.append(",");
-        }else{
+        } else {
             minorDisorders = new StringBuilder();
         }
         minorDisorders.append(nodeAnswer);
@@ -126,18 +157,26 @@ public class FamilyInterview extends Interview {
     }
 
     private void dEvent10() {
-
+        newFamily.setLivesWithPatient(convertNodeAnswer());
     }
 
     private void dEvent11() {
-
+        newFamily.setAlive(convertNodeAnswer());
     }
 
     private void dEvent12() {
-
+        writeFamily();
     }
 
     private void dEvent13() {
+        writeFamily();
+    }
+
+    private void writeFamily() {
+        try {
+            patientHistory.addFamilyHistory(newFamily);
+        } catch (Exception e) {
+        }
 
     }
 

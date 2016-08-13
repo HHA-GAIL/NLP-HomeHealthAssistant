@@ -21,12 +21,11 @@ public class Gale {
     NeuralMap neuralMap;
     healthCareAIFullMDIParent primaryForm;
 
-    public Gale(healthCareAIFullMDIParent primayForm) throws Exception {
+    public Gale() throws Exception {
         try {
             speak = new Speak(Speak.methodOfCommunication.Text);
             listen = new Listen(speak);
             neuralMap = new NeuralMap();
-            this.primaryForm = primayForm;
             //startProactiveThreads();
         } catch (Exception e) {
             throw e;
@@ -43,6 +42,15 @@ public class Gale {
         }
     }
     
+    public Cluster getClusterByName(String name){
+        Cluster cluster = null;
+        try {
+          cluster = neuralMap.getClusterByName(name);  
+        } catch (Exception e) {
+        }
+        return cluster;
+    }
+    
     public void speak(String stringToSpeak){
         speak.askQuestionToUser(stringToSpeak);
     }
@@ -50,4 +58,14 @@ public class Gale {
     public String askQuestion(String stringToAsk){
         return speak.askQuestionToUser(stringToAsk);
     }
+
+    public Listen getListen() {
+        return listen;
+    }
+
+    public Speak getSpeak() {
+        return speak;
+    }
+    
+    
 }

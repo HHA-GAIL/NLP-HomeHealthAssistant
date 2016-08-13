@@ -32,26 +32,46 @@ public abstract class Reactive implements Runnable{
     
     public void runCurrentNode(){
         String listeningType = currentNode.getListeningFor();
-        Sentence userResponse = new Sentence(gale.askQuestion(currentNode.getQuestion()));
+        Sentence userResponse = gale.getListen().convertStringToSentence(
+                (gale.askQuestion(currentNode.getQuestion())));
         switch (listeningType){
-            case "BOOLEAN":
+            case "BINARY":
                 if (userResponse.getFullSentence().equals("Yes")) {
                     nodeAnswer = "YES";
-                    decesionAnswer = "YES";
+                    decesionAnswer = "NO";
                 }else{
                     nodeAnswer = "NO";
                     decesionAnswer = "NO";
                 }
                 break;
+            case "BOOLEAN":
+                if (userResponse.getFullSentence().equals("Yes")) {
+                    nodeAnswer = "YES";
+                    decesionAnswer = "FOUND";
+                }else{
+                    nodeAnswer = "NO";
+                    decesionAnswer = "FOUND";
+                }
+                break;
+            case "ANSWER":
+                nodeAnswer = userResponse.getFullSentence();
+                decesionAnswer = userResponse.getFullSentence();
+                break;
             default:
-                nodeAnswer = userResponse.mentions(listeningType).get(0);
+                try {
+                  nodeAnswer = userResponse.mentions(listeningType).get(0);  
+                } catch (Exception e) {
+                }                
                 found = (nodeAnswer != null);
                 if (found) {
                     decesionAnswer = "FOUND";
                 }else{
                     runCurrentNode();
                 }
-        }
+                break;
+                }
+                
+        
         runEvent(currentNode.getEvent());
     }
     
