@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: gale
 -- ------------------------------------------------------
--- Server version	5.7.13-log
+-- Server version	5.7.14-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -148,10 +148,6 @@ LOCK TABLES `node_has_decision` WRITE;
 INSERT INTO `node_has_decision` VALUES (1,1),(1,2),(2,3),(3,4),(4,5),(6,5),(4,6),(6,6),(5,7),(7,8),(9,8),(7,9),(9,9),(8,10),(10,11),(11,12),(12,13),(12,14);
 /*!40000 ALTER TABLE `node_has_decision` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'gale'
---
 
 --
 -- Current Database: `dbo`
@@ -815,7 +811,7 @@ CREATE TABLE `familyhistorytable` (
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`FamilyID`),
   KEY `I_PatientID` (`PatientID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -824,7 +820,7 @@ CREATE TABLE `familyhistorytable` (
 
 LOCK TABLES `familyhistorytable` WRITE;
 /*!40000 ALTER TABLE `familyhistorytable` DISABLE KEYS */;
-INSERT INTO `familyhistorytable` VALUES (1,1,'Jon','Dad',1,0,'N/A','',0,1),(2,1,'Brian Miller','Father',1,1,'Cancer',NULL,0,0),(3,1,'Joyce Miller','Mother',1,1,'Cancer','',0,0),(4,1,'Katie Miller','Sister',1,1,NULL,NULL,0,0);
+INSERT INTO `familyhistorytable` VALUES (1,1,'Jon','Dad',1,0,'N/A','',0,1),(2,1,'Mike Cinko','Brother',0,0,'diabetes',NULL,0,0),(3,1,'George Smith','Father',0,0,'diabetes',NULL,0,0);
 /*!40000 ALTER TABLE `familyhistorytable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2381,10 +2377,6 @@ LOCK TABLES `weightbyage` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'dbo'
---
-
---
 -- Current Database: `gale`
 --
 
@@ -2423,4 +2415,4 @@ USE `dbo`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-13  9:37:55
+-- Dump completed on 2016-09-01 21:59:48
