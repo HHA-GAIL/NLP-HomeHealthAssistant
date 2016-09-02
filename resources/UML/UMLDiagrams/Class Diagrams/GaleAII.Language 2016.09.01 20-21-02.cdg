@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="GaleAII.Language">
+  <ClassDiagramComponents>
+    <Class name="ExactDictionary" package="GaleAII.Language" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="CHUNK_SCORE" type="double" visibility="package" isStatic="true" isFinal="true"/>
+        <Field name="dictionaryType" type="String" visibility="package"/>
+        <Field name="dictionary" type="MapDictionary&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="dictionaryType"/>
+          <Argument type="String" name="fileName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createDictionary" returnType="void" visibility="private">
+          <Argument type="String" name="nameOfFile"/>
+          <Argument type="MapDictionary&lt;String&gt;" name="dictionary"/>
+          <Argument type="String" name="TypeOfDictionary"/>
+        </Method>
+        <Method name="readFile" returnType="ArrayList&lt;String&gt;" visibility="private">
+          <Argument type="String" name="textFileName"/>
+        </Method>
+        <Method name="getDictionary" returnType="MapDictionary&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Phrase" package="GaleAII.Language" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="wordsInPhrase" type="String" visibility="private"/>
+        <Field name="tag" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="words"/>
+          <Argument type="String" name="tag"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getWordsInPhrase" returnType="String" visibility="public"/>
+        <Method name="getTag" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sentence" package="GaleAII.Language" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="words" type="ArrayList&lt;Word&gt;" visibility="package"/>
+        <Field name="fullSentence" type="String" visibility="package"/>
+        <Field name="phrases" type="ArrayList&lt;Phrase&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="sentanceString"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="breakStringIntoWords" returnType="void" visibility="private">
+          <Argument type="String" name="sentanceString"/>
+        </Method>
+        <Method name="mentions" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="tag"/>
+        </Method>
+        <Method name="getFullSentence" returnType="String" visibility="public"/>
+        <Method name="addPhrase" returnType="void" visibility="public">
+          <Argument type="Phrase" name="newPhrase"/>
+        </Method>
+        <Method name="getWords" returnType="ArrayList&lt;Word&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Word" package="GaleAII.Language" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="word" type="String" visibility="private"/>
+        <Field name="tags" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="partsOfSpeech" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="word"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mentions" returnType="boolean" visibility="public">
+          <Argument type="String" name="checkForTag"/>
+        </Method>
+        <Method name="getWord" returnType="String" visibility="public"/>
+        <Method name="setWord" returnType="void" visibility="public">
+          <Argument type="String" name="word"/>
+        </Method>
+        <Method name="getTags" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="addTag" returnType="void" visibility="public">
+          <Argument type="String" name="Tag"/>
+        </Method>
+        <Method name="setTags" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="tags"/>
+        </Method>
+        <Method name="getPartsOfSpeech" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="setPartsOfSpeech" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="partsOfSpeech"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="GaleAII.Language.Sentence" target="GaleAII.Language.Word" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="phrases" source="GaleAII.Language.Sentence" target="GaleAII.Language.Phrase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Phrase&gt;"/>
+    <HasRelation name="words" source="GaleAII.Language.Sentence" target="GaleAII.Language.Word" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Word&gt;"/>
+    <UseRelation source="GaleAII.Language.Sentence" target="GaleAII.Language.Phrase" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -11,7 +11,7 @@ package ProgramData;
  */
 public interface DatabaseInfo {
     public final String URL = "jdbc:mysql://localhost:3306/dbo?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false";
-    public final String USER = "research";
-    public final String PASSWORD = "Research";
+    public final String USER = "root";
+    public final String PASSWORD = "Harry0794";
     
 }

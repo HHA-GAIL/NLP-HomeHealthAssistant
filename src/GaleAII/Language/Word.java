@@ -16,12 +16,12 @@ public class Word {
 
     private String word;
     private ArrayList<String> tags;
-    private ArrayList<String> partsOfSpeech;
+    private ArrayList<String> partsOfSpeach;
 
     public Word(String word) {
         this.word = word;
         tags = new ArrayList<>();
-        partsOfSpeech = new ArrayList<>();
+        partsOfSpeach = new ArrayList<>();
     }
     
     public boolean mentions(String checkForTag){
@@ -55,11 +55,11 @@ public class Word {
     }
 
     public ArrayList<String> getPartsOfSpeech() {
-        return partsOfSpeech;
+        return partsOfSpeach;
     }
 
     public void setPartsOfSpeech(ArrayList<String> partsOfSpeech) {
-        this.partsOfSpeech = partsOfSpeech;
+        this.partsOfSpeach = partsOfSpeech;
     }
 
 }
