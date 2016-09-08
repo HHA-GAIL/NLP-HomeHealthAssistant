@@ -2,7 +2,7 @@
 
 <ClassDiagram name="GaleAII.Language">
   <ClassDiagramComponents>
-    <Class name="ExactDictionary" package="GaleAII.Language" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="ExactDictionary" package="GaleAII.Language" visibility="public" xPosition="282.0" yPosition="19.0">
       <Fields>
         <Field name="CHUNK_SCORE" type="double" visibility="package" isStatic="true" isFinal="true"/>
         <Field name="dictionaryType" type="String" visibility="package"/>
@@ -26,7 +26,7 @@
         <Method name="getDictionary" returnType="MapDictionary&lt;String&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Phrase" package="GaleAII.Language" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Phrase" package="GaleAII.Language" visibility="public" xPosition="835.0" yPosition="456.0">
       <Fields>
         <Field name="wordsInPhrase" type="String" visibility="private"/>
         <Field name="tag" type="String" visibility="private"/>
@@ -42,7 +42,7 @@
         <Method name="getTag" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Sentence" package="GaleAII.Language" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Sentence" package="GaleAII.Language" visibility="public" xPosition="415.0" yPosition="380.0">
       <Fields>
         <Field name="words" type="ArrayList&lt;Word&gt;" visibility="package"/>
         <Field name="fullSentence" type="String" visibility="package"/>
@@ -67,7 +67,7 @@
         <Method name="getWords" returnType="ArrayList&lt;Word&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Word" package="GaleAII.Language" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="Word" package="GaleAII.Language" visibility="public" xPosition="5.0" yPosition="323.0">
       <Fields>
         <Field name="word" type="String" visibility="private"/>
         <Field name="tags" type="ArrayList&lt;String&gt;" visibility="private"/>

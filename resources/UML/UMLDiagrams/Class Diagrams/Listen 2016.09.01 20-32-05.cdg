@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ClassDiagram name="Listen">
-  <ClassDiagramComponents>
-    <Class name="Listen" package="GaleAII.Core" visibility="public" xPosition="20.0" yPosition="20.0">
-      <Fields>
-        <Field name="dictionaries" type="ArrayList&lt;ExactDictionary&gt;" visibility="package"/>
-        <Field name="nerModelChunker" type="Chunker" visibility="package"/>
-        <Field name="speak" type="Speak" visibility="package"/>
-      </Fields>
-      <Constructors>
-        <Constructor visibility="public">
-          <Argument type="Speak" name="speak"/>
-        </Constructor>
-      </Constructors>
-      <Methods>
-        <Method name="fillDictionaries" returnType="void" visibility="private"/>
-        <Method name="populateNerChunker" returnType="void" visibility="private"/>
-        <Method name="convertStringToSentence" returnType="Sentence" visibility="public">
-          <Argument type="String" name="stringToConvert"/>
-        </Method>
-        <Method name="tagSentence" returnType="void" visibility="private">
-          <Argument type="Sentence" name="sentenceToTag"/>
-        </Method>
-        <Method name="tagWord" returnType="void" visibility="private">
-          <Argument type="Word" name="wordToTag"/>
-        </Method>
-        <Method name="tagPhrases" returnType="void" visibility="private">
-          <Argument type="Sentence" name="sentenceToTag"/>
-        </Method>
-        <Method name="tagWordsExactDictionary" returnType="void" visibility="private">
-          <Argument type="Word" name="word"/>
-        </Method>
-        <Method name="tagWordsFirstBestNamedEntity" returnType="void" visibility="private">
-          <Argument type="Word" name="word"/>
-        </Method>
-        <Method name="tagPhraseExactDictionary" returnType="void" visibility="private">
-          <Argument type="Sentence" name="sentence"/>
-        </Method>
-        <Method name="tagPhraseFirstBestNamedEntity" returnType="void" visibility="private">
-          <Argument type="Sentence" name="sentence"/>
-        </Method>
-        <Method name="getWordsInString" returnType="int" visibility="private">
-          <Argument type="String" name="testedString"/>
-        </Method>
-      </Methods>
-    </Class>
-  </ClassDiagramComponents>
+  <ClassDiagramComponents/>
   <ClassDiagramRelations/>
 </ClassDiagram>
