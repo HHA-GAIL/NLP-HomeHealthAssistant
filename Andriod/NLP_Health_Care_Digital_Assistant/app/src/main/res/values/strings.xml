@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NLP_Health_Care_Digital_Assistant</string>
+    <string name="test">Test</string>
+    <string name="fitbit">Fitbit</string>
+    <string name="scope">activity</string>
+    <string name="response_type">code</string>
+    <string name="client_id">227ZCX</string>
+    <string name="redirect_uri">Http://www.example.com</string>
+    <string name="fitbit_url">https://www.fitbit.com/oauth2/authorize?</string>
+</resources>
