@@ -1,8 +1,13 @@
 package edu.pnw.nlp_health_care_digital_assistant;
 
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.net.Uri;
+import android.support.customtabs.CustomTabsCallback;
+import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
+import android.support.customtabs.CustomTabsServiceConnection;
+import android.support.customtabs.CustomTabsSession;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,21 +22,34 @@ public class HomeActivity extends AppCompatActivity {
     String CLIENT_ID = new String();
     String Response_Type = new String();
     String SCOPE = new String();
-    String Redirect_Uri =  new String();
-    String FIT_BIT_URL =  new String();
+    String Redirect_Uri = new String();
+    String FIT_BIT_URL = new String();
+
+    final String CUSTOM_TAB_PACKAGE_NAME = "com.andriod.chrome";
+
+    CustomTabsClient mCustomTabsClient;
+    CustomTabsSession mCustomTabsSession;
+    CustomTabsServiceConnection mCustomTabsServiceConnection;
+    CustomTabsIntent mCustomTabsIntent;
+    CustomTabsCallback mCustomTabsCallback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         CLIENT_ID = getString(R.string.client_id);
-         Response_Type = getString(R.string.response_type);
-         SCOPE = getString(R.string.scope);
-         Redirect_Uri =  getString(R.string.redirect_uri);
-         FIT_BIT_URL =  getString(R.string.fitbit_url);
+        CLIENT_ID = getString(R.string.client_id);
+        Response_Type = getString(R.string.response_type);
+        SCOPE = getString(R.string.scope);
+        Redirect_Uri = getString(R.string.redirect_uri);
+        FIT_BIT_URL = getString(R.string.fitbit_url);
+
+
+
         setContentView(R.layout.activity_home);
         wireTestButton();
         wireFitbitButton();
     }
-    private void wireTestButton(){
+
+    private void wireTestButton() {
         testButton = (Button) findViewById(R.id.test_button);
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private void wireFitbitButton(){
+    private void wireFitbitButton() {
         fitbitButton = (Button) findViewById(R.id.fitbit_button);
         fitbitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +79,10 @@ public class HomeActivity extends AppCompatActivity {
                 //Building chrome custom tab
                 //String url = "http://www.purple.com";
                 CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+
                 CustomTabsIntent customTabsIntent = builder.build();
+
+
                 Uri uri = uriBuilder.build();
                 customTabsIntent.launchUrl(HomeActivity.this, Uri.parse(url));
             }
