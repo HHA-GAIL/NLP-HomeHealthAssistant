@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
+import org.apache.http.client.HttpClient.*;
+
+
 import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
@@ -60,5 +64,10 @@ public class MainActivity extends AppCompatActivity {
         fitbitCode = fitbitCode.substring(fitbitCode.indexOf('&') + 1);
         String expires_in = fitbitCode.substring(fitbitCode.indexOf('=') + 1);
         System.out.println(expires_in);
+
+        String requestURL = "https://api.fitbit.com/1/user/-/profile.json";
+
+
+
     }
 }
