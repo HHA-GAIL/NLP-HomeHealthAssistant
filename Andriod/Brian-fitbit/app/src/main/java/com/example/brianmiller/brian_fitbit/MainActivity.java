@@ -44,6 +44,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void runFitBitInteractions(Uri fitBitResponse){
-
+        System.out.println(fitBitResponse.toString());
+        String access_token = fitBitResponse.toString().substring(fitBitResponse.toString().indexOf('=') + 1,fitBitResponse.toString().indexOf('&'));
+        System.out.println(access_token);
+        String fitbitCode = fitBitResponse.toString().substring(fitBitResponse.toString().indexOf('&') + 1);
+        System.out.println(fitbitCode);
+        String user_id = fitbitCode.substring(fitbitCode.indexOf('=') + 1,fitbitCode.indexOf('&'));
+        System.out.println(user_id);
+        fitbitCode = fitbitCode.substring(fitbitCode.indexOf('&') + 1);
+        String scope = fitbitCode.substring(fitbitCode.indexOf('=') + 1,fitbitCode.indexOf('&'));
+        System.out.println(scope);
+        fitbitCode = fitbitCode.substring(fitbitCode.indexOf('&') + 1);
+        String token_type = fitbitCode.substring(fitbitCode.indexOf('=') + 1,fitbitCode.indexOf('&'));
+        System.out.println(token_type);
+        fitbitCode = fitbitCode.substring(fitbitCode.indexOf('&') + 1);
+        String expires_in = fitbitCode.substring(fitbitCode.indexOf('=') + 1);
+        System.out.println(expires_in);
     }
 }
