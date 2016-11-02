@@ -2,6 +2,8 @@ package com.example.brianmiller.brian_fitbit;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.StrictMode;
+import android.os.StrictMode.ThreadPolicy;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +11,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-import org.apache.http.client.HttpClient.*;
+import com.example.brianmiller.brian_fitbit.Fitbit.Fitbit;
+import com.google.api.client.http.GenericUrl;
+import com.google.api.client.http.HttpHeaders;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpRequestFactory;
+import com.google.api.client.http.HttpResponse;
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.apache.ApacheHttpTransport;
+import com.google.api.client.testing.http.apache.MockHttpClient;
 
-
+import java.io.IOException;
 import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,13 +30,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         try{
             Intent intent = getIntent();
             Uri data = intent.getData();
             Toast.makeText(MainActivity.this,"Connected to Fitbit",Toast.LENGTH_SHORT).show();
             runFitBitInteractions(data);
         }catch (Exception e){
-
+            System.err.println(e.toString());
         }
 
         wireFitbitButton();
@@ -64,9 +75,18 @@ public class MainActivity extends AppCompatActivity {
         fitbitCode = fitbitCode.substring(fitbitCode.indexOf('&') + 1);
         String expires_in = fitbitCode.substring(fitbitCode.indexOf('=') + 1);
         System.out.println(expires_in);
-
-        String requestURL = "https://api.fitbit.com/1/user/-/profile.json";
-
+        try{
+            String requestURL = "https://api.fitbit.com/1/user/-/profile.json";
+            ApacheHttpTransport client = new ApacheHttpTransport();
+            HttpRequestFactory requestFactory = client.createRequestFactory();
+            HttpRequest getRequest = requestFactory.buildGetRequest(new GenericUrl(requestURL));
+            HttpHeaders httpHeaders = new HttpHeaders();
+            httpHeaders.setAuthorization(new String(token_type + " " + access_token));
+            getRequest.setHeaders(httpHeaders);
+            Fitbit.
+        }catch (IOException e){
+            System.err.println(e.toString());
+        }
 
 
     }
