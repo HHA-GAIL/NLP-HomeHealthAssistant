@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.brianmiller.brian_fitbit">
+          package="com.ebookfrenzy.brian_fitbit_21">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -23,7 +22,7 @@
                 <!-- note that the leading "/" is required for pathPrefix-->
                 <!-- Accepts URIs that begin with "example://gizmos” -->
                 <data android:scheme="test"
-                    android:host="fitbit" />
+                      android:host="fitbit" />
             </intent-filter>
 
         </activity>

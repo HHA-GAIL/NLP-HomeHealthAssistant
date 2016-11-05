@@ -1,4 +1,4 @@
-package com.example.brianmiller.brian_fitbit;
+package com.ebookfrenzy.brian_fitbit_21;
 
 /**
  * Created by brian.miller on 10/31/2016.

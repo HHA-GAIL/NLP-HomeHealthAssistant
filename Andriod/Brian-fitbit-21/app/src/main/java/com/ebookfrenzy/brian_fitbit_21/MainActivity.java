@@ -1,4 +1,4 @@
-package com.example.brianmiller.brian_fitbit;
+package com.ebookfrenzy.brian_fitbit_21;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -17,11 +17,18 @@ import com.google.api.client.http.HttpRequestFactory;
 import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.google.api.client.json.JsonParser;
+import com.google.api.client.json.JsonToken;
 import com.google.api.client.json.jackson2.JacksonFactory;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
+
     Button fitBitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void runFitBitInteractions(Uri fitBitResponse){
+
         System.out.println(fitBitResponse.toString());
         String access_token = fitBitResponse.toString().substring(fitBitResponse.toString().indexOf('=') + 1,fitBitResponse.toString().indexOf('&'));
         System.out.println(access_token);
@@ -75,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         String expires_in = fitbitCode.substring(fitbitCode.indexOf('=') + 1);
         System.out.println(expires_in);
         try{
-            String requestURL = "https://api.fitbit.com/1/user/-/profile.json";
+            String requestURL = "https://api.fitbit.com/1/user/" + user_id + "/activities/date/2016-11-05.json";
             ApacheHttpTransport client = new ApacheHttpTransport();
             HttpRequestFactory requestFactory = client.createRequestFactory();
             HttpRequest getRequest = requestFactory.buildGetRequest(new GenericUrl(requestURL));
@@ -83,11 +91,15 @@ public class MainActivity extends AppCompatActivity {
             httpHeaders.setAuthorization(new String(token_type + " " + access_token));
             getRequest.setHeaders(httpHeaders);
             HttpResponse response = getRequest.execute();
-            JacksonFactory jacksonFactory = new JacksonFactory();
-            JsonParser parser = jacksonFactory.createJsonParser(response.getContent());
-            String data = parser.parseAndClose(String.class);
-            System.out.println(data);
-        }catch (IOException e){
+            BufferedReader streamReader = new BufferedReader(new InputStreamReader(response.getContent(), "UTF-8"));
+            StringBuilder responseBuilder = new StringBuilder();
+            String inputString;
+            while ((inputString = streamReader.readLine()) != null){
+                responseBuilder.append(inputString);
+            }
+            JSONObject jsonObject = new JSONObject(responseBuilder.toString());
+            System.out.println("Steps: " + jsonObject.getJSONObject("summary").getString("steps"));
+            }catch (Exception e){
             System.err.println(e.toString());
         }
 
