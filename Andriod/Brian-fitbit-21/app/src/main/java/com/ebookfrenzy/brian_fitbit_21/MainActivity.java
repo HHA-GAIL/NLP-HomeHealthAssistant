@@ -26,6 +26,9 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -83,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
         String expires_in = fitbitCode.substring(fitbitCode.indexOf('=') + 1);
         System.out.println(expires_in);
         try{
-            String requestURL = "https://api.fitbit.com/1/user/" + user_id + "/activities/date/2016-11-05.json";
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DATE, 1);
+            Date now = cal.getTime();
+            SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyy-MM0-dd");
+            String formatedDate = yyyyMMdd.format(now);
+            String requestURL = "https://api.fitbit.com/1/user/" + user_id + "/activities/date"+formatedDate+".json";
             ApacheHttpTransport client = new ApacheHttpTransport();
             HttpRequestFactory requestFactory = client.createRequestFactory();
             HttpRequest getRequest = requestFactory.buildGetRequest(new GenericUrl(requestURL));
@@ -98,7 +106,10 @@ public class MainActivity extends AppCompatActivity {
                 responseBuilder.append(inputString);
             }
             JSONObject jsonObject = new JSONObject(responseBuilder.toString());
+            int steps = Integer.parseInt(jsonObject.getJSONObject("summary").getString("steps"));
+
             System.out.println("Steps: " + jsonObject.getJSONObject("summary").getString("steps"));
+            Toast.makeText(this,"You have walked " + jsonObject.getJSONObject("summary").getString("steps"),Toast.LENGTH_LONG).show();
             }catch (Exception e){
             System.err.println(e.toString());
         }

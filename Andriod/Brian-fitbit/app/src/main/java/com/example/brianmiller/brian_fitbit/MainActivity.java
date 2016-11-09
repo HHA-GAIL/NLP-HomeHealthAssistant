@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String url = "https://www.fitbit.com/oauth2/authorize?" +
                         "response_type=token" +
-                        "&client_id=" + Constants.ClientID +
+                        "&client_id=" + Constaints.CLINET_ID +
                         "&expires_in=2592000" +
                         "&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight" +
                         "&redirect_uri=test://fitbit";
