@@ -28,7 +28,7 @@ public class Activity {
         }catch (Exception e){
             System.out.println(e.toString());
         }
-        add = new Add(valueStrings(),)
+        //add = new Add(valueStrings(),);
 
     }
 
@@ -40,10 +40,7 @@ public class Activity {
         return values;
     }
 
-    private String[] collumnStrings(){
-        String[] collumnStrings = new String[3];
-        collumnStrings[]
-    }
+
 
 
 }
