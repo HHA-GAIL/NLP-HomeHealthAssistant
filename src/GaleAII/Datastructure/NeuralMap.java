@@ -10,17 +10,29 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- *
+ * This is the Neural Map data structure, the point of this structure is to
+ * act the way the human brain behaves. In this simplified version there are 
+ * clusters of related thoughts, with each thought living in a single node. 
+ * This class acts as the brain for Gail, and not to be tampered with without
+ * carefully examining other code as each change has profound effects on behavior.
  * @author Brian
  */
 public class NeuralMap {
 
     ArrayList<Cluster> clusters = new ArrayList<>();
-
+    /**
+     * default constructor for the data structure class, forces the build of a neural 
+     * map, this process is not yet thread safe.
+     */
     public NeuralMap() {
         buildNeuralMap();
     }
-
+    /**
+     * Reads the database and pulls each cluster result into the cluster
+     * constructor.
+     * 
+     * @see 
+     */
     private void buildNeuralMap() {
         try {
             Read read = new Read("Gale.Cluster");
