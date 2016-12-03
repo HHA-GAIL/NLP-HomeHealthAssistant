@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfig>
+    <classPaths>C:\Users\brian\Documents\NLP-HomeHealthAssistant\dist\lib\mysql-connector-java-5.1.23-bin.jar</classPaths>
+    <classPaths>C:\Users\brian\Documents\NLP-HomeHealthAssistant\dist\lib\lingpipe-4.1.0.jar</classPaths>
+    <importPaths>C:\Users\brian\Documents\NLP-HomeHealthAssistant\dist\HealthcareAIAssistant.jar</importPaths>
+</projectConfig>
