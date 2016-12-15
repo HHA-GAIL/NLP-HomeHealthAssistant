@@ -10,7 +10,7 @@ package com.ebookfrenzy.brian_fitbit_21.ProgramData;
  * @author Brian
  */
 public interface DatabaseInfo {
-    public final String HOST_NAME = "ec2-54-200-12-7.us-west-2.compute.amazonaws.com";
+    public final String HOST_NAME = "ec2-54-200-12-7.us-west-2.compute.amazonaws.com:3306";
     public final String URL = "jdbc:mysql://"+HOST_NAME+"/dbo?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false";
     public final String USER = "research";
     public final String PASSWORD = "Gail01";

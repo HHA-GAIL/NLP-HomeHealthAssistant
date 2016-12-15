@@ -11,15 +11,14 @@ import java.util.Date;
  */
 
 public class Activity {
+
     private Read read;
     private Add add;
 
-    private int id;
-    private Date date;
+    private String date;
     private int Steps;
 
-    public Activity(int id, Date date, int steps) {
-        this.id = id;
+    public Activity(String date, int steps) {
         this.date = date;
         Steps = steps;
         read = new Read("fitBitActivity");
@@ -33,11 +32,24 @@ public class Activity {
     }
 
     private String[] valueStrings(){
-        String[] values = new String[3];
-        values[0] = String.valueOf(id);
-        values[1] = date.toString();
-        values[2] = String.valueOf(Steps);
+        String[] values = new String[2];
+        values[0] = date.toString();
+        values[1] = String.valueOf(Steps);
         return values;
+    }
+
+    private String[] columnStrings(){
+        String[] columns = new String[2];
+        columns[0] = "Date";
+        columns[1] = "Steps";
+        return columns;
+    }
+
+    public void Add() throws Exception{
+        add = new Add(valueStrings(),columnStrings());
+        read = new Read("fitBitActivity");
+        read.createConnection();
+        add.perform(read.selectAll());
     }
 
 

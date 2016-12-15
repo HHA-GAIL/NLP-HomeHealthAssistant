@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
+import com.ebookfrenzy.brian_fitbit_21.Fitbit.Activity;
+import com.ebookfrenzy.brian_fitbit_21.Fitbit.link;
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpHeaders;
 import com.google.api.client.http.HttpRequest;
@@ -89,9 +91,9 @@ public class MainActivity extends AppCompatActivity {
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, 1);
             Date now = cal.getTime();
-            SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyy-MM0-dd");
+            SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyy-MM-dd");
             String formatedDate = yyyyMMdd.format(now);
-            String requestURL = "https://api.fitbit.com/1/user/" + user_id + "/activities/date"+formatedDate+".json";
+            String requestURL = "https://api.fitbit.com/1/user/" + user_id + "/activities/date/"+formatedDate+".json";
             ApacheHttpTransport client = new ApacheHttpTransport();
             HttpRequestFactory requestFactory = client.createRequestFactory();
             HttpRequest getRequest = requestFactory.buildGetRequest(new GenericUrl(requestURL));
@@ -107,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
             }
             JSONObject jsonObject = new JSONObject(responseBuilder.toString());
             int steps = Integer.parseInt(jsonObject.getJSONObject("summary").getString("steps"));
-
+            Activity activity = new Activity(formatedDate, steps);
+            link Link = new link();
+            Link.execute(activity);
             System.out.println("Steps: " + jsonObject.getJSONObject("summary").getString("steps"));
             Toast.makeText(this,"You have walked " + jsonObject.getJSONObject("summary").getString("steps"),Toast.LENGTH_LONG).show();
             }catch (Exception e){

@@ -51,9 +51,10 @@ public abstract class Utilities implements DatabaseInfo {
      *
      * @throws SQLException
      */
-    public void createConnection() throws SQLException {
+    public void createConnection() throws Exception {
         if (this.connection == null) {
             try {
+                Class.forName("com.mysql.jdbc.Driver");
                 connection = DriverManager.getConnection(URL, USER, PASSWORD);
             } catch (Exception e) {
                 throw e;
