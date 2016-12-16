@@ -35,13 +35,14 @@ public class NeuralMap {
      */
     private void buildNeuralMap() {
         try {
-            Read read = new Read("Gale.Cluster");
+            Read read = new Read("gale.cluster");
             read.createConnection();
             ResultSet rs = read.selectAll();
             while (rs.next()) {
                 clusters.add(new Cluster(rs));
             }
         } catch (Exception e) {
+            
         }
     }
 

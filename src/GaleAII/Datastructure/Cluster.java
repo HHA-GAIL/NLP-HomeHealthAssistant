@@ -46,7 +46,7 @@ public class Cluster {
      */
     private void buildCluster() {
         try {
-            Read read = new Read("gale.Node");
+            Read read = new Read("gale.node");
             read.createConnection();
             ResultSet rs = read.selectWhere("clusterID", String.valueOf(this.clusterID));
             while (rs.next()) {
