@@ -30,8 +30,12 @@ public class FamilyInterview extends Interview {
 
     private Byte convertNodeAnswer() {
         byte liveWith;
-
-        switch (nodeAnswer) {
+        /**
+         * Author: Fan Hu
+         * Add the toUpperCase, to make sure that if user input "yes" can get the right result
+         * Date: 2/12/2017
+         */
+        switch (nodeAnswer.toUpperCase()) {
             case "YES":
                 liveWith = 1;
                 break;

@@ -29,7 +29,15 @@ public class Core extends Reactive {
     @Override
     public void runEvent(int eventID) {
         currentDecision = cluster.getDecisionFromAnswer(decesionAnswer);
-        runDecision(currentDecision.getEventCode());
+        /**
+         * should add a judgment to avoid the NULL pointer
+         */
+//        if(currentDecision!=null){
+             runDecision(currentDecision.getEventCode());
+//        }else{
+//            System.out.println("No Result");
+//        }
+       
     }
 
     @Override
@@ -54,5 +62,4 @@ public class Core extends Reactive {
     public void run() {
         runCurrentNode();
     }
-
 }
