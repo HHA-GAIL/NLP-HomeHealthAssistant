@@ -195,8 +195,6 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     private void startGaleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGaleMenuItemActionPerformed
 
        Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
-
-
         /**
          * author: Fan Hu
          * Handle the nullpointer in the thread
@@ -211,6 +209,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
             }
         });
         coreThread.start();
+
     }//GEN-LAST:event_startGaleMenuItemActionPerformed
     public final void populateHistory() {
         try {

@@ -11,7 +11,11 @@ package ProgramData;
  */
 public interface DatabaseInfo {
 
+
     //    public final String HOST_NAME = "ec2-54-200-12-7.us-west-2.compute.amazonaws.com";
+
+//    public final String HOST_NAME = "ec2-54-200-12-7.us-west-2.compute.amazonaws.com";
+
 
 //    public final String HOST_NAME = "ec2-54-200-12-7.us-west-2.compute.amazonaws.com";
 
