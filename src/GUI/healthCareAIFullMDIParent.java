@@ -193,8 +193,24 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     }//GEN-LAST:event_illnessMenuItemActionPerformed
 
     private void startGaleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGaleMenuItemActionPerformed
-        Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
-        new Thread(coreEvent).start();
+
+       Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
+
+
+        /**
+         * author: Fan Hu
+         * Handle the nullpointer in the thread
+         * Date: 2/12/2017
+         */    
+        Thread coreThread=new Thread(coreEvent);
+        coreThread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread t, Throwable e) {
+                    JOptionPane.showMessageDialog(null, "Please check and input again", "Wrong Input", JOptionPane.ERROR_MESSAGE);
+                    System.out.println("catch exception");
+            }
+        });
+        coreThread.start();
     }//GEN-LAST:event_startGaleMenuItemActionPerformed
     public final void populateHistory() {
         try {

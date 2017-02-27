@@ -31,47 +31,50 @@ public abstract class Reactive implements Runnable{
     }
     
     public void runCurrentNode(){
-        String listeningType = currentNode.getListeningFor();
-        Sentence userResponse = gale.getListen().convertStringToSentence(
+       String listeningType = currentNode.getListeningFor();
+       Sentence userResponse = gale.getListen().convertStringToSentence(
                 (gale.askQuestion(currentNode.getQuestion())));
-        switch (listeningType){
+       /**
+         * Author: Fan Hu
+         * add toUpperCase to ignore the spelling mistake
+         */
+        switch (listeningType) {
             case "BINARY":
-                if (userResponse.getFullSentence().equals("Yes")) {
+                if (userResponse.getFullSentence().toUpperCase().equals("YES")) {
                     nodeAnswer = "YES";
                     decesionAnswer = "YES";
-                }else{
+                } else {
                     nodeAnswer = "NO";
                     decesionAnswer = "NO";
                 }
                 break;
             case "BOOLEAN":
-                if (userResponse.getFullSentence().equals("Yes")) {
+                if (userResponse.getFullSentence().toUpperCase().equals("YES")) {
                     nodeAnswer = "YES";
                     decesionAnswer = "FOUND";
-                }else{
+                } else {
                     nodeAnswer = "NO";
                     decesionAnswer = "FOUND";
                 }
                 break;
             case "ANSWER":
+                nodeAnswer="";
                 nodeAnswer = userResponse.getFullSentence();
                 decesionAnswer = userResponse.getFullSentence();
                 break;
             default:
                 try {
-                  nodeAnswer = userResponse.mentions(listeningType).get(0);  
+                    nodeAnswer = userResponse.mentions(listeningType).get(0);
                 } catch (Exception e) {
-                }                
+                }
                 found = (nodeAnswer != null);
                 if (found) {
                     decesionAnswer = "FOUND";
-                }else{
+                } else {
                     runCurrentNode();
                 }
                 break;
-                }
-                
-        
+        }
         runEvent(currentNode.getEvent());
     }
     

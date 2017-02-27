@@ -87,12 +87,18 @@ public class Cluster {
     public Decision getDecisionFromAnswer(String Answer){
         Decision correctDecision = null;
         for (Decision decision : currentNode.getDecisions()) {
-            if (Answer.equals(decision.getAnswer())) {
+            /**
+             * Author： Fan Hu
+             * Date: 2/12/2017
+             * Function: Ignore all the spelling mistakes about upper and lower character
+             */
+            if (Answer.toUpperCase().equals(decision.getAnswer().toUpperCase())) {
                 correctDecision = decision;
             }
         }
         return correctDecision;
-    }
+}
+
     
     
     
