@@ -15,7 +15,7 @@ import collections.History;
  * @author Brian Miller
  */
 public class FamilyInterview extends Interview {
-
+    boolean flag=false;
     Family newFamily;
 
     private static int FAMILY_CLUSTER_ROOT_NODEID = 2;
@@ -31,9 +31,9 @@ public class FamilyInterview extends Interview {
     private Byte convertNodeAnswer() {
         byte liveWith;
         /**
-         * Author: Fan Hu
-         * Add the toUpperCase, to make sure that if user input "yes" can get the right result
-         * Date: 2/12/2017
+         * @author: Fan Hu
+         * @function Add the toUpperCase, to make sure that if user input "yes" can get the right result
+         * @date: 2/12/2017
          */
         switch (nodeAnswer.toUpperCase()) {
             case "YES":
@@ -178,7 +178,15 @@ public class FamilyInterview extends Interview {
     }
 
     private void dEvent13() {
-        writeFamily();
+        /**
+         * @author Fan Hu
+         * @function Make sure that the store function will be only called once
+         * @date 03/04/2017
+         */
+        if(!flag){
+            writeFamily();
+            flag=true;
+        }
     }
 
     private void writeFamily() {

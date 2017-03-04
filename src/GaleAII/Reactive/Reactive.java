@@ -9,7 +9,7 @@ import GaleAII.Datastructure.Cluster;
 import GaleAII.Datastructure.Decision;
 import GaleAII.Datastructure.Node;
 import GaleAII.Language.Sentence;
-
+import javax.swing.*;
 /**
  *
  * @author Brian Miller
@@ -64,13 +64,20 @@ public abstract class Reactive implements Runnable{
                 break;
             default:
                 try {
-                    nodeAnswer = userResponse.mentions(listeningType).get(0);
-                } catch (Exception e) {
-                }
-                found = (nodeAnswer != null);
-                if (found) {
-                    decesionAnswer = "FOUND";
-                } else {
+                    nodeAnswer = userResponse.mentions(listeningType).get(0);                
+                    found = (nodeAnswer != null);
+                    if (found) {
+                        decesionAnswer = "FOUND";
+                    } else {
+                        runCurrentNode();
+                    }                  
+                } catch (IndexOutOfBoundsException e) {
+                    /**
+                     * @author Fan Hu
+                     * @function Give some prompt for the wrong input
+                     * @date 03/04/2017
+                     */
+                    JOptionPane.showMessageDialog(null, "Please check the information and input again", "Information Error", JOptionPane.ERROR_MESSAGE);
                     runCurrentNode();
                 }
                 break;
