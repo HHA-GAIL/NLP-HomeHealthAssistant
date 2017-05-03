@@ -1,7 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+This is the interface class for all display classes which are used in building
+a health history database. The display classes allow for validation of incoming
+data according to the regex provided by upstream code.
+
+Note--
+
+Currently not fully implimented 
  */
 package Display;
 
@@ -14,12 +18,12 @@ import java.util.regex.*;
 public interface Display {
     
     /**
-     *
-     * @param regex
-     * @param toVerify
-     * @param errorMessage
-     * @return
-     * @throws Exception
+     * General method to provide validation
+     * @param regex Regular expression used in validation.
+     * @param toVerify the string to be validated
+     * @param errorMessage custom error message to be displayed
+     * @return True if validation successful
+     * @throws Exception returns on invalid validation, returns custom error message
      */
     static public boolean validate(String regex, String toVerify, String errorMessage) throws Exception{
         try {

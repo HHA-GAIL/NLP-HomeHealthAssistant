@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Multi-file class diagram">
   <ClassDiagramComponents>
-    <Class name="ExactDictionary" package="GaleAII.Language" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="ExactDictionary" package="GaleAII.Language" visibility="public" xPosition="17.0" yPosition="9.0">
       <Fields>
         <Field name="CHUNK_SCORE" type="double" visibility="package" isStatic="true" isFinal="true"/>
         <Field name="dictionaryType" type="String" visibility="package"/>
@@ -26,7 +26,7 @@
         <Method name="getDictionary" returnType="MapDictionary&lt;String&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Phrase" package="GaleAII.Language" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Phrase" package="GaleAII.Language" visibility="public" xPosition="17.0" yPosition="559.0">
       <Fields>
         <Field name="wordsInPhrase" type="String" visibility="private"/>
         <Field name="tag" type="String" visibility="private"/>
@@ -42,7 +42,7 @@
         <Method name="getTag" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Sentence" package="GaleAII.Language" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Sentence" package="GaleAII.Language" visibility="public" xPosition="351.0" yPosition="483.0">
       <Fields>
         <Field name="words" type="ArrayList&lt;Word&gt;" visibility="package"/>
         <Field name="fullSentence" type="String" visibility="package"/>
@@ -67,7 +67,7 @@
         <Method name="getWords" returnType="ArrayList&lt;Word&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Word" package="GaleAII.Language" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="Word" package="GaleAII.Language" visibility="public" xPosition="811.0" yPosition="426.0">
       <Fields>
         <Field name="word" type="String" visibility="private"/>
         <Field name="tags" type="ArrayList&lt;String&gt;" visibility="private"/>
@@ -99,7 +99,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Listen" package="GaleAII.Core" visibility="public" xPosition="1220.0" yPosition="20.0">
+    <Class name="Listen" package="GaleAII.Core" visibility="public" xPosition="805.0" yPosition="9.0">
       <Fields>
         <Field name="dictionaries" type="ArrayList&lt;ExactDictionary&gt;" visibility="package"/>
         <Field name="nerModelChunker" type="Chunker" visibility="package"/>
@@ -145,11 +145,11 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <UseRelation source="GaleAII.Language.Sentence" target="GaleAII.Language.Word" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GaleAII.Core.Listen" target="GaleAII.Language.Word" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GaleAII.Language.Sentence" target="GaleAII.Language.Phrase" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="dictionaries" source="GaleAII.Core.Listen" target="GaleAII.Language.ExactDictionary" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;ExactDictionary&gt;"/>
     <HasRelation name="words" source="GaleAII.Language.Sentence" target="GaleAII.Language.Word" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Word&gt;"/>
-    <UseRelation source="GaleAII.Core.Listen" target="GaleAII.Language.Word" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="GaleAII.Core.Listen" target="GaleAII.Language.Sentence" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="GaleAII.Language.Sentence" target="GaleAII.Language.Phrase" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="phrases" source="GaleAII.Language.Sentence" target="GaleAII.Language.Phrase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Phrase&gt;"/>
+    <UseRelation source="GaleAII.Core.Listen" target="GaleAII.Language.Sentence" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

@@ -10,6 +10,7 @@ import collections.History;
 import java.text.ParseException;
 import GaleAII.Gale;
 import GaleAII.Reactive.Core;
+import GaleAII.Reactive.FamilyInterview;
 import javax.swing.*;
 
 /**
@@ -63,6 +64,28 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     private void initComponents() {
 
         desktopPane = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        GenHistoryInterviewButton = new javax.swing.JButton();
+        NutritionInterviewButton = new javax.swing.JButton();
+        MentalHealthInterviewButton = new javax.swing.JButton();
+        SleepInterviewButton = new javax.swing.JButton();
+        ExerciseInterviewButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        NutritionalAdviceButton = new javax.swing.JButton();
+        SleepAdviceButton = new javax.swing.JButton();
+        ExerciseAdviceButton = new javax.swing.JButton();
+        MentalHealthAdviceButton = new javax.swing.JButton();
+        MedicalIssuesAdviceButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        GenMedicalHistoryButton = new javax.swing.JButton();
+        VitalSignsButton = new javax.swing.JButton();
+        FitbitVitalsButton = new javax.swing.JButton();
+        FitbitVitalsButton1 = new javax.swing.JButton();
+        FitbitVitalsButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         historyMenu = new javax.swing.JMenu();
@@ -81,6 +104,187 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+
+        desktopPane.setBackground(new java.awt.Color(128, 128, 128));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("GALE: Intelligent Health Monitor and Advisor");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel1.setName(""); // NOI18N
+        desktopPane.add(jLabel1);
+        jLabel1.setBounds(20, 30, 1240, 40);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        GenHistoryInterviewButton.setText("General History");
+        GenHistoryInterviewButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenHistoryInterviewButtonActionPerformed(evt);
+            }
+        });
+
+        NutritionInterviewButton.setText("Nutritional Information");
+
+        MentalHealthInterviewButton.setText("Mental Health");
+
+        SleepInterviewButton.setText("Sleep Patterns");
+
+        ExerciseInterviewButton.setText("Exercise");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GenHistoryInterviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(NutritionInterviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MentalHealthInterviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SleepInterviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ExerciseInterviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(GenHistoryInterviewButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(NutritionInterviewButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MentalHealthInterviewButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SleepInterviewButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ExerciseInterviewButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(jPanel1);
+        jPanel1.setBounds(240, 150, 170, 180);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Advisory Information");
+        desktopPane.add(jLabel2);
+        jLabel2.setBounds(910, 140, 170, 20);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+
+        NutritionalAdviceButton.setText("Nutritional Advice");
+
+        SleepAdviceButton.setText("Sleep Advice");
+
+        ExerciseAdviceButton.setText("Exercise Advice");
+
+        MentalHealthAdviceButton.setText("Mental Health Advice");
+
+        MedicalIssuesAdviceButton.setText("Medical Issues Advice");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NutritionalAdviceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SleepAdviceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ExerciseAdviceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MentalHealthAdviceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MedicalIssuesAdviceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NutritionalAdviceButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SleepAdviceButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ExerciseAdviceButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MentalHealthAdviceButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MedicalIssuesAdviceButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(jPanel2);
+        jPanel2.setBounds(910, 160, 157, 180);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Medical Interviews");
+        desktopPane.add(jLabel3);
+        jLabel3.setBounds(240, 130, 170, 20);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Medical History");
+        desktopPane.add(jLabel4);
+        jLabel4.setBounds(570, 130, 170, 20);
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+
+        GenMedicalHistoryButton.setText("General Medical");
+        GenMedicalHistoryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenMedicalHistoryButtonActionPerformed(evt);
+            }
+        });
+
+        VitalSignsButton.setText("Vital Signs");
+
+        FitbitVitalsButton.setText("FitBit Vitals");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GenMedicalHistoryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(VitalSignsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FitbitVitalsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(GenMedicalHistoryButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(VitalSignsButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FitbitVitalsButton)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(jPanel3);
+        jPanel3.setBounds(570, 150, 170, 120);
+
+        FitbitVitalsButton1.setText("Gale Transcript");
+        FitbitVitalsButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FitbitVitalsButton1ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(FitbitVitalsButton1);
+        FitbitVitalsButton1.setBounds(590, 80, 120, 23);
+
+        FitbitVitalsButton2.setText("Continuous Interactive Mode");
+        FitbitVitalsButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FitbitVitalsButton2ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(FitbitVitalsButton2);
+        FitbitVitalsButton2.setBounds(540, 310, 230, 40);
 
         fileMenu.setText("File");
         jMenuBar1.add(fileMenu);
@@ -152,12 +356,17 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1001, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1260, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
         );
+
+        desktopPane.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -193,9 +402,45 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     }//GEN-LAST:event_illnessMenuItemActionPerformed
 
     private void startGaleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGaleMenuItemActionPerformed
-        Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
-        new Thread(coreEvent).start();
+      Core coreEvent = new Core(gale.getClusterByName("Root"), gale, history);
+        /**
+         * author: Fan Hu
+         * Handle the nullpointer in the thread
+         * Date: 2/12/2017
+         */    
+        Thread coreThread=new Thread(coreEvent);
+        coreThread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread t, Throwable e) {
+                    JOptionPane.showMessageDialog(null, "Please check and input again", "Wrong Input", JOptionPane.ERROR_MESSAGE);
+                    System.out.println("catch exception");
+            }
+        });
+        coreThread.start();
     }//GEN-LAST:event_startGaleMenuItemActionPerformed
+        
+    private void GenHistoryInterviewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenHistoryInterviewButtonActionPerformed
+        FamilyInterview familyInterview
+                = new FamilyInterview(gale.getClusterByName("Family Interview"),
+                        gale, history);
+        Thread familyInterviewThread = new Thread(familyInterview);
+        familyInterviewThread.start();
+    }//GEN-LAST:event_GenHistoryInterviewButtonActionPerformed
+
+    private void GenMedicalHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenMedicalHistoryButtonActionPerformed
+        GUI.History.GeneralFull generalFull = new GUI.History.GeneralFull(history);
+        Helper.addInternalFrame(desktopPane, generalFull);
+    }//GEN-LAST:event_GenMedicalHistoryButtonActionPerformed
+
+    private void FitbitVitalsButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
+    
+    private void FitbitVitalsButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
     public final void populateHistory() {
         try {
             currentPatient = patient.getGeneralInformation();
@@ -268,6 +513,21 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton ExerciseAdviceButton;
+    public javax.swing.JButton ExerciseInterviewButton;
+    public javax.swing.JButton FitbitVitalsButton;
+    public javax.swing.JButton FitbitVitalsButton1;
+    public javax.swing.JButton FitbitVitalsButton2;
+    public javax.swing.JButton GenHistoryInterviewButton;
+    public javax.swing.JButton GenMedicalHistoryButton;
+    public javax.swing.JButton MedicalIssuesAdviceButton;
+    public javax.swing.JButton MentalHealthAdviceButton;
+    public javax.swing.JButton MentalHealthInterviewButton;
+    public javax.swing.JButton NutritionInterviewButton;
+    public javax.swing.JButton NutritionalAdviceButton;
+    public javax.swing.JButton SleepAdviceButton;
+    public javax.swing.JButton SleepInterviewButton;
+    public javax.swing.JButton VitalSignsButton;
     public javax.swing.JDesktopPane desktopPane;
     public javax.swing.JMenu fileMenu;
     public javax.swing.JMenuItem generalMenuItem;
@@ -275,8 +535,15 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     public javax.swing.JMenu historyMenu;
     public javax.swing.JMenuItem illnessMenuItem;
     public javax.swing.JMenuItem immunizationMenuItem;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
     public javax.swing.JMenu jMenu1;
     public javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
     public javax.swing.JMenuItem occupationsMenuItem;
     public javax.swing.JMenuItem startGaleMenuItem;
     // End of variables declaration//GEN-END:variables

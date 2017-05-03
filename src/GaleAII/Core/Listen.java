@@ -5,26 +5,19 @@
  */
 package GaleAII.Core;
 
-import com.aliasi.dict.MapDictionary;
-import java.awt.Frame;
+
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import com.aliasi.chunk.Chunk;
 import com.aliasi.chunk.Chunker;
 import com.aliasi.chunk.Chunking;
-import com.aliasi.dict.DictionaryEntry;
-import com.aliasi.dict.MapDictionary;
-import com.aliasi.dict.TrieDictionary;
-import com.aliasi.dict.Dictionary;
 import com.aliasi.dict.ExactDictionaryChunker;
 import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory;
 import com.aliasi.util.AbstractExternalizable;
 import java.io.File;
 import GaleAII.Language.*;
-import GaleAII.Core.Speak;
 
 /**
- *
+ * The listen class is used to break strings into meaningful objects.
  * @author Brian Miller
  */
 public class Listen {
@@ -32,7 +25,12 @@ public class Listen {
     ArrayList<ExactDictionary> dictionaries = new ArrayList<>();
     Chunker nerModelChunker;
     Speak speak;
-
+    /**
+     * Default constructor for the listen class. Fills dictionaries and populates
+     * the NER libary (chunker)  
+     * @param speak
+     * @throws Exception 
+     */
     public Listen(Speak speak) throws Exception {
         fillDictionaries();
         populateNerChunker();
@@ -81,24 +79,38 @@ public class Listen {
         tagSentence(newSentence);        
         return newSentence;     
     }
-    
+    /**
+     * private method that loops through each word and tags it according to the
+     * loaded listener class.
+     * @param sentenceToTag 
+     */
     private void tagSentence(Sentence sentenceToTag) {
         tagPhrases(sentenceToTag);
         for (Word word : sentenceToTag.getWords()) {
             tagWord(word);
         }
     }
-
+    /**
+     * For now this method just returns the tag from the exact dictionary 
+     * chunker, eventually it will use all the available chunkers to process words.
+     * @param wordToTag 
+     */
     private void tagWord(Word wordToTag) {
         tagWordsExactDictionary(wordToTag);
         tagWordsFirstBestNamedEntity(wordToTag);
     }
-
+    /**
+     * Tag phrases with available chunkers. A phrase is a grouping of words.
+     * @param sentenceToTag 
+     */
     private void tagPhrases(Sentence sentenceToTag) {
         tagPhraseExactDictionary(sentenceToTag);
         tagPhraseFirstBestNamedEntity(sentenceToTag);
     }
-
+    /**
+     * Uses the exact dictionary chunker to tag words words with meaning.
+     * @param word 
+     */
     private void tagWordsExactDictionary(Word word) {
         for (ExactDictionary exactDictionary : dictionaries) {
             ExactDictionaryChunker dictionaryChunker
@@ -113,7 +125,10 @@ public class Listen {
             }
         }
     }
-
+    /**
+     * Uses the NER model for chunking, matches a word to best fit tag
+     * @param word 
+     */
     private void tagWordsFirstBestNamedEntity(Word word) {
         Chunking chunking = nerModelChunker.chunk(word.getWord());
         for (Chunk chunk : chunking.chunkSet()) {
@@ -123,7 +138,10 @@ public class Listen {
             }
         }
     }
-
+    /**
+     * Tags a group of words into a phrase that match an exact dictionary entry
+     * @param sentence 
+     */
     private void tagPhraseExactDictionary(Sentence sentence) {
         for (ExactDictionary exactDictionary : dictionaries) {
             ExactDictionaryChunker dictionaryChunker
@@ -140,7 +158,10 @@ public class Listen {
             }
         }
     }
-
+    /**
+     * Tags groups of words into phrases using the NER chunker.
+     * @param sentence 
+     */
     private void tagPhraseFirstBestNamedEntity(Sentence sentence) {
         try {
             Chunking chunking = nerModelChunker.chunk(sentence.getFullSentence());
@@ -155,7 +176,11 @@ public class Listen {
         } catch (Exception e) {
         }
     }
-    
+    /**
+     * Splits a sentence into words.
+     * @param testedString
+     * @return 
+     */
     private int getWordsInString(String testedString) {
         int words = 0;
         String[] wordsInTestedString = testedString.split("\\W+");
