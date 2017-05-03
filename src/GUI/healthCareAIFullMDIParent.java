@@ -432,6 +432,15 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         Helper.addInternalFrame(desktopPane, generalFull);
     }//GEN-LAST:event_GenMedicalHistoryButtonActionPerformed
 
+    private void FitbitVitalsButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
+    
+    private void FitbitVitalsButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
     public final void populateHistory() {
         try {
             currentPatient = patient.getGeneralInformation();
