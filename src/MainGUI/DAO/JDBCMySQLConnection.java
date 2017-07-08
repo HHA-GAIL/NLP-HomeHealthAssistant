@@ -9,11 +9,9 @@ import java.sql.Statement;
 public class JDBCMySQLConnection {
 
     //static reference to itself
-    public static final String URL = "jdbc:mysql://localhost:3306/cnit350_database?useSSL=true";
-//    public static final String URL = "jdbc:mysql://localhost:3306/table_form?useSSL=true";
-    public static final String USER = "root";
-    public static final String PASSWORD = "960617";
-//    public static final String PASSWORD = "123";
+    public static final String URL = "jdbc:mysql://ec2-54-200-12-7.us-west-2.compute.amazonaws.com:3306/dbo?useSSL=true";
+    public static final String USER = "research";
+    public static final String PASSWORD = "Gail01";
     public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
 
     private static Connection createConnection() {
