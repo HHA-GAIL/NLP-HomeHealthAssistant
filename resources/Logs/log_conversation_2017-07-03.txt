@@ -1,0 +1,24 @@
+What is your family members name?
+Tom Bob
+
+What is your relation to them?
+Dad
+
+What is your relation to them?
+Father
+
+Do they have any major disorders?
+no
+
+Do they have any minor disorders?
+no
+
+Do they live with you?
+no
+
+Are they Alive?
+yes
+
+Would you like to add another family member?
+no
+

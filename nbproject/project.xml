@@ -14,7 +14,10 @@
         </data>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1"/>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Chu</word>
+            <word>Hu</word>
             <word>Ling</word>
+            <word>Zhiwei</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

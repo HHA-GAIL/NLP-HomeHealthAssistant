@@ -46,7 +46,7 @@ public class Cluster {
      */
     private void buildCluster() {
         try {
-            Read read = new Read("gale.Node");
+            Read read = new Read("gale.node");
             read.createConnection();
             ResultSet rs = read.selectWhere("clusterID", String.valueOf(this.clusterID));
             while (rs.next()) {
@@ -87,12 +87,18 @@ public class Cluster {
     public Decision getDecisionFromAnswer(String Answer){
         Decision correctDecision = null;
         for (Decision decision : currentNode.getDecisions()) {
-            if (Answer.equals(decision.getAnswer())) {
+            /**
+             * Author： Fan Hu
+             * Date: 2/12/2017
+             * Function: Ignore all the spelling mistakes about upper and lower character
+             */
+            if (Answer.toUpperCase().equals(decision.getAnswer().toUpperCase())) {
                 correctDecision = decision;
             }
         }
         return correctDecision;
-    }
+}
+
     
     
     

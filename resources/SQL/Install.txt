@@ -1,0 +1,9 @@
+Open mysql workbench
+Create new connection
+url pattern is username@hostname:port
+username is research
+hostname is ec2-54-200-12-7.us-west-2.compute.amazonaws.com
+port is 3306
+password is Gail01
+
+there are no IP constrictions on the database firewall
