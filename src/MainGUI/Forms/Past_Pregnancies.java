@@ -32,7 +32,7 @@ public final class Past_Pregnancies extends javax.swing.JInternalFrame {
     Format Formatter = new SimpleDateFormat("yyyy-mm-dd");
 
     public void populateTabPastPregnancies(MainGUI.Classes.PastPregnancies pastPreg) {
-        Preg_Date.setText(pastPreg.getPregnancyDate().toString());
+       Preg_Date.setText(pastPreg.getPregnancyDate().toString());
         LoL.setText(pastPreg.getLengthOfLabor());
         Sex.setText(pastPreg.getSex());
         ToD.setText(pastPreg.getTypeOfDelivery());
@@ -53,10 +53,10 @@ public final class Past_Pregnancies extends javax.swing.JInternalFrame {
         BCP_Yes.setText(Byte.toString(pastPreg.getOnBCPAtConceptionYes()));
         BCP_No.setText(Byte.toString(pastPreg.getOnBCPAtConceptionNo()));
         Current.setText(Byte.toString(pastPreg.getCurrent()));
-        LMP.setText(Formatter.format(pastPreg.getLMP()));
-        EDD.setText(Formatter.format(pastPreg.getEDD()));
+        LMP.setText((pastPreg.getLMP().toString()));
+        EDD.setText((pastPreg.getEDD().toString()));
         Date_Stamp.setText((pastPreg.getDateStamp().toString()));
-        EGA_Cal.setText(Formatter.format(pastPreg.getEGACalculationDate()));
+        EGA_Cal.setText((pastPreg.getEGACalculationDate().toString()));
     }
 
     public MainGUI.Classes.PastPregnancies formToPastPregnancies() {
