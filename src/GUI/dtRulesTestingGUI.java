@@ -195,7 +195,8 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
                     edu.dhu.DTRules.DTRulesPatientDev.BasePath , 
                     edu.dhu.DTRules.DTRulesPatientDev.ConfigFileFileName, 
-                    edu.dhu.DTRules.DTRulesPatientDev.RuleName_PatientDemo);
+                    edu.dhu.DTRules.DTRulesPatientDev.RuleName_PatientDemo,
+                    edu.dhu.DTRules.DTRulesPatientDev.EntryTable);
             WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName());
             for(edu.dhu.DTRules.entities.Result result : results){
                 WriteTA(TA_Results, "\n"+result.getResultCode()+"--->"+result.getResultMessage());
