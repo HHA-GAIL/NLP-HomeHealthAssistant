@@ -90,6 +90,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         showHistoryButton = new javax.swing.JButton();
         FitbitVitalsButton3 = new javax.swing.JButton();
         showHistoryButton1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         historyMenu = new javax.swing.JMenu();
@@ -218,7 +219,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         );
 
         desktopPane.add(jPanel2);
-        jPanel2.setBounds(910, 160, 168, 210);
+        jPanel2.setBounds(910, 160, 229, 210);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -279,7 +280,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
             }
         });
         desktopPane.add(FitbitVitalsButton1);
-        FitbitVitalsButton1.setBounds(590, 80, 120, 34);
+        FitbitVitalsButton1.setBounds(590, 80, 120, 27);
 
         showHistoryButton.setText("Medical Access");
         showHistoryButton.setName(""); // NOI18N
@@ -310,6 +311,15 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         });
         desktopPane.add(showHistoryButton1);
         showHistoryButton1.setBounds(540, 370, 230, 40);
+
+        jButton1.setText("DTRules_Testing");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(jButton1);
+        jButton1.setBounds(540, 500, 230, 40);
 
         fileMenu.setText("File");
         jMenuBar1.add(fileMenu);
@@ -467,6 +477,12 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
         mg.setVisible(true);
     }//GEN-LAST:event_showMedicalAccess
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        dtRulesTestingGUI dtr = new dtRulesTestingGUI();
+        dtr.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void FitbitVitalsButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
@@ -564,6 +580,7 @@ public class healthCareAIFullMDIParent extends javax.swing.JFrame {
     public javax.swing.JMenu historyMenu;
     public javax.swing.JMenuItem illnessMenuItem;
     public javax.swing.JMenuItem immunizationMenuItem;
+    public javax.swing.JButton jButton1;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;

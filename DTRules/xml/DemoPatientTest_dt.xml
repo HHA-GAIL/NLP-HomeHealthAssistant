@@ -1,0 +1,1277 @@
+<decision_tables>
+<decision_table>
+<table_name>Test_Patient</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS>the decision table is used to test the rule engine</COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>local int BMILength = the length of bMI_Devs</context_description>
+<context_postfix>
+bMI_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details></contexts>
+<initial_actions>
+<initial_action_details>
+<intial_action_number>1</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort bMI_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+bMI_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>2</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort floors_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+floors_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>3</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort hR_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+hR_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>4</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort sleep_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+sleep_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>5</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort steps_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+steps_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>6</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>sort weight_Devs in descending order by $dateTime</initial_action_description>
+<initial_action_postfix>
+weight_Devs /dateTime false sortentities 
+</initial_action_postfix></initial_action_details>
+<initial_action_details>
+<intial_action_number>7</intial_action_number>
+<initial_action_comment></initial_action_comment>
+<initial_action_requirement></initial_action_requirement>
+<initial_action_description>set caltemp = 0</initial_action_description>
+<initial_action_postfix>
+0  cvr /caltemp xdef  
+</initial_action_postfix></initial_action_details></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>gender == &quot;female&quot;</condition_description>
+<condition_postfix>
+gender &quot;female&quot; streq 
+</condition_postfix>
+<condition_column column_value="Y" column_number="2"></condition_column></condition_details>
+<condition_details>
+<condition_number>2</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>gender == &quot;male&quot;</condition_description>
+<condition_postfix>
+gender &quot;male&quot; streq 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details>
+<condition_details>
+<condition_number>3</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>BMILength &gt; 0</condition_description>
+<condition_postfix>
+0 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column>
+<condition_column column_value="Y" column_number="2"></condition_column></condition_details>
+<condition_details>
+<condition_number>4</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>BMILength == 0</condition_description>
+<condition_postfix>
+0 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="3"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Examine_MALE</action_description>
+<action_postfix>
+Examine_MALE 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>2</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Examine_FEMALE</action_description>
+<action_postfix>
+Examine_FEMALE 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>3</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate</action_description>
+<action_postfix>
+Calculate 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Examine_MALE</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>local entity bMI_tmp = bMI_Devs[0]</context_description>
+<context_postfix>
+bMI_Devs 0 getat cve allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>2</context_number>
+<context_comment></context_comment>
+<context_description>local date now = the current date</context_description>
+<context_postfix>
+getdate cvd allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>3</context_number>
+<context_comment></context_comment>
+<context_description>local int gap = days from bMI_tmp&apos;s dateTime to now</context_description>
+<context_postfix>
+0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &lt; 20.7</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 20.7 f&lt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details>
+<condition_details>
+<condition_number>2</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 20.7 and bMI_tmp&apos;s bMI &lt; 26.4</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 20.7 f&gt;= { pop 0 local@  entitypush bMI entitypop 26.4 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="2"></condition_column></condition_details>
+<condition_details>
+<condition_number>3</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 26.4 and bMI_tmp&apos;s bMI &lt; 27.8</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 26.4 f&gt;= { pop 0 local@  entitypush bMI entitypop 27.8 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="3"></condition_column></condition_details>
+<condition_details>
+<condition_number>4</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 27.8 and bMI_tmp&apos;s bMI &lt; 31.1</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 27.8 f&gt;= { pop 0 local@  entitypush bMI entitypop 31.1 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="4"></condition_column></condition_details>
+<condition_details>
+<condition_number>5</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 31.1</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 31.1 f&gt;= 
+</condition_postfix>
+<condition_column column_value="Y" column_number="5"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>2</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>3</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 0</action_description>
+<action_postfix>
+0  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>4</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;underweight&quot;</action_description>
+<action_postfix>
+&quot;underweight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>5</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;normal&quot;</action_description>
+<action_postfix>
+&quot;normal&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>6</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;marginally overweight&quot;</action_description>
+<action_postfix>
+&quot;marginally overweight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>7</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;overwight&quot;</action_description>
+<action_postfix>
+&quot;overwight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>8</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;very overweight or obese&quot;</action_description>
+<action_postfix>
+&quot;very overweight or obese&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>9</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set  the result&apos;s resultMessage = the result&apos;s resultMessage + &quot; ---&gt;from&quot;  + gap +  &quot;days ago&apos;s data:&quot;+bMI_tmp&apos;s bMI</action_description>
+<action_postfix>
+result entitypush resultMessage &quot; ---&gt;from&quot; strconcat 2 local@  strconcat &quot;days ago&apos;s data:&quot; strconcat 0 local@  entitypush bMI entitypop strconcat entitypop cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Examine_FEMALE</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>local entity bMI_tmp = bMI_Devs[0]</context_description>
+<context_postfix>
+bMI_Devs 0 getat cve allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>2</context_number>
+<context_comment></context_comment>
+<context_description>local date now = the current date</context_description>
+<context_postfix>
+getdate cvd allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>3</context_number>
+<context_comment></context_comment>
+<context_description>local int gap = days from bMI_tmp&apos;s dateTime to now</context_description>
+<context_postfix>
+0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &lt; 19.1</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 19.1 f&lt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details>
+<condition_details>
+<condition_number>2</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 19.1 and bMI_tmp&apos;s bMI &lt; 25.8</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 19.1 f&gt;= { pop 0 local@  entitypush bMI entitypop 25.8 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="2"></condition_column></condition_details>
+<condition_details>
+<condition_number>3</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 25.8 and bMI_tmp&apos;s bMI &lt; 27.3</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 25.8 f&gt;= { pop 0 local@  entitypush bMI entitypop 27.3 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="3"></condition_column></condition_details>
+<condition_details>
+<condition_number>4</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 27.3 and bMI_tmp&apos;s bMI &lt; 32.3</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 27.3 f&gt;= { pop 0 local@  entitypush bMI entitypop 32.3 f&lt; } over if
+
+</condition_postfix>
+<condition_column column_value="Y" column_number="4"></condition_column></condition_details>
+<condition_details>
+<condition_number>5</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>bMI_tmp&apos;s bMI &gt;= 32.3</condition_description>
+<condition_postfix>
+0 local@  entitypush bMI entitypop 32.3 f&gt;= 
+</condition_postfix>
+<condition_column column_value="Y" column_number="5"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>2</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>3</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 0</action_description>
+<action_postfix>
+0  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>4</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;underweight&quot;</action_description>
+<action_postfix>
+&quot;underweight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>5</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;normal&quot;</action_description>
+<action_postfix>
+&quot;normal&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>6</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;marginally overweight&quot;</action_description>
+<action_postfix>
+&quot;marginally overweight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>7</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;overwight&quot;</action_description>
+<action_postfix>
+&quot;overwight&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>8</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;very overweight or obese&quot;</action_description>
+<action_postfix>
+&quot;very overweight or obese&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>9</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set  the result&apos;s resultMessage = the result&apos;s resultMessage + &quot; ---&gt;from&quot;  + gap +  &quot;days ago&apos;s data:&quot;+bMI_tmp&apos;s bMI</action_description>
+<action_postfix>
+result entitypush resultMessage &quot; ---&gt;from&quot; strconcat 2 local@  strconcat &quot;days ago&apos;s data:&quot; strconcat 0 local@  entitypush bMI entitypop strconcat entitypop cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column>
+<action_column column_value="X" column_number="2"></action_column>
+<action_column column_value="X" column_number="3"></action_column>
+<action_column column_value="X" column_number="4"></action_column>
+<action_column column_value="X" column_number="5"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>ALL</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>local double adder = 0</context_description>
+<context_postfix>
+0  cvr allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>2</context_number>
+<context_comment></context_comment>
+<context_description>local int floorLength = the length of floors_Devs</context_description>
+<context_postfix>
+floors_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>3</context_number>
+<context_comment></context_comment>
+<context_description>local int hRLength = the length of hR_Devs</context_description>
+<context_postfix>
+hR_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>4</context_number>
+<context_comment></context_comment>
+<context_description>local int sleep_DevLength = the length of sleep_Devs</context_description>
+<context_postfix>
+sleep_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>5</context_number>
+<context_comment></context_comment>
+<context_description>local int steps_DevLength = the length of steps_Devs</context_description>
+<context_postfix>
+steps_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details>
+<context_details>
+<context_number>6</context_number>
+<context_comment></context_comment>
+<context_description>local int weightLength = the length of weight_Devs</context_description>
+<context_postfix>
+weight_Devs length  cvi allocate execute deallocate pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>floorLength &gt; 0</condition_description>
+<condition_postfix>
+1 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details>
+<condition_details>
+<condition_number>2</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>floorLength == 0</condition_description>
+<condition_postfix>
+1 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="2"></condition_column></condition_details>
+<condition_details>
+<condition_number>3</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>hRLength &gt; 0</condition_description>
+<condition_postfix>
+2 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="3"></condition_column></condition_details>
+<condition_details>
+<condition_number>4</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>hRLength == 0</condition_description>
+<condition_postfix>
+2 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="4"></condition_column></condition_details>
+<condition_details>
+<condition_number>5</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>sleep_DevLength &gt; 0</condition_description>
+<condition_postfix>
+3 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="5"></condition_column></condition_details>
+<condition_details>
+<condition_number>6</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>sleep_DevLength == 0</condition_description>
+<condition_postfix>
+3 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="6"></condition_column></condition_details>
+<condition_details>
+<condition_number>7</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>steps_DevLength &gt; 0</condition_description>
+<condition_postfix>
+4 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="7"></condition_column></condition_details>
+<condition_details>
+<condition_number>8</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>steps_DevLength == 0</condition_description>
+<condition_postfix>
+4 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="8"></condition_column></condition_details>
+<condition_details>
+<condition_number>9</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>weightLength &gt; 0</condition_description>
+<condition_postfix>
+5 local@  0 &gt; 
+</condition_postfix>
+<condition_column column_value="Y" column_number="9"></condition_column></condition_details>
+<condition_details>
+<condition_number>10</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>weightLength == 0</condition_description>
+<condition_postfix>
+5 local@  0 == 
+</condition_postfix>
+<condition_column column_value="Y" column_number="10"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>2</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>3</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate_FloorsDev</action_description>
+<action_postfix>
+Calculate_FloorsDev 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>4</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 11</action_description>
+<action_postfix>
+11  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>5</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;your average floors is &quot;+caltemp/floorLength</action_description>
+<action_postfix>
+&quot;your average floors is &quot; caltemp 1 local@  fdiv strconcat cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>6</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = 0</action_description>
+<action_postfix>
+0  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
+<action_details>
+<action_number>7</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>8</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>9</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 10</action_description>
+<action_postfix>
+10  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>10</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;No Floor_Dev data of the patient¡­&quot;</action_description>
+<action_postfix>
+&quot;No Floor_Dev data of the patient¡­&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="2"></action_column></action_details>
+<action_details>
+<action_number>11</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>12</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>13</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate_HRDev</action_description>
+<action_postfix>
+Calculate_HRDev 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>14</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 21</action_description>
+<action_postfix>
+21  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>15</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+floorLength+&quot; average HR is &quot;+caltemp/floorLength</action_description>
+<action_postfix>
+&quot;your recent &quot; 1 local@  strconcat &quot; average HR is &quot; strconcat caltemp 1 local@  fdiv strconcat cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>16</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = 0</action_description>
+<action_postfix>
+0  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="3"></action_column></action_details>
+<action_details>
+<action_number>17</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>18</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>19</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 20</action_description>
+<action_postfix>
+20  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>20</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;No HR_Dev data of the patient¡­&quot;</action_description>
+<action_postfix>
+&quot;No HR_Dev data of the patient¡­&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="4"></action_column></action_details>
+<action_details>
+<action_number>21</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="6"></action_column></action_details>
+<action_details>
+<action_number>22</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="6"></action_column></action_details>
+<action_details>
+<action_number>23</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 30</action_description>
+<action_postfix>
+30  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="6"></action_column></action_details>
+<action_details>
+<action_number>24</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;No Sleep_Dev data of the patient¡­&quot;</action_description>
+<action_postfix>
+&quot;No Sleep_Dev data of the patient¡­&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="6"></action_column></action_details>
+<action_details>
+<action_number>25</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="8"></action_column></action_details>
+<action_details>
+<action_number>26</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="8"></action_column></action_details>
+<action_details>
+<action_number>27</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 40</action_description>
+<action_postfix>
+40  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="8"></action_column></action_details>
+<action_details>
+<action_number>28</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;No Steps_Dev data of the patient¡­&quot;</action_description>
+<action_postfix>
+&quot;No Steps_Dev data of the patient¡­&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="8"></action_column></action_details>
+<action_details>
+<action_number>29</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="10"></action_column></action_details>
+<action_details>
+<action_number>30</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="10"></action_column></action_details>
+<action_details>
+<action_number>31</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 50</action_description>
+<action_postfix>
+50  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="10"></action_column></action_details>
+<action_details>
+<action_number>32</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;No Weight_Dev data of the patient¡­&quot;</action_description>
+<action_postfix>
+&quot;No Weight_Dev data of the patient¡­&quot; cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="10"></action_column></action_details>
+<action_details>
+<action_number>33</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>34</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>35</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate_SleepDev</action_description>
+<action_postfix>
+Calculate_SleepDev 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>36</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 31</action_description>
+<action_postfix>
+31  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>37</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+sleep_DevLength+&quot; average SleepMeasurement is &quot;+caltemp/sleep_DevLength</action_description>
+<action_postfix>
+&quot;your recent &quot; 3 local@  strconcat &quot; average SleepMeasurement is &quot; strconcat caltemp 3 local@  fdiv strconcat cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>38</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = 0</action_description>
+<action_postfix>
+0  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="5"></action_column></action_details>
+<action_details>
+<action_number>39</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>40</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>41</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate_StepsDev</action_description>
+<action_postfix>
+Calculate_StepsDev 
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>42</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 41</action_description>
+<action_postfix>
+41  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>43</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Steps is &quot;+caltemp/steps_DevLength</action_description>
+<action_postfix>
+&quot;your recent &quot; 4 local@  strconcat &quot; average Steps is &quot; strconcat caltemp 4 local@  fdiv strconcat cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>44</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = 0</action_description>
+<action_postfix>
+0  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="7"></action_column></action_details>
+<action_details>
+<action_number>45</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add a new result entity to the context of this table</action_description>
+<action_postfix>
+/result createentity entitypush 
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details>
+<action_details>
+<action_number>46</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>add the result to the patient&apos;s results</action_description>
+<action_postfix>
+result patient entitypush results swap addto entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details>
+<action_details>
+<action_number>47</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>perform Calculate_WeightDev</action_description>
+<action_postfix>
+Calculate_WeightDev 
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details>
+<action_details>
+<action_number>48</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultCode = 52</action_description>
+<action_postfix>
+52  cvi result entitypush /resultCode xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details>
+<action_details>
+<action_number>49</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Weight is &quot;+caltemp/steps_DevLength</action_description>
+<action_postfix>
+&quot;your recent &quot; 4 local@  strconcat &quot; average Weight is &quot; strconcat caltemp 4 local@  fdiv strconcat cvs result entitypush /resultMessage xdef  entitypop 
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details>
+<action_details>
+<action_number>50</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = 0</action_description>
+<action_postfix>
+0  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="9"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate_FloorsDev</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>for all floors_Devs</context_description>
+<context_postfix>
+dup floors_Devs forall pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>true</condition_description>
+<condition_postfix>
+true 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = caltemp + floors_Dev&apos;s floors</action_description>
+<action_postfix>
+caltemp floors_Dev entitypush floors entitypop fadd  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate_HRDev</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>for all hR_Devs</context_description>
+<context_postfix>
+dup hR_Devs forall pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>true</condition_description>
+<condition_postfix>
+true 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = caltemp + hR_Dev&apos;s HR</action_description>
+<action_postfix>
+caltemp hR_Dev entitypush HR entitypop fadd  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate_SleepDev</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>for all sleep_Devs</context_description>
+<context_postfix>
+dup sleep_Devs forall pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>true</condition_description>
+<condition_postfix>
+true 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = caltemp + sleep_Dev&apos;s sleepMeasurement</action_description>
+<action_postfix>
+caltemp sleep_Dev entitypush sleepMeasurement entitypop fadd  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate_StepsDev</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>for all steps_Devs</context_description>
+<context_postfix>
+dup steps_Devs forall pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>true</condition_description>
+<condition_postfix>
+true 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = caltemp + steps_Dev&apos;s steps</action_description>
+<action_postfix>
+caltemp steps_Dev entitypush steps entitypop fadd  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table>
+<decision_table>
+<table_name>Calculate_WeightDev</table_name>
+<xls_file>PatientDemoDT.xls</xls_file>
+<attribute_fields>
+<TYPE>FIRST</TYPE>
+<COMMENTS></COMMENTS>
+<POLICY_REFERENCE></POLICY_REFERENCE></attribute_fields>
+<contexts>
+<context_details>
+<context_number>1</context_number>
+<context_comment></context_comment>
+<context_description>for all weight_Devs</context_description>
+<context_postfix>
+dup weight_Devs forall pop 
+</context_postfix></context_details></contexts>
+<initial_actions></initial_actions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>true</condition_description>
+<condition_postfix>
+true 
+</condition_postfix>
+<condition_column column_value="Y" column_number="1"></condition_column></condition_details></conditions>
+<actions>
+<action_details>
+<action_number>1</action_number>
+<action_comment></action_comment>
+<action_requirement></action_requirement>
+<action_description>set caltemp = caltemp + weight_Dev&apos;s weight</action_description>
+<action_postfix>
+caltemp weight_Dev entitypush weight entitypop fadd  cvr /caltemp xdef  
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions>
+<policy_statements></policy_statements></decision_table></decision_tables>

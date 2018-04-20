@@ -1,0 +1,19 @@
+<DTRules>
+
+  <compileralias name="EL">com.dtrules.compiler.el.EL</compileralias> 
+  <compiler>EL</compiler>
+
+  <RuleSet name="DemoPatientTest" source="file"  >
+     <RuleSetFilePath>/xml</RuleSetFilePath>
+     <WorkingDirectory>/DemoPatientTestTEST</WorkingDirectory>
+     
+     <DTExcelFolder>/DecisionTables/DemoPatientTestDT/</DTExcelFolder>
+     <EDDExcelFolder>/edd/</EDDExcelFolder>
+
+     <Entities        name="DemoPatientTest_edd.xml" />
+     <Decisiontables  name="DemoPatientTest_dt.xml"  />
+     <Map             name="DemoPatientTest_map.xml" />
+  </RuleSet>   
+
+</DTRules>
+
