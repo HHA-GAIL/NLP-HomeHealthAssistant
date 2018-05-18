@@ -70,7 +70,6 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TA_PatientInfo = new javax.swing.JTextArea();
-        Btn_Run = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         TA_Results = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
@@ -110,15 +109,9 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         TA_PatientInfo.setText("The information of the certain Patient will be placed here...\nNow the EDD is fixed..\nAnd the selected decision table should use the data entities defined by the EDD...\n");
         jScrollPane1.setViewportView(TA_PatientInfo);
 
-        Btn_Run.setText("Run in DTRulesEngine...");
-        Btn_Run.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_RunActionPerformed(evt);
-            }
-        });
-
         TA_Results.setEditable(false);
         TA_Results.setColumns(20);
+        TA_Results.setLineWrap(true);
         TA_Results.setRows(5);
         TA_Results.setText("The result will be placed here...");
         jScrollPane2.setViewportView(TA_Results);
@@ -152,7 +145,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
 
         Select_EntryTable.setEnabled(false);
 
-        Btn_RunSelectedDT.setText("Run the selected DT...");
+        Btn_RunSelectedDT.setText("Run in the DT");
         Btn_RunSelectedDT.setEnabled(false);
         Btn_RunSelectedDT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,7 +200,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         TA_CompileMsg.setText("The Compile Message will be placed here...\n");
         jScrollPane3.setViewportView(TA_CompileMsg);
 
-        jLabel4.setText("Please input your RuleSet's name:");
+        jLabel4.setText("Please input your Rule name:");
 
         jLabel1.setText("Select your entry table:");
 
@@ -215,11 +208,11 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane3)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
@@ -231,7 +224,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Select_EntryTable, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(TF_SelectedFile, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                                .addComponent(TF_SelectedFile)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Btn_SelectDT, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -240,12 +233,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(135, 135, 135))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Btn_Run, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Btn_RunSelectedDT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(CB_Sleep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CB_Steps)
@@ -259,13 +247,24 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                         .addComponent(CB_HR)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Btn_UploadDT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(INPT_PName, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                            .addComponent(Btn_Search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Btn_RunSelectedDT, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(INPT_PName)
+                                    .addComponent(Btn_Search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 8, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -298,14 +297,12 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Btn_Search)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Btn_Run)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Btn_RunSelectedDT))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Btn_UploadDT)
                     .addComponent(CB_HR)
@@ -369,30 +366,6 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
 //        }
 //        WriteTA(TA_PatientInfo, "\n\nDONE!");
     }//GEN-LAST:event_Btn_SearchActionPerformed
-
-    private void Btn_RunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_RunActionPerformed
-        // TODO add your handling code here:
-        edu.dhu.DTRules.entities.Patient patient = com.dtrules.samples.sampleproject2.DataGenerater.GenerateDTRulesPatient();
-//        if(patientList.size() == 0)
-//            return;
-        try{
-            edu.dhu.DTRules.DTRulesPatientDev dtrpd = new edu.dhu.DTRules.DTRulesPatientDev();
-            List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine(patient,
-                    edu.dhu.DTRules.DTRulesPatientDev.BasePath , 
-                    edu.dhu.DTRules.DTRulesPatientDev.ConfigFileFileName, 
-                    DTRulesXML.DTName,
-                    edu.dhu.DTRules.DTRulesPatientDev.EntryTable);
-            WriteTA(TA_Results, "\n\nResult of patient "+patient.getFullName());
-            for(edu.dhu.DTRules.entities.Result result : results){
-                WriteTA(TA_Results, "\n"+result.getResultCode()+"--->"+result.getResultMessage());
-            }
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-            WriteTA(TA_Results, "\n\nError occurred: " + e.getMessage());
-        }
-    }//GEN-LAST:event_Btn_RunActionPerformed
 
 
     private void CheckForUpload() {
@@ -554,22 +527,22 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             if(count > 0){
                 //has the same name of RuleName
                 //should ask for overwritting
-                int n=JOptionPane.showConfirmDialog(null, "There has a same name RuleSet in the database yet："+RuleSetName+".\nWould you like to overwritting the data in the database?"
+                int n=JOptionPane.showConfirmDialog(null, "Rule name "+RuleSetName+" already exists, will you overwrite it?"
                         ,"ATTENTION!",JOptionPane.YES_NO_OPTION);
                 if(n == JOptionPane.OK_OPTION){
                     //up date here...
                     if(gdtrdao.updateDTRules(RuleSetName, Attributes.toString(), EntryTable, DTXMLContent))
-                        WriteTA(TA_Results, "\nUpDate Done...");
+                        JOptionPane.showConfirmDialog(null, "UpDate Done...", "Info",JOptionPane.DEFAULT_OPTION);
                     else
-                        WriteTA(TA_Results, "\nUpdate Failed...");
+                        JOptionPane.showConfirmDialog(null, "UpDate Failed...", "Info",JOptionPane.DEFAULT_OPTION);
                 }
                 return;
             }
             
             if(gdtrdao.insertDTRules(RuleSetName, Attributes.toString(), EntryTable, DTXMLContent))
-                WriteTA(TA_Results, "\nUpload Done...");
+                JOptionPane.showConfirmDialog(null, "Upload Done...", "Info",JOptionPane.DEFAULT_OPTION);
             else
-                WriteTA(TA_Results, "\nUpload Failed...");
+                JOptionPane.showConfirmDialog(null, "Upload Failed...", "Info",JOptionPane.DEFAULT_OPTION);
         }
         catch(Exception e){
             e.printStackTrace();
@@ -637,7 +610,6 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_ComplieDT;
-    private javax.swing.JButton Btn_Run;
     private javax.swing.JButton Btn_RunSelectedDT;
     private javax.swing.JButton Btn_Search;
     private javax.swing.JButton Btn_SelectDT;
