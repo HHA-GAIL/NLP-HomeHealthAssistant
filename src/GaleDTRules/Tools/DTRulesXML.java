@@ -265,11 +265,18 @@ public class DTRulesXML {
      * compile the RuleSet using the RulesName, the RulesName should be in the DTRules.xml first
      * @param RulesName 
      */
-    public void Compile() throws Exception {
+    public void Compile(File dtfile) throws Exception {
 //        com.dtrules.samples.sampleproject2.DemoTesting.main(null);//no problem
 //        edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", RulesName, BASEPATH, new String[] {"main"});
         try {
-         edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", DTName, BASEPATH, new String[] {"main"});
+            //delete the files in the certain dir
+            File dir = new File(BASEPATH + DTFolder);
+            File[] files = dir.listFiles();
+            for(File fir : files){
+                fir.delete();
+            }
+            copyFileToCertainDir(dtfile);
+            edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", DTName, BASEPATH, new String[] {"main"});
         } catch (Exception e) {
             throw e;
         }
