@@ -146,6 +146,7 @@ public class Patients implements BaseConverter{
             tmp.setDevID_FK(dlp.getDevID_FK());
             tmp.setPatientID_FK(dlp.getPatientID_FK());
             tmp.setDateTime(dlp.getDateTime());
+            tmp.setSleepResults(dlp.getSleepResults());
             pt.getSleep_Devs().add(tmp);
         }
         for(Steps_Dev stp : Steps_Devs){

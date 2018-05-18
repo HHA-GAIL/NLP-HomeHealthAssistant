@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author HASEE
+ * @author NazonaX
  */
 public class GaleHRDevDAO {
     private Connection conn;
@@ -25,11 +25,6 @@ public class GaleHRDevDAO {
     
     
     
-    /**
-     * get the column names of illness history table
-     *
-     * @return column names
-     */
     public DefaultTableModel getTableModel(int patientID) {
         try {
             conn = JDBCMySQLConnection.getConnection(JDBCMySQLConnection.TYPE.GALE);

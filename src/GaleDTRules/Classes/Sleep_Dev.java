@@ -17,6 +17,7 @@ public class Sleep_Dev {
     private Integer PatientID_FK;
     private Integer DevID_FK;
     private Double SleepMeasurement;
+    private String SleepResults;
     private Date DateTime;
 
     /**
@@ -62,20 +63,6 @@ public class Sleep_Dev {
     }
 
     /**
-     * @return the SleepMeasurement
-     */
-    public Double getSleepMeasurement() {
-        return SleepMeasurement;
-    }
-
-    /**
-     * @param SleepMeasurement the SleepMeasurement to set
-     */
-    public void setSleepMeasurement(Object SleepMeasurement) {
-        this.SleepMeasurement = (Double)SleepMeasurement;
-    }
-
-    /**
      * @return the DateTime
      */
     public Date getDateTime() {
@@ -88,4 +75,33 @@ public class Sleep_Dev {
     public void setDateTime(Object DateTime) {
         this.DateTime = (Date)DateTime;
     }
+    
+        /**
+     * @return the SleepMeasurement
+     */
+    public Double getSleepMeasurement() {
+        return SleepMeasurement;
+    }
+
+    /**
+     * @param SleepMeasurement the SleepMeasurement to set
+     */
+    public void setSleepMeasurement(Object SleepMeasurement) {
+        this.SleepMeasurement = (Integer)SleepMeasurement + 0.0;
+    }
+
+    /**
+     * @return the SleepResults
+     */
+    public String getSleepResults() {
+        return SleepResults;
+    }
+
+    /**
+     * @param SleepResults the SleepResults to set
+     */
+    public void setSleepResults(Object SleepResults) {
+        this.SleepResults = (String)SleepResults;
+    }
+    
 }

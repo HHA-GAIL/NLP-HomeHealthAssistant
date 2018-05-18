@@ -85,7 +85,7 @@ public class HR_Dev {
     /**
      * @param DateTime the DateTime to set
      */
-    public void setDateTime(Date DateTime) {
-        this.DateTime = DateTime;
+    public void setDateTime(Object DateTime) {
+        this.DateTime = (Date)DateTime;
     }
 }

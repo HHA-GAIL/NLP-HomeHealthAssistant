@@ -1,0 +1,681 @@
+<DTRulesTrace>
+	<loadData>
+		<root>
+			<patient>
+				<entitypush entity='patient' id='10316'></entitypush>
+				<mapCreateEntity name='patient' data_id='1'>
+					<age>
+						<def id='10316' entity='patient' name='age'>24</def>
+						<message>   /age &quot;24&quot; def</message>
+					</age>
+					<patientID>
+						<def id='10316' entity='patient' name='patientid'>1</def>
+						<message>   /patientid &quot;1&quot; def</message>
+					</patientID>
+					<gender>
+						<def id='10316' entity='patient' name='gender'>&quot;male&quot;</def>
+						<message>   /gender &quot;male&quot; def</message>
+					</gender>
+					<fullName>
+						<def id='10316' entity='patient' name='fullname'>&quot;NazonaX&quot;</def>
+						<message>   /fullname &quot;NazonaX&quot; def</message>
+					</fullName>
+					<memberSince></memberSince>
+					<sleep_Devs>
+						<sleep_Dev>
+							<createentity name='sleep_Dev' id='10318'></createentity>
+							<addto arrayId='321'>/sleep_Dev 10318 fce </addto>
+							<entitypush entity='sleep_Dev' id='10318'></entitypush>
+							<mapCreateEntity name='sleep_dev' data_id='8'>
+								<dateTime>
+									<def id='10318' entity='sleep_Dev' name='datetime'>&quot;04/17/2018 17:20:23:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-17 17:20:23.0&quot; def</message>
+								</dateTime>
+								<sleepID>
+									<def id='10318' entity='sleep_Dev' name='sleepid'>1</def>
+									<message>   /sleepid &quot;1&quot; def</message>
+								</sleepID>
+								<sleepResults>
+									<def id='10318' entity='sleep_Dev' name='sleepresults'>&quot;490&quot;</def>
+									<message>   /sleepresults &quot;490&quot; def</message>
+								</sleepResults>
+								<patientID_FK>
+									<def id='10318' entity='sleep_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10318' entity='sleep_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<sleepMeasurement></sleepMeasurement>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</sleep_Dev>
+					</sleep_Devs>
+					<steps_Devs>
+						<steps_Dev>
+							<createentity name='steps_Dev' id='10320'></createentity>
+							<addto arrayId='322'>/steps_Dev 10320 fce </addto>
+							<entitypush entity='steps_Dev' id='10320'></entitypush>
+							<mapCreateEntity name='steps_dev' data_id='9'>
+								<stepsID>
+									<def id='10320' entity='steps_Dev' name='stepsid'>1</def>
+									<message>   /stepsid &quot;1&quot; def</message>
+								</stepsID>
+								<dateTime>
+									<def id='10320' entity='steps_Dev' name='datetime'>&quot;04/17/2018 17:20:40:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-17 17:20:40.0&quot; def</message>
+								</dateTime>
+								<steps>
+									<def id='10320' entity='steps_Dev' name='steps'>15633.0</def>
+									<message>   /steps &quot;15633.0&quot; def</message>
+								</steps>
+								<patientID_FK>
+									<def id='10320' entity='steps_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10320' entity='steps_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</steps_Dev>
+					</steps_Devs>
+					<bMI_Devs>
+						<bMI_Dev>
+							<createentity name='bMI_Dev' id='10322'></createentity>
+							<addto arrayId='317'>/bMI_Dev 10322 fce </addto>
+							<entitypush entity='bMI_Dev' id='10322'></entitypush>
+							<mapCreateEntity name='bmi_dev' data_id='2'>
+								<bMI>
+									<def id='10322' entity='bMI_Dev' name='bmi'>17.7</def>
+									<message>   /bmi &quot;17.7&quot; def</message>
+								</bMI>
+								<dateTime>
+									<def id='10322' entity='bMI_Dev' name='datetime'>&quot;04/17/2018 16:27:22:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-17 16:27:22.0&quot; def</message>
+								</dateTime>
+								<bMIID>
+									<def id='10322' entity='bMI_Dev' name='bmiid'>4</def>
+									<message>   /bmiid &quot;4&quot; def</message>
+								</bMIID>
+								<patientID_FK>
+									<def id='10322' entity='bMI_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10322' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</bMI_Dev>
+						<bMI_Dev>
+							<createentity name='bMI_Dev' id='10324'></createentity>
+							<addto arrayId='317'>/bMI_Dev 10324 fce </addto>
+							<entitypush entity='bMI_Dev' id='10324'></entitypush>
+							<mapCreateEntity name='bmi_dev' data_id='3'>
+								<bMI>
+									<def id='10324' entity='bMI_Dev' name='bmi'>20.0</def>
+									<message>   /bmi &quot;20.0&quot; def</message>
+								</bMI>
+								<dateTime>
+									<def id='10324' entity='bMI_Dev' name='datetime'>&quot;04/12/2018 16:27:05:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-12 16:27:05.0&quot; def</message>
+								</dateTime>
+								<bMIID>
+									<def id='10324' entity='bMI_Dev' name='bmiid'>3</def>
+									<message>   /bmiid &quot;3&quot; def</message>
+								</bMIID>
+								<patientID_FK>
+									<def id='10324' entity='bMI_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10324' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</bMI_Dev>
+						<bMI_Dev>
+							<createentity name='bMI_Dev' id='10326'></createentity>
+							<addto arrayId='317'>/bMI_Dev 10326 fce </addto>
+							<entitypush entity='bMI_Dev' id='10326'></entitypush>
+							<mapCreateEntity name='bmi_dev' data_id='4'>
+								<bMI>
+									<def id='10326' entity='bMI_Dev' name='bmi'>18.7</def>
+									<message>   /bmi &quot;18.7&quot; def</message>
+								</bMI>
+								<dateTime>
+									<def id='10326' entity='bMI_Dev' name='datetime'>&quot;04/02/2018 16:26:49:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-02 16:26:49.0&quot; def</message>
+								</dateTime>
+								<bMIID>
+									<def id='10326' entity='bMI_Dev' name='bmiid'>2</def>
+									<message>   /bmiid &quot;2&quot; def</message>
+								</bMIID>
+								<patientID_FK>
+									<def id='10326' entity='bMI_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10326' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</bMI_Dev>
+						<bMI_Dev>
+							<createentity name='bMI_Dev' id='10328'></createentity>
+							<addto arrayId='317'>/bMI_Dev 10328 fce </addto>
+							<entitypush entity='bMI_Dev' id='10328'></entitypush>
+							<mapCreateEntity name='bmi_dev' data_id='5'>
+								<bMI>
+									<def id='10328' entity='bMI_Dev' name='bmi'>17.7</def>
+									<message>   /bmi &quot;17.7&quot; def</message>
+								</bMI>
+								<dateTime>
+									<def id='10328' entity='bMI_Dev' name='datetime'>&quot;04/01/2018 16:26:25:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-01 16:26:25.0&quot; def</message>
+								</dateTime>
+								<bMIID>
+									<def id='10328' entity='bMI_Dev' name='bmiid'>1</def>
+									<message>   /bmiid &quot;1&quot; def</message>
+								</bMIID>
+								<patientID_FK>
+									<def id='10328' entity='bMI_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10328' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</bMI_Dev>
+					</bMI_Devs>
+					<hR_Devs>
+						<hR_Dev>
+							<createentity name='hR_Dev' id='10330'></createentity>
+							<addto arrayId='319'>/hR_Dev 10330 fce </addto>
+							<entitypush entity='hR_Dev' id='10330'></entitypush>
+							<mapCreateEntity name='hr_dev' data_id='7'>
+								<dateTime>
+									<def id='10330' entity='hR_Dev' name='datetime'>&quot;04/17/2018 17:19:58:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-17 17:19:58.0&quot; def</message>
+								</dateTime>
+								<hRID>
+									<def id='10330' entity='hR_Dev' name='hrid'>1</def>
+									<message>   /hrid &quot;1&quot; def</message>
+								</hRID>
+								<hR>
+									<def id='10330' entity='hR_Dev' name='hr'>2</def>
+									<message>   /hr &quot;2&quot; def</message>
+								</hR>
+								<patientID_FK>
+									<def id='10330' entity='hR_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10330' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</hR_Dev>
+					</hR_Devs>
+					<floors_Devs>
+						<floors_Dev>
+							<createentity name='floors_Dev' id='10332'></createentity>
+							<addto arrayId='318'>/floors_Dev 10332 fce </addto>
+							<entitypush entity='floors_Dev' id='10332'></entitypush>
+							<mapCreateEntity name='floors_dev' data_id='6'>
+								<dateTime>
+									<def id='10332' entity='floors_Dev' name='datetime'>&quot;04/04/2018 17:19:40:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-04 17:19:40.0&quot; def</message>
+								</dateTime>
+								<floors>
+									<def id='10332' entity='floors_Dev' name='floors'>5</def>
+									<message>   /floors &quot;5&quot; def</message>
+								</floors>
+								<floorsID>
+									<def id='10332' entity='floors_Dev' name='floorsid'>1</def>
+									<message>   /floorsid &quot;1&quot; def</message>
+								</floorsID>
+								<patientID_FK>
+									<def id='10332' entity='floors_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10332' entity='floors_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</floors_Dev>
+					</floors_Devs>
+					<weight_Devs>
+						<weight_Dev>
+							<createentity name='weight_Dev' id='10334'></createentity>
+							<addto arrayId='323'>/weight_Dev 10334 fce </addto>
+							<entitypush entity='weight_Dev' id='10334'></entitypush>
+							<mapCreateEntity name='weight_dev' data_id='10'>
+								<dateTime>
+									<def id='10334' entity='weight_Dev' name='datetime'>&quot;04/16/2018 17:21:00:0000&quot; cvd</def>
+									<message>   /datetime &quot;2018-04-16 17:21:00.0&quot; def</message>
+								</dateTime>
+								<weight>
+									<def id='10334' entity='weight_Dev' name='weight'>62.0</def>
+									<message>   /weight &quot;62.0&quot; def</message>
+								</weight>
+								<patientID_FK>
+									<def id='10334' entity='weight_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<devID_FK>
+									<def id='10334' entity='weight_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<weightID>
+									<def id='10334' entity='weight_Dev' name='weightid'>1</def>
+									<message>   /weightid &quot;1&quot; def</message>
+								</weightID>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</weight_Dev>
+					</weight_Devs>
+					<results></results>
+					<entitypop></entitypop>
+				</mapCreateEntity>
+			</patient>
+		</root>
+	</loadData>
+	<decisiontable name='Test_Patient'>
+		<context execute='{ /Test_Patient executeTable  } bMI_Devs length  cvi allocate execute deallocate pop'>
+			<execute_table>
+				<allocate index='0' value='4'></allocate>
+				<initialActions>
+					<initialAction>
+						<formal>sort bMI_Devs in descending order by $dateTime</formal>
+						<sortentities length='4' by='dateTime' arrayId='317'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>sort floors_Devs in descending order by $dateTime</formal>
+						<sortentities length='1' by='dateTime' arrayId='318'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>sort hR_Devs in descending order by $dateTime</formal>
+						<sortentities length='1' by='dateTime' arrayId='319'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>sort sleep_Devs in descending order by $dateTime</formal>
+						<sortentities length='1' by='dateTime' arrayId='321'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>sort steps_Devs in descending order by $dateTime</formal>
+						<sortentities length='1' by='dateTime' arrayId='322'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>sort weight_Devs in descending order by $dateTime</formal>
+						<sortentities length='1' by='dateTime' arrayId='323'>false</sortentities>
+					</initialAction>
+					<initialAction>
+						<formal>set caltemp = 0</formal>
+						<def id='10316' entity='patient' name='caltemp'>0.0</def>
+					</initialAction>
+				</initialActions>
+				<Condition n='1' v='N'></Condition>
+				<Condition n='2' v='Y'></Condition>
+				<Condition n='3' v='Y'></Condition>
+				<column n='1 '>
+					<action n='1'>
+						<decisiontable name='Examine_MALE'>
+							<context execute='{ { { /Examine_MALE executeTable  } 0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop } getdate cvd allocate execute deallocate pop } bMI_Devs 0 getat cve allocate execute deallocate pop'>
+								<execute_table>
+									<allocate index='0' value='/bMI_Dev 10322 fce '></allocate>
+									<allocate index='1' value='&quot;05/12/2018 15:56:13:0761&quot; cvd'></allocate>
+									<entitypush entity='bMI_Dev' id='10322'></entitypush>
+									<entitypush value='bMI_Dev' id='10322'></entitypush>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+									<allocate index='2' value='24'></allocate>
+									<initialActions></initialActions>
+									<entitypush entity='bMI_Dev' id='10322'></entitypush>
+									<entitypush value='bMI_Dev' id='10322'></entitypush>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+									<Condition n='1' v='Y'></Condition>
+									<column n='1 '>
+										<action n='1'>
+											<createentity name='result' id='10337'></createentity>
+											<entitypush entity='result' id='10337'></entitypush>
+											<entitypush value='result' id='10337'></entitypush>
+										</action>
+										<action n='2'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10337 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='3'>
+											<entitypush entity='result' id='10337'></entitypush>
+											<entitypush value='result' id='10337'></entitypush>
+											<def id='10337' entity='result' name='resultCode'>0</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='4'>
+											<entitypush entity='result' id='10337'></entitypush>
+											<entitypush value='result' id='10337'></entitypush>
+											<def id='10337' entity='result' name='resultMessage'>&quot;underweight&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='9'>
+											<entitypush entity='result' id='10337'></entitypush>
+											<entitypush value='result' id='10337'></entitypush>
+											<entitypush entity='bMI_Dev' id='10322'></entitypush>
+											<entitypush value='bMI_Dev' id='10322'></entitypush>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+											<entitypush entity='result' id='10337'></entitypush>
+											<entitypush value='result' id='10337'></entitypush>
+											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from24days ago&apos;s data:17.7&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+									</column>
+								</execute_table>
+								<execute_table>
+									<entitypop></entitypop>
+								</execute_table>
+							</context>
+						</decisiontable>
+					</action>
+					<action n='3'>
+						<decisiontable name='Calculate'>
+							<context execute='{ { { { { { { /Calculate executeTable  } sleep_Devs 0 getat cve allocate execute deallocate pop } weight_Devs length  cvi allocate execute deallocate pop } steps_Devs length  cvi allocate execute deallocate pop } sleep_Devs length  cvi allocate execute deallocate pop } hR_Devs length  cvi allocate execute deallocate pop } floors_Devs length  cvi allocate execute deallocate pop } 0  cvr allocate execute deallocate pop'>
+								<execute_table>
+									<allocate index='0' value='0.0'></allocate>
+									<allocate index='1' value='1'></allocate>
+									<allocate index='2' value='1'></allocate>
+									<allocate index='3' value='1'></allocate>
+									<allocate index='4' value='1'></allocate>
+									<allocate index='5' value='1'></allocate>
+									<allocate index='6' value='/sleep_Dev 10318 fce '></allocate>
+									<initialActions></initialActions>
+									<Condition n='1' v='Y'></Condition>
+									<Condition n='2' v='N'></Condition>
+									<Condition n='3' v='Y'></Condition>
+									<Condition n='4' v='N'></Condition>
+									<Condition n='5' v='Y'></Condition>
+									<Condition n='6' v='N'></Condition>
+									<Condition n='7' v='Y'></Condition>
+									<Condition n='8' v='N'></Condition>
+									<Condition n='9' v='Y'></Condition>
+									<Condition n='10' v='N'></Condition>
+									<column n='1 3 5 7 9 '>
+										<action n='1'>
+											<createentity name='result' id='10338'></createentity>
+											<entitypush entity='result' id='10338'></entitypush>
+											<entitypush value='result' id='10338'></entitypush>
+										</action>
+										<action n='2'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10338 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='3'>
+											<decisiontable name='Calculate_FloorsDev'>
+												<context execute='{ /Calculate_FloorsDev executeTable  } dup floors_Devs forall pop'>
+													<execute_table>
+														<entitypush entity='floors_Dev' id='10332'></entitypush>
+														<initialActions></initialActions>
+														<Condition n='1' v='Y'></Condition>
+														<column n='1 '>
+															<action n='1'>
+																<entitypush entity='floors_Dev' id='10332'></entitypush>
+																<entitypush value='floors_Dev' id='10332'></entitypush>
+																<entitypop></entitypop>
+																<entitypop></entitypop>
+																<def id='10316' entity='patient' name='caltemp'>5.0</def>
+															</action>
+														</column>
+													</execute_table>
+													<execute_table>
+														<entitypop></entitypop>
+													</execute_table>
+												</context>
+											</decisiontable>
+										</action>
+										<action n='4'>
+											<entitypush entity='result' id='10338'></entitypush>
+											<entitypush value='result' id='10338'></entitypush>
+											<def id='10338' entity='result' name='resultCode'>11</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='5'>
+											<entitypush entity='result' id='10338'></entitypush>
+											<entitypush value='result' id='10338'></entitypush>
+											<def id='10338' entity='result' name='resultMessage'>&quot;your average floors is 5.0&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='6'>
+											<def id='10316' entity='patient' name='caltemp'>0.0</def>
+										</action>
+										<action n='11'>
+											<createentity name='result' id='10339'></createentity>
+											<entitypush entity='result' id='10339'></entitypush>
+											<entitypush value='result' id='10339'></entitypush>
+										</action>
+										<action n='12'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10339 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='13'>
+											<decisiontable name='Calculate_HRDev'>
+												<context execute='{ /Calculate_HRDev executeTable  } dup hR_Devs forall pop'>
+													<execute_table>
+														<entitypush entity='hR_Dev' id='10330'></entitypush>
+														<initialActions></initialActions>
+														<Condition n='1' v='Y'></Condition>
+														<column n='1 '>
+															<action n='1'>
+																<entitypush entity='hR_Dev' id='10330'></entitypush>
+																<entitypush value='hR_Dev' id='10330'></entitypush>
+																<entitypop></entitypop>
+																<entitypop></entitypop>
+																<def id='10316' entity='patient' name='caltemp'>2.0</def>
+															</action>
+														</column>
+													</execute_table>
+													<execute_table>
+														<entitypop></entitypop>
+													</execute_table>
+												</context>
+											</decisiontable>
+										</action>
+										<action n='14'>
+											<entitypush entity='result' id='10339'></entitypush>
+											<entitypush value='result' id='10339'></entitypush>
+											<def id='10339' entity='result' name='resultCode'>21</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='15'>
+											<entitypush entity='result' id='10339'></entitypush>
+											<entitypush value='result' id='10339'></entitypush>
+											<def id='10339' entity='result' name='resultMessage'>&quot;your recent 1 average HR is 2.0&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='16'>
+											<def id='10316' entity='patient' name='caltemp'>0.0</def>
+										</action>
+										<action n='33'>
+											<createentity name='result' id='10340'></createentity>
+											<entitypush entity='result' id='10340'></entitypush>
+											<entitypush value='result' id='10340'></entitypush>
+										</action>
+										<action n='34'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10340 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='35'>
+											<entitypush entity='result' id='10340'></entitypush>
+											<entitypush value='result' id='10340'></entitypush>
+											<def id='10340' entity='result' name='resultCode'>31</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='36'>
+											<entitypush entity='sleep_Dev' id='10318'></entitypush>
+											<entitypush value='sleep_Dev' id='10318'></entitypush>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+											<entitypush entity='result' id='10340'></entitypush>
+											<entitypush value='result' id='10340'></entitypush>
+											<def id='10340' entity='result' name='resultMessage'>&quot;your recent sleep result is: 490&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='37'>
+											<def id='10316' entity='patient' name='caltemp'>0.0</def>
+										</action>
+										<action n='38'>
+											<createentity name='result' id='10341'></createentity>
+											<entitypush entity='result' id='10341'></entitypush>
+											<entitypush value='result' id='10341'></entitypush>
+										</action>
+										<action n='39'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10341 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='40'>
+											<decisiontable name='Calculate_StepsDev'>
+												<context execute='{ /Calculate_StepsDev executeTable  } dup steps_Devs forall pop'>
+													<execute_table>
+														<entitypush entity='steps_Dev' id='10320'></entitypush>
+														<initialActions></initialActions>
+														<Condition n='1' v='Y'></Condition>
+														<column n='1 '>
+															<action n='1'>
+																<entitypush entity='steps_Dev' id='10320'></entitypush>
+																<entitypush value='steps_Dev' id='10320'></entitypush>
+																<entitypop></entitypop>
+																<entitypop></entitypop>
+																<def id='10316' entity='patient' name='caltemp'>15633.0</def>
+															</action>
+														</column>
+													</execute_table>
+													<execute_table>
+														<entitypop></entitypop>
+													</execute_table>
+												</context>
+											</decisiontable>
+										</action>
+										<action n='41'>
+											<entitypush entity='result' id='10341'></entitypush>
+											<entitypush value='result' id='10341'></entitypush>
+											<def id='10341' entity='result' name='resultCode'>41</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='42'>
+											<entitypush entity='result' id='10341'></entitypush>
+											<entitypush value='result' id='10341'></entitypush>
+											<def id='10341' entity='result' name='resultMessage'>&quot;your recent 1 average Steps is 15633.0&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='43'>
+											<def id='10316' entity='patient' name='caltemp'>0.0</def>
+										</action>
+										<action n='44'>
+											<createentity name='result' id='10342'></createentity>
+											<entitypush entity='result' id='10342'></entitypush>
+											<entitypush value='result' id='10342'></entitypush>
+										</action>
+										<action n='45'>
+											<entitypush entity='patient' id='10316'></entitypush>
+											<entitypush value='patient' id='10316'></entitypush>
+											<addto arrayId='320'>/result 10342 fce </addto>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='46'>
+											<decisiontable name='Calculate_WeightDev'>
+												<context execute='{ /Calculate_WeightDev executeTable  } dup weight_Devs forall pop'>
+													<execute_table>
+														<entitypush entity='weight_Dev' id='10334'></entitypush>
+														<initialActions></initialActions>
+														<Condition n='1' v='Y'></Condition>
+														<column n='1 '>
+															<action n='1'>
+																<entitypush entity='weight_Dev' id='10334'></entitypush>
+																<entitypush value='weight_Dev' id='10334'></entitypush>
+																<entitypop></entitypop>
+																<entitypop></entitypop>
+																<def id='10316' entity='patient' name='caltemp'>62.0</def>
+															</action>
+														</column>
+													</execute_table>
+													<execute_table>
+														<entitypop></entitypop>
+													</execute_table>
+												</context>
+											</decisiontable>
+										</action>
+										<action n='47'>
+											<entitypush entity='result' id='10342'></entitypush>
+											<entitypush value='result' id='10342'></entitypush>
+											<def id='10342' entity='result' name='resultCode'>52</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='48'>
+											<entitypush entity='result' id='10342'></entitypush>
+											<entitypush value='result' id='10342'></entitypush>
+											<def id='10342' entity='result' name='resultMessage'>&quot;your recent 1 average Weight is 62.0&quot;</def>
+											<entitypop></entitypop>
+											<entitypop></entitypop>
+										</action>
+										<action n='49'>
+											<def id='10316' entity='patient' name='caltemp'>0.0</def>
+										</action>
+									</column>
+								</execute_table>
+								<execute_table>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+									<entitypop></entitypop>
+								</execute_table>
+							</context>
+						</decisiontable>
+					</action>
+				</column>
+			</execute_table>
+			<execute_table></execute_table>
+		</context>
+	</decisiontable>
+</DTRulesTrace>

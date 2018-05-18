@@ -25,12 +25,6 @@ public class GalePatientDAO {
     private ResultSet rst;
     
     
-    
-    /**
-     * get the column names of illness history table
-     *
-     * @return column names
-     */
     public DefaultTableModel getTableModel(String fullname) {
         try {
             conn = JDBCMySQLConnection.getConnection(JDBCMySQLConnection.TYPE.GALE);

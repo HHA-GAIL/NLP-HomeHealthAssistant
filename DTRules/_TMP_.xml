@@ -1,6 +1,3 @@
-<DTRules>
-<compileralias name="EL">com.dtrules.compiler.el.EL</compileralias>
-<compiler>EL</compiler>
 <RuleSet name="TheDecisionTable" source="file"  >
 <RuleSetFilePath>/xml</RuleSetFilePath>
 <WorkingDirectory>/workingDir</WorkingDirectory>
@@ -9,4 +6,4 @@
 <Entities        name="Dev_edd.xml" />
 <Decisiontables  name="TheDecisionTable_dt.xml"  />
 <Map             name="Dev_map.xml" />
-</RuleSet></DTRules>
+</RuleSet>

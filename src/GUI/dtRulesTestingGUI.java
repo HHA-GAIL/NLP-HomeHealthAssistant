@@ -8,20 +8,30 @@ package GUI;
 import GaleDTRules.DAO.GalePatientDAO;
 import GaleDTRules.Classes.*;
 import GaleDTRules.DAO.GaleBMIDevDAO;
+import GaleDTRules.DAO.GaleDTRulesDAO;
 import GaleDTRules.DAO.GaleFloorsDevDAO;
 import GaleDTRules.DAO.GaleHRDevDAO;
 import GaleDTRules.DAO.GaleSleepDevDAO;
 import GaleDTRules.DAO.GaleStepsDevDAO;
 import GaleDTRules.DAO.GaleWeightDevDAO;
+import GaleDTRules.Tools.DTRulesXML;
+import static GaleDTRules.Tools.DTRulesXML.BASEPATH;
 import com.sun.javafx.scene.control.skin.VirtualFlow;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
+import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
+import jdk.nashorn.internal.runtime.regexp.joni.constants.CCVALTYPE;
 
 /**
  *
@@ -30,6 +40,13 @@ import javax.swing.table.DefaultTableModel;
 public class dtRulesTestingGUI extends javax.swing.JFrame {
 
     List<Patients> patientList = new LinkedList<>();
+    private String RuleSetString = null;
+    private String EntryTable = null;
+    private String RuleSetName = null;
+    
+    private boolean Compiled = false;
+    private boolean EntryTable_Confirmed = false;
+    private boolean Tested = false;
     
     /**
      * Creates new form dtRulesTestingGUI
@@ -58,6 +75,20 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         Btn_Run = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         TA_Results = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        TF_SelectedFile = new javax.swing.JTextField();
+        Btn_SelectDT = new javax.swing.JButton();
+        Btn_ComplieDT = new javax.swing.JButton();
+        Btn_UploadDT = new javax.swing.JButton();
+        Select_EntryTable = new javax.swing.JComboBox<>();
+        Btn_EntryTableConfirm = new javax.swing.JButton();
+        Btn_RunSelectedDT = new javax.swing.JButton();
+        CB_BMI = new javax.swing.JCheckBox();
+        CB_Floors = new javax.swing.JCheckBox();
+        CB_HR = new javax.swing.JCheckBox();
+        CB_Sleep = new javax.swing.JCheckBox();
+        CB_Steps = new javax.swing.JCheckBox();
+        CB_Weight = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,7 +107,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         TA_PatientInfo.setColumns(20);
         TA_PatientInfo.setLineWrap(true);
         TA_PatientInfo.setRows(5);
-        TA_PatientInfo.setText("The information of the certain Patient will be placed here...");
+        TA_PatientInfo.setText("The information of the certain Patient will be placed here...\nNow the EDD is fixed..\nAnd the selected decision table should use the data entities defined by the EDD...\n\nTODO:\n1.Select the excel file\n2.Add rule set in the DTRules.xml, should check if there is a multidefination\n3.Compile\n4.Output the messages\n5.Could be update to the database\n6.Set all needed data as a temp variable\n\n");
         jScrollPane1.setViewportView(TA_PatientInfo);
 
         Btn_Run.setText("Run in DTRulesEngine...");
@@ -92,27 +123,149 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         TA_Results.setText("The result will be placed here...");
         jScrollPane2.setViewportView(TA_Results);
 
+        jLabel3.setText("Select your excel file, it should be a decision table.");
+
+        TF_SelectedFile.setEditable(false);
+
+        Btn_SelectDT.setText("...");
+        Btn_SelectDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_SelectDTActionPerformed(evt);
+            }
+        });
+
+        Btn_ComplieDT.setText("Compile the DT");
+        Btn_ComplieDT.setEnabled(false);
+        Btn_ComplieDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_ComplieDTActionPerformed(evt);
+            }
+        });
+
+        Btn_UploadDT.setText("Upload");
+        Btn_UploadDT.setEnabled(false);
+        Btn_UploadDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_UploadDTActionPerformed(evt);
+            }
+        });
+
+        Select_EntryTable.setEnabled(false);
+
+        Btn_EntryTableConfirm.setText("Confirm");
+        Btn_EntryTableConfirm.setEnabled(false);
+        Btn_EntryTableConfirm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_EntryTableConfirmActionPerformed(evt);
+            }
+        });
+
+        Btn_RunSelectedDT.setText("Run the selected DT...");
+        Btn_RunSelectedDT.setEnabled(false);
+        Btn_RunSelectedDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_RunSelectedDTActionPerformed(evt);
+            }
+        });
+
+        CB_BMI.setText("BMI");
+        CB_BMI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_BMIActionPerformed(evt);
+            }
+        });
+
+        CB_Floors.setText("Floors");
+        CB_Floors.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_FloorsActionPerformed(evt);
+            }
+        });
+
+        CB_HR.setText("HR");
+        CB_HR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_HRActionPerformed(evt);
+            }
+        });
+
+        CB_Sleep.setText("Sleep");
+        CB_Sleep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_SleepActionPerformed(evt);
+            }
+        });
+
+        CB_Steps.setText("Steps");
+        CB_Steps.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_StepsActionPerformed(evt);
+            }
+        });
+
+        CB_Weight.setText("Weight");
+        CB_Weight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB_WeightActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(Btn_Run, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane1))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
+                            .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(21, 21, 21)
-                                .addComponent(Btn_Search)))
-                        .addGap(0, 216, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(Btn_Run, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Btn_RunSelectedDT, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(TF_SelectedFile, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Btn_SelectDT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Btn_Search)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Btn_ComplieDT)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Btn_UploadDT))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(CB_Sleep)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CB_Steps)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CB_Weight))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Select_EntryTable, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Btn_EntryTableConfirm)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CB_BMI)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CB_Floors)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CB_HR)))
+                        .addGap(0, 4, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,15 +273,36 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TF_SelectedFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Btn_SelectDT)
+                    .addComponent(Btn_ComplieDT)
+                    .addComponent(Btn_UploadDT))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Select_EntryTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Btn_EntryTableConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CB_BMI)
+                        .addComponent(CB_Floors)
+                        .addComponent(CB_HR)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 13, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
                     .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Btn_Search)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(CB_Sleep)
+                    .addComponent(CB_Steps)
+                    .addComponent(CB_Weight))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Btn_Run)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Btn_Run)
+                    .addComponent(Btn_RunSelectedDT))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -180,29 +354,226 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             WriteTA(TA_Results, "\nname:"+pt.getFullName());
             WriteTA(TA_Results, "\nage:"+pt.getAge());
             WriteTA(TA_Results, "\ngender"+pt.getGender());
-            WriteTA(TA_Results, "\nmember since:"+bartDateFormat.format(pt.getMemberSince()));
+            if(pt.getMemberSince() != null)
+                WriteTA(TA_Results, "\nmember since:"+bartDateFormat.format(pt.getMemberSince()));
         }
         WriteTA(TA_PatientInfo, "\n\nDONE!");
     }//GEN-LAST:event_Btn_SearchActionPerformed
 
     private void Btn_RunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_RunActionPerformed
         // TODO add your handling code here:
-        edu.dhu.DTRules.DTRulesPatientDev dtrpd = new edu.dhu.DTRules.DTRulesPatientDev();
         edu.dhu.DTRules.entities.Patient patient = com.dtrules.samples.sampleproject2.DataGenerater.GenerateDTRulesPatient();
-        if(patientList.size() == 0)
-            return;
-        for(Patients pt : patientList){
-            List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
+//        if(patientList.size() == 0)
+//            return;
+        try{
+            edu.dhu.DTRules.DTRulesPatientDev dtrpd = new edu.dhu.DTRules.DTRulesPatientDev();
+            List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine(patient,
                     edu.dhu.DTRules.DTRulesPatientDev.BasePath , 
                     edu.dhu.DTRules.DTRulesPatientDev.ConfigFileFileName, 
-                    edu.dhu.DTRules.DTRulesPatientDev.RuleName_PatientDemo,
+                    DTRulesXML.DTName,
                     edu.dhu.DTRules.DTRulesPatientDev.EntryTable);
-            WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName());
+            WriteTA(TA_Results, "\n\nResult of patient "+patient.getFullName());
             for(edu.dhu.DTRules.entities.Result result : results){
                 WriteTA(TA_Results, "\n"+result.getResultCode()+"--->"+result.getResultMessage());
             }
         }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            WriteTA(TA_Results, "\n\nError occurred: " + e.getMessage());
+        }
     }//GEN-LAST:event_Btn_RunActionPerformed
+
+
+    private void CheckForUpload() {
+        if((CB_BMI.isSelected() || CB_Floors.isSelected() || CB_HR.isSelected()
+                || CB_Sleep.isSelected() || CB_Steps.isSelected() || CB_Weight.isSelected())
+                && Compiled && EntryTable_Confirmed && Tested)
+            Btn_UploadDT.setEnabled(true);
+        else
+            Btn_UploadDT.setEnabled(false);
+    }
+
+    class ExcelFileFilter extends FileFilter {
+        public String getDescription() {
+            return "*.xls;*.xlsx";
+        }
+        public boolean accept(File file) {
+            String name = file.getName();
+            return file.isDirectory() || name.toLowerCase().endsWith(".xls") || name.toLowerCase().endsWith(".xlsx");
+        }
+    }
+    private void Btn_SelectDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_SelectDTActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        ExcelFileFilter eff = new ExcelFileFilter();
+        jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        jfc.addChoosableFileFilter(eff);
+        jfc.setFileFilter(eff);
+        int state = jfc.showOpenDialog(null);
+        if(state == 1){
+            return;
+        }else{
+            File f = jfc.getSelectedFile();
+            TF_SelectedFile.setText(f.getAbsolutePath());
+            f = null;
+            Btn_ComplieDT.setEnabled(true);
+        }
+    }//GEN-LAST:event_Btn_SelectDTActionPerformed
+
+    private void Btn_ComplieDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ComplieDTActionPerformed
+        //add a method that returns the RuleSet string, save it in a temp variable...done
+        //check all the directions are exists...done
+        //append or create a DTRules.xml with the RuleSet string...done
+        //copy the file into certain dir AND COMPILE, then we should take all decision table's name to let user to choose the entry table...done
+        //Data we need: BasePath, ConfigFileFileName, RuleSetName, EntryTableName
+        //The Edd xls file is fixed for now and maybe it will not be modified or we will not add new entities
+        TA_Results.setText("");
+        File dtFile = new File(TF_SelectedFile.getText());
+        String ruleName = dtFile.getName().split("[.]")[0];
+        RuleSetName = ruleName;
+        DTRulesXML dtrxml = DTRulesXML.getInstance();
+        RuleSetString = dtrxml.getRuleSetString(ruleName);
+        WriteTA(TA_PatientInfo, "The RuleSet Generated Info:");
+        WriteTA(TA_PatientInfo, RuleSetString);
+        try{
+            dtrxml.writeTempXmlFile(RuleSetString);
+//            int checkResult = dtrxml.checkDTRules(ruleName);
+//            WriteTA(TA_PatientInfo, "\nCheck result: "+checkResult+"\n");
+//            if(checkResult == -1){
+////                create a new DTRules.xml and its relative dirs
+////                WriteTA(TA_PatientInfo, "Writting...\n\n"+dtrxml.createDTRules(RuleSetString) + "\nDONE...\n\n");
+//                dtrxml.createDTRules(RuleSetString);
+//            }
+//            if(checkResult == 0){
+//                //append the ruleset in the existed DTRules.xml
+//                dtrxml.appendDTRules(RuleSetString);
+//            }
+//            if(checkResult == 1){
+//                //replace the ruleset in the existed DTRules.xml
+//                dtrxml.replaceDTRules(RuleSetString, ruleName);
+//            }
+            dtrxml.createDTRules(RuleSetString);
+            //copy the xls file into the certain dir
+            dtrxml.copyFileToCertainDir(dtFile);
+            //Compile the decision table
+            //Set System.out PrintStream and get the compile messages
+            ByteArrayOutputStream baos = new ByteArrayOutputStream(2048);
+            PrintStream cacheout = new PrintStream(baos);
+            PrintStream original = System.out;
+            System.setOut(cacheout);
+            dtrxml.Compile(ruleName);
+            System.setOut(original);
+            WriteTA(TA_Results, baos.toString());
+            //get the decision tables from the dt xml file
+            List<String> decisiontable = dtrxml.getDecisionTables(ruleName);
+            for(String str : decisiontable){
+                Select_EntryTable.addItem(str);
+            }
+            Select_EntryTable.setSelectedIndex(0);
+            Select_EntryTable.setEnabled(true);
+            Btn_EntryTableConfirm.setEnabled(true);
+            Compiled = true;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            WriteTA(TA_PatientInfo, e.getMessage());
+        }
+    }//GEN-LAST:event_Btn_ComplieDTActionPerformed
+
+    private void Btn_EntryTableConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_EntryTableConfirmActionPerformed
+        EntryTable = Select_EntryTable.getItemAt(Select_EntryTable.getSelectedIndex());
+        Btn_RunSelectedDT.setEnabled(true);
+        EntryTable_Confirmed = true;
+    }//GEN-LAST:event_Btn_EntryTableConfirmActionPerformed
+
+    private void Btn_RunSelectedDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_RunSelectedDTActionPerformed
+        if(patientList.size() == 0)
+            return;
+        try{
+            edu.dhu.DTRules.DTRulesPatientDev dtrpd = new edu.dhu.DTRules.DTRulesPatientDev();
+            for(Patients pt : patientList){
+                List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
+                        DTRulesXML.BASEPATH , 
+                        "DTRules.xml", 
+                        DTRulesXML.DTName,
+//                        "123",
+                        EntryTable);
+                if(results.size() != 0){
+                    WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName());
+                    for(edu.dhu.DTRules.entities.Result result : results){
+                        WriteTA(TA_Results, "\n"+result.getResultCode()+"--->"+result.getResultMessage());
+                    }
+                }
+            }
+            Tested = true;
+            CheckForUpload();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            WriteTA(TA_Results, "\n\nError occrred: " + e.getMessage());
+        }
+    }//GEN-LAST:event_Btn_RunSelectedDTActionPerformed
+
+    private void Btn_UploadDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_UploadDTActionPerformed
+        //to upload the runnable DTRules to the database
+        //we need:
+        //1.RuleSetName...done
+        //2.The RuleSet, content of the part of the DTRules.xml...done
+        //3.The three xml file
+        //4.Entry table name...done
+        try{
+            DTRulesXML dtrxml = DTRulesXML.getInstance();
+//            String MapXMLContent = dtrxml.readMapXML(RuleSetName);
+//            String EDDXMLContent = dtrxml.readEDDXML(RuleSetName);
+            String DTXMLContent = dtrxml.readDTXML(RuleSetName);// read the tmp xml file, and the RuleSetName parameter is not used at all
+            System.out.println("XML String Read done...");
+            GaleDTRulesDAO gdtrdao = new GaleDTRulesDAO();
+            StringBuilder Attributes = new StringBuilder();
+            if(CB_BMI.isSelected())
+                Attributes.append("BMI;");
+            if(CB_HR.isSelected())
+                Attributes.append("HR;");
+            if(CB_Floors.isSelected())
+                Attributes.append("Floors;");
+            if(CB_Sleep.isSelected())
+                Attributes.append("Sleep;");
+            if(CB_Steps.isSelected())
+                Attributes.append("Steps;");
+            if(CB_Weight.isSelected())
+                Attributes.append("Weight;");
+            if(gdtrdao.insertDTRules(RuleSetName, Attributes.toString(), EntryTable, RuleSetString, DTXMLContent))
+                WriteTA(TA_PatientInfo, "Upload Done...");
+            else
+                WriteTA(TA_PatientInfo, "Upload Failed...");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_Btn_UploadDTActionPerformed
+
+    private void CB_BMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_BMIActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_BMIActionPerformed
+
+    private void CB_FloorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_FloorsActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_FloorsActionPerformed
+
+    private void CB_HRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_HRActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_HRActionPerformed
+
+    private void CB_SleepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_SleepActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_SleepActionPerformed
+
+    private void CB_StepsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_StepsActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_StepsActionPerformed
+
+    private void CB_WeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB_WeightActionPerformed
+        CheckForUpload();
+    }//GEN-LAST:event_CB_WeightActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,13 +611,27 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_ComplieDT;
+    private javax.swing.JButton Btn_EntryTableConfirm;
     private javax.swing.JButton Btn_Run;
+    private javax.swing.JButton Btn_RunSelectedDT;
     private javax.swing.JButton Btn_Search;
+    private javax.swing.JButton Btn_SelectDT;
+    private javax.swing.JButton Btn_UploadDT;
+    private javax.swing.JCheckBox CB_BMI;
+    private javax.swing.JCheckBox CB_Floors;
+    private javax.swing.JCheckBox CB_HR;
+    private javax.swing.JCheckBox CB_Sleep;
+    private javax.swing.JCheckBox CB_Steps;
+    private javax.swing.JCheckBox CB_Weight;
     private javax.swing.JTextField INPT_PName;
+    private javax.swing.JComboBox<String> Select_EntryTable;
     private javax.swing.JTextArea TA_PatientInfo;
     private javax.swing.JTextArea TA_Results;
+    private javax.swing.JTextField TF_SelectedFile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
