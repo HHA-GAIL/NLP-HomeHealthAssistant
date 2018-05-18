@@ -41,6 +41,8 @@ public class DTRulesXML {
     public static final String XMLENTITY = "Dev_edd.xml";
     public static final String XMLMAP = "Dev_map.xml";
     public static final String DTName = "TheDecisionTable";
+    public static final String XMLDT = DTName + "_dt.xml";
+    public static final String DTFolder = "DecisionTables/DevDT";
     
     private StringBuilder sb = new StringBuilder();
     
@@ -71,13 +73,13 @@ public class DTRulesXML {
     /*
     the method used the same edd file, for now...
     */
-    public String getRuleSetString(String DTName){
+    public String getRuleSetString(){
 //        return getRuleSetString(DTName, XMLDIR, WORKINGDIR, 
 //                "DecisionTables/"+DTName, EDDFOLDER,
 //                XMLENTITY, DTName+"_dt.xml", XMLMAP);
         return getRuleSetString(this.DTName, XMLDIR, WORKINGDIR, 
-                "DecisionTables/"+DTName, EDDFOLDER,
-                XMLENTITY, this.DTName+"_dt.xml", XMLMAP);
+                DTFolder, EDDFOLDER,
+                XMLENTITY, XMLDT, XMLMAP);
     }
     
     /**
@@ -246,9 +248,9 @@ public class DTRulesXML {
      */
     public void copyFileToCertainDir(File dtFile) throws FileNotFoundException, IOException {
         FileInputStream fis = new FileInputStream(dtFile);
-        File dest = new File(BASEPATH + "DecisionTables/" + dtFile.getName().split("[.]")[0]);
+        File dest = new File(BASEPATH + DTFolder);
         dest.mkdirs();
-        dest = new File(BASEPATH + "DecisionTables/" + dtFile.getName().split("[.]")[0] + "/" + dtFile.getName());
+        dest = new File(BASEPATH + DTFolder + "/" + dtFile.getName());
         FileOutputStream fos = new FileOutputStream(dest);
         byte[] buffer = new byte[1024];
         int btRead = 0;
@@ -263,7 +265,7 @@ public class DTRulesXML {
      * compile the RuleSet using the RulesName, the RulesName should be in the DTRules.xml first
      * @param RulesName 
      */
-    public void Compile(String RulesName) throws Exception {
+    public void Compile() throws Exception {
 //        com.dtrules.samples.sampleproject2.DemoTesting.main(null);//no problem
 //        edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", RulesName, BASEPATH, new String[] {"main"});
         try {
@@ -336,7 +338,7 @@ public class DTRulesXML {
         return readXMLFile(BASEPATH + xmlDir + "/" + EDDName);
     }
 
-    public String readDTXML(String RuleSetName) throws SAXException, IOException, ParserConfigurationException {
+    public String readDTXML() throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document dtDocument = builder.parse(BASEPATH + "_TMP_.xml");
         Element dtElement = (Element)dtDocument.getElementsByTagName("RuleSet").item(0);

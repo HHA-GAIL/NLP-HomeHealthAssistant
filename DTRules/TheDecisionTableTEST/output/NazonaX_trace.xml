@@ -236,14 +236,14 @@
 									<def id='10332' entity='floors_Dev' name='datetime'>&quot;04/04/2018 17:19:40:0000&quot; cvd</def>
 									<message>   /datetime &quot;2018-04-04 17:19:40.0&quot; def</message>
 								</dateTime>
-								<floors>
-									<def id='10332' entity='floors_Dev' name='floors'>5</def>
-									<message>   /floors &quot;5&quot; def</message>
-								</floors>
 								<floorsID>
 									<def id='10332' entity='floors_Dev' name='floorsid'>1</def>
 									<message>   /floorsid &quot;1&quot; def</message>
 								</floorsID>
+								<floors>
+									<def id='10332' entity='floors_Dev' name='floors'>5</def>
+									<message>   /floors &quot;5&quot; def</message>
+								</floors>
 								<devID_FK>
 									<def id='10332' entity='floors_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
@@ -335,12 +335,12 @@
 							<context execute='{ { { /Examine_MALE executeTable  } 0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop } getdate cvd allocate execute deallocate pop } bMI_Devs 0 getat cve allocate execute deallocate pop'>
 								<execute_table>
 									<allocate index='0' value='/bMI_Dev 10322 fce '></allocate>
-									<allocate index='1' value='&quot;05/18/2018 12:47:28:0880&quot; cvd'></allocate>
+									<allocate index='1' value='&quot;05/18/2018 16:47:59:0316&quot; cvd'></allocate>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
 									<entitypop></entitypop>
 									<entitypop></entitypop>
-									<allocate index='2' value='30'></allocate>
+									<allocate index='2' value='31'></allocate>
 									<initialActions></initialActions>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
@@ -385,7 +385,7 @@
 											<entitypop></entitypop>
 											<entitypush entity='result' id='10337'></entitypush>
 											<entitypush value='result' id='10337'></entitypush>
-											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from30days ago&apos;s data:17.7&quot;</def>
+											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from31days ago&apos;s data:17.7&quot;</def>
 											<entitypop></entitypop>
 											<entitypop></entitypop>
 										</action>

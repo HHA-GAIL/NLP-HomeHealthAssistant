@@ -1,7 +1,7 @@
 <RuleSet name="TheDecisionTable" source="file"  >
 <RuleSetFilePath>/xml</RuleSetFilePath>
 <WorkingDirectory>/workingDir</WorkingDirectory>
-<DTExcelFolder>/DecisionTables/PatientDemoDT/</DTExcelFolder>
+<DTExcelFolder>/DecisionTables/DevDT/</DTExcelFolder>
 <EDDExcelFolder>/DevEDD/</EDDExcelFolder>
 <Entities        name="Dev_edd.xml" />
 <Decisiontables  name="TheDecisionTable_dt.xml"  />

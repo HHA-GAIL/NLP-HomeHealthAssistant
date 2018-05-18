@@ -28,6 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
@@ -42,7 +43,6 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
     List<Patients> patientList = new LinkedList<>();
     private String RuleSetString = null;
     private String EntryTable = null;
-    private String RuleSetName = null;
     
     private boolean Compiled = false;
     private boolean EntryTable_Confirmed = false;
@@ -66,7 +66,6 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         INPT_PName = new javax.swing.JTextField();
         Btn_Search = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -89,10 +88,12 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         CB_Sleep = new javax.swing.JCheckBox();
         CB_Steps = new javax.swing.JCheckBox();
         CB_Weight = new javax.swing.JCheckBox();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TA_CompileMsg = new javax.swing.JTextArea();
+        TB_RuleSetName = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("DTRules_Testing_Panel");
 
         Btn_Search.setText("Search");
         Btn_Search.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +108,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         TA_PatientInfo.setColumns(20);
         TA_PatientInfo.setLineWrap(true);
         TA_PatientInfo.setRows(5);
-        TA_PatientInfo.setText("The information of the certain Patient will be placed here...\nNow the EDD is fixed..\nAnd the selected decision table should use the data entities defined by the EDD...\n\nTODO:\n1.Select the excel file\n2.Add rule set in the DTRules.xml, should check if there is a multidefination\n3.Compile\n4.Output the messages\n5.Could be update to the database\n6.Set all needed data as a temp variable\n\n");
+        TA_PatientInfo.setText("The information of the certain Patient will be placed here...\nNow the EDD is fixed..\nAnd the selected decision table should use the data entities defined by the EDD...\n");
         jScrollPane1.setViewportView(TA_PatientInfo);
 
         Btn_Run.setText("Run in DTRulesEngine...");
@@ -210,6 +211,13 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             }
         });
 
+        TA_CompileMsg.setColumns(20);
+        TA_CompileMsg.setRows(5);
+        TA_CompileMsg.setText("The Compile Message will be placed here...\n");
+        jScrollPane3.setViewportView(TA_CompileMsg);
+
+        jLabel4.setText("Please input your RuleSet's name:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -218,93 +226,96 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane1))
-                        .addContainerGap())
+                        .addComponent(CB_Sleep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CB_Steps)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CB_Weight)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CB_BMI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CB_Floors)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CB_HR)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Btn_UploadDT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Btn_Run, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Btn_RunSelectedDT, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Btn_Run, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Btn_RunSelectedDT, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TF_SelectedFile, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Btn_SelectDT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Btn_Search)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Btn_ComplieDT)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Btn_UploadDT))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(CB_Sleep)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CB_Steps)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CB_Weight))))
+                                .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Btn_Search))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Select_EntryTable, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Btn_EntryTableConfirm)
+                                .addComponent(Btn_EntryTableConfirm))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TF_SelectedFile, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CB_BMI)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CB_Floors)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CB_HR)))
-                        .addGap(0, 4, Short.MAX_VALUE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TB_RuleSetName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Btn_SelectDT, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Btn_ComplieDT)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TB_RuleSetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TF_SelectedFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Btn_SelectDT)
-                    .addComponent(Btn_ComplieDT)
-                    .addComponent(Btn_UploadDT))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Btn_ComplieDT))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Select_EntryTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Btn_EntryTableConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(CB_BMI)
-                        .addComponent(CB_Floors)
-                        .addComponent(CB_HR)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 13, Short.MAX_VALUE)
+                    .addComponent(Btn_EntryTableConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(INPT_PName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Btn_Search)
-                    .addComponent(CB_Sleep)
-                    .addComponent(CB_Steps)
-                    .addComponent(CB_Weight))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Btn_Search))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Btn_Run)
                     .addComponent(Btn_RunSelectedDT))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CB_Sleep)
+                    .addComponent(CB_Steps)
+                    .addComponent(CB_Weight)
+                    .addComponent(CB_BMI)
+                    .addComponent(CB_Floors)
+                    .addComponent(CB_HR)
+                    .addComponent(Btn_UploadDT))
+                .addGap(5, 5, 5))
         );
 
         pack();
@@ -350,14 +361,14 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             patientList.add(tmp);
         }
         SimpleDateFormat bartDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        for(Patients pt: patientList){
-            WriteTA(TA_Results, "\nname:"+pt.getFullName());
-            WriteTA(TA_Results, "\nage:"+pt.getAge());
-            WriteTA(TA_Results, "\ngender"+pt.getGender());
-            if(pt.getMemberSince() != null)
-                WriteTA(TA_Results, "\nmember since:"+bartDateFormat.format(pt.getMemberSince()));
-        }
-        WriteTA(TA_PatientInfo, "\n\nDONE!");
+//        for(Patients pt: patientList){
+//            WriteTA(TA_Results, "\nname:"+pt.getFullName());
+//            WriteTA(TA_Results, "\nage:"+pt.getAge());
+//            WriteTA(TA_Results, "\ngender"+pt.getGender());
+//            if(pt.getMemberSince() != null)
+//                WriteTA(TA_Results, "\nmember since:"+bartDateFormat.format(pt.getMemberSince()));
+//        }
+//        WriteTA(TA_PatientInfo, "\n\nDONE!");
     }//GEN-LAST:event_Btn_SearchActionPerformed
 
     private void Btn_RunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_RunActionPerformed
@@ -415,6 +426,8 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         }else{
             File f = jfc.getSelectedFile();
             TF_SelectedFile.setText(f.getAbsolutePath());
+            if(TB_RuleSetName.getText() == null || TB_RuleSetName.getText().equals(""))
+                TB_RuleSetName.setText(f.getName().split("[.]")[0]);
             f = null;
             Btn_ComplieDT.setEnabled(true);
         }
@@ -427,14 +440,12 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         //copy the file into certain dir AND COMPILE, then we should take all decision table's name to let user to choose the entry table...done
         //Data we need: BasePath, ConfigFileFileName, RuleSetName, EntryTableName
         //The Edd xls file is fixed for now and maybe it will not be modified or we will not add new entities
-        TA_Results.setText("");
+        TA_CompileMsg.setText("");
         File dtFile = new File(TF_SelectedFile.getText());
         String ruleName = dtFile.getName().split("[.]")[0];
-        RuleSetName = ruleName;
         DTRulesXML dtrxml = DTRulesXML.getInstance();
-        RuleSetString = dtrxml.getRuleSetString(ruleName);
-        WriteTA(TA_PatientInfo, "The RuleSet Generated Info:");
-        WriteTA(TA_PatientInfo, RuleSetString);
+        RuleSetString = dtrxml.getRuleSetString();
+        WriteTA(TA_CompileMsg, "The RuleSet Generated Info:");
         try{
             dtrxml.writeTempXmlFile(RuleSetString);
 //            int checkResult = dtrxml.checkDTRules(ruleName);
@@ -461,9 +472,9 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             PrintStream cacheout = new PrintStream(baos);
             PrintStream original = System.out;
             System.setOut(cacheout);
-            dtrxml.Compile(ruleName);
+            dtrxml.Compile();
             System.setOut(original);
-            WriteTA(TA_Results, baos.toString());
+            WriteTA(TA_CompileMsg, baos.toString());
             //get the decision tables from the dt xml file
             List<String> decisiontable = dtrxml.getDecisionTables(ruleName);
             for(String str : decisiontable){
@@ -484,6 +495,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         EntryTable = Select_EntryTable.getItemAt(Select_EntryTable.getSelectedIndex());
         Btn_RunSelectedDT.setEnabled(true);
         EntryTable_Confirmed = true;
+        WriteTA(TA_CompileMsg, "\nSelected EntryTable: "+EntryTable);
     }//GEN-LAST:event_Btn_EntryTableConfirmActionPerformed
 
     private void Btn_RunSelectedDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_RunSelectedDTActionPerformed
@@ -523,9 +535,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         //4.Entry table name...done
         try{
             DTRulesXML dtrxml = DTRulesXML.getInstance();
-//            String MapXMLContent = dtrxml.readMapXML(RuleSetName);
-//            String EDDXMLContent = dtrxml.readEDDXML(RuleSetName);
-            String DTXMLContent = dtrxml.readDTXML(RuleSetName);// read the tmp xml file, and the RuleSetName parameter is not used at all
+            String DTXMLContent = dtrxml.readDTXML();// read the tmp xml file, and the RuleSetName parameter is not used at all
             System.out.println("XML String Read done...");
             GaleDTRulesDAO gdtrdao = new GaleDTRulesDAO();
             StringBuilder Attributes = new StringBuilder();
@@ -541,10 +551,32 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
                 Attributes.append("Steps;");
             if(CB_Weight.isSelected())
                 Attributes.append("Weight;");
-            if(gdtrdao.insertDTRules(RuleSetName, Attributes.toString(), EntryTable, RuleSetString, DTXMLContent))
-                WriteTA(TA_PatientInfo, "Upload Done...");
+            String RuleSetName = TB_RuleSetName.getText();
+            if("".equals(RuleSetName))
+                WriteTA(TA_Results, "\nThe RuleSet name has not be inputed yet...");
+            
+            //check for the RuleName
+            DefaultTableModel dt = gdtrdao.getTableModel(RuleSetName);
+            int count = dt.getRowCount();
+            if(count > 0){
+                //has the same name of RuleName
+                //should ask for overwritting
+                int n=JOptionPane.showConfirmDialog(null, "There has a same name RuleSet in the database yet："+RuleSetName+".\nWould you like to overwritting the data in the database?"
+                        ,"ATTENTION!",JOptionPane.YES_NO_OPTION);
+                if(n == JOptionPane.OK_OPTION){
+                    //up date here...
+                    if(gdtrdao.updateDTRules(RuleSetName, Attributes.toString(), EntryTable, DTXMLContent))
+                        WriteTA(TA_Results, "\nUpDate Done...");
+                    else
+                        WriteTA(TA_Results, "\nUpdate Failed...");
+                }
+                return;
+            }
+            
+            if(gdtrdao.insertDTRules(RuleSetName, Attributes.toString(), EntryTable, DTXMLContent))
+                WriteTA(TA_Results, "\nUpload Done...");
             else
-                WriteTA(TA_PatientInfo, "Upload Failed...");
+                WriteTA(TA_Results, "\nUpload Failed...");
         }
         catch(Exception e){
             e.printStackTrace();
@@ -626,14 +658,17 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox CB_Weight;
     private javax.swing.JTextField INPT_PName;
     private javax.swing.JComboBox<String> Select_EntryTable;
+    private javax.swing.JTextArea TA_CompileMsg;
     private javax.swing.JTextArea TA_PatientInfo;
     private javax.swing.JTextArea TA_Results;
+    private javax.swing.JTextField TB_RuleSetName;
     private javax.swing.JTextField TF_SelectedFile;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 
     private void WriteTA(JTextArea Ta, String message) {
