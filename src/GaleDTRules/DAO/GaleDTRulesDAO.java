@@ -151,6 +151,64 @@ public class GaleDTRulesDAO {
     }
     
     /**
+     * To select the DTRules whose RuleName is like the parameter
+     * @param RuleName
+     * @return DefaultTableModel just includes RuleName
+     */
+    public DefaultTableModel getLikelyRuleNames(String RuleName) {
+        try {
+            conn = JDBCMySQLConnection.getConnection(JDBCMySQLConnection.TYPE.GALE);
+            if(!"".equals(RuleName))
+            {
+                pstmt = conn.prepareStatement("SELECT RuleName FROM DTRules where RuleName like ? ;");
+                pstmt.setString(1, "%"+RuleName+"%");
+            }
+            else
+                pstmt = conn.prepareStatement("SELECT RuleName FROM DTRules ;");
+            rst = pstmt.executeQuery();
+            ResultSetMetaData metaData = rst.getMetaData();
+            int count = metaData.getColumnCount();
+            Vector<String> columnNames = new Vector<>();
+
+            for (int i = 1; i <= count; i++) {
+                columnNames.add(metaData.getColumnLabel(i));
+            }
+
+            Vector<Vector<Object>> data = new Vector<>();
+            while (rst.next()) {
+                Vector<Object> vector = new Vector<>();
+                for (int columnIndex = 1; columnIndex <= count; columnIndex++) {
+                    vector.add(rst.getObject(columnIndex));
+                }
+                data.add(vector);
+            }
+            return new DefaultTableModel(data, columnNames) {
+                /* set the first row, which is id row, not editable */
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    return !(0 <= row && row < getRowCount() && column == 0 || column == 1);
+                }
+
+                @Override
+                public Class<?> getColumnClass(int column) {
+                    if (getRowCount() <= 1) {
+                        return Object.class;
+                    } else if (column < 2 || column == 4 || column == 5 || column == 8) {
+                        return getValueAt(0, column).getClass();
+                    } else {
+                        return Object.class;
+                    }
+                }
+            };
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCMySQLConnection.closeAll(rst, pstmt, conn);
+        }
+        return null;
+    }
+    
+    /**
      * update the DTRules with RuleName
      * @param RuleSetName
      * @param toString
@@ -171,6 +229,28 @@ public class GaleDTRulesDAO {
             if(count > 0)
                 result = true;
 //            System.out.println("Check...");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCMySQLConnection.closeAll(rst, pstmt, conn);
+        }
+        return result;
+    }
+
+    /**
+     * delete DTRules by RuleName
+     * @param RuleName
+     * @return 
+     */
+    public boolean deleteDTRules(String RuleName) {
+        boolean result = false;
+        try {
+            conn = JDBCMySQLConnection.getConnection(JDBCMySQLConnection.TYPE.GALE);
+            pstmt = conn.prepareStatement("delete from DTRules where RuleName=?;");
+            pstmt.setString(1, RuleName);
+            int count = pstmt.executeUpdate();
+            if(count > 0)
+                result = true;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

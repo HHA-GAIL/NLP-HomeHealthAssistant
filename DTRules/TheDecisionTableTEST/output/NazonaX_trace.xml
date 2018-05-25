@@ -39,14 +39,14 @@
 									<def id='10318' entity='sleep_Dev' name='sleepresults'>&quot;490&quot;</def>
 									<message>   /sleepresults &quot;490&quot; def</message>
 								</sleepResults>
-								<devID_FK>
-									<def id='10318' entity='sleep_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10318' entity='sleep_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10318' entity='sleep_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<sleepMeasurement></sleepMeasurement>
 								<entitypop></entitypop>
 							</mapCreateEntity>
@@ -70,14 +70,14 @@
 									<def id='10320' entity='steps_Dev' name='steps'>15633.0</def>
 									<message>   /steps &quot;15633.0&quot; def</message>
 								</steps>
-								<devID_FK>
-									<def id='10320' entity='steps_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10320' entity='steps_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10320' entity='steps_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</steps_Dev>
@@ -100,14 +100,14 @@
 									<def id='10322' entity='bMI_Dev' name='bmiid'>4</def>
 									<message>   /bmiid &quot;4&quot; def</message>
 								</bMIID>
-								<devID_FK>
-									<def id='10322' entity='bMI_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10322' entity='bMI_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10322' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</bMI_Dev>
@@ -128,14 +128,14 @@
 									<def id='10324' entity='bMI_Dev' name='bmiid'>3</def>
 									<message>   /bmiid &quot;3&quot; def</message>
 								</bMIID>
-								<devID_FK>
-									<def id='10324' entity='bMI_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10324' entity='bMI_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10324' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</bMI_Dev>
@@ -156,14 +156,14 @@
 									<def id='10326' entity='bMI_Dev' name='bmiid'>2</def>
 									<message>   /bmiid &quot;2&quot; def</message>
 								</bMIID>
-								<devID_FK>
-									<def id='10326' entity='bMI_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10326' entity='bMI_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10326' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</bMI_Dev>
@@ -184,14 +184,14 @@
 									<def id='10328' entity='bMI_Dev' name='bmiid'>1</def>
 									<message>   /bmiid &quot;1&quot; def</message>
 								</bMIID>
-								<devID_FK>
-									<def id='10328' entity='bMI_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10328' entity='bMI_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10328' entity='bMI_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</bMI_Dev>
@@ -214,14 +214,14 @@
 									<def id='10330' entity='hR_Dev' name='hr'>2</def>
 									<message>   /hr &quot;2&quot; def</message>
 								</hR>
-								<devID_FK>
-									<def id='10330' entity='hR_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10330' entity='hR_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10330' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -244,14 +244,14 @@
 									<def id='10332' entity='floors_Dev' name='floorsid'>1</def>
 									<message>   /floorsid &quot;1&quot; def</message>
 								</floorsID>
-								<devID_FK>
-									<def id='10332' entity='floors_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10332' entity='floors_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10332' entity='floors_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</floors_Dev>
@@ -270,14 +270,14 @@
 									<def id='10334' entity='weight_Dev' name='weight'>62.0</def>
 									<message>   /weight &quot;62.0&quot; def</message>
 								</weight>
-								<devID_FK>
-									<def id='10334' entity='weight_Dev' name='devid_fk'>-1</def>
-									<message>   /devid_fk &quot;-1&quot; def</message>
-								</devID_FK>
 								<patientID_FK>
 									<def id='10334' entity='weight_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
+								<devID_FK>
+									<def id='10334' entity='weight_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
 								<weightID>
 									<def id='10334' entity='weight_Dev' name='weightid'>1</def>
 									<message>   /weightid &quot;1&quot; def</message>
@@ -335,12 +335,12 @@
 							<context execute='{ { { /Examine_MALE executeTable  } 0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop } getdate cvd allocate execute deallocate pop } bMI_Devs 0 getat cve allocate execute deallocate pop'>
 								<execute_table>
 									<allocate index='0' value='/bMI_Dev 10322 fce '></allocate>
-									<allocate index='1' value='&quot;05/18/2018 22:23:12:0870&quot; cvd'></allocate>
+									<allocate index='1' value='&quot;05/25/2018 20:05:38:0412&quot; cvd'></allocate>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
 									<entitypop></entitypop>
 									<entitypop></entitypop>
-									<allocate index='2' value='31'></allocate>
+									<allocate index='2' value='38'></allocate>
 									<initialActions></initialActions>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
@@ -385,7 +385,7 @@
 											<entitypop></entitypop>
 											<entitypush entity='result' id='10337'></entitypush>
 											<entitypush value='result' id='10337'></entitypush>
-											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from31days ago&apos;s data:17.7&quot;</def>
+											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from38days ago&apos;s data:17.7&quot;</def>
 											<entitypop></entitypop>
 											<entitypop></entitypop>
 										</action>
