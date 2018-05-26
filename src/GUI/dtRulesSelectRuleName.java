@@ -281,6 +281,7 @@ public class dtRulesSelectRuleName extends javax.swing.JDialog {
                 }
             }
             TA_Content.setText(contentString.substring(start, end));
+            TA_Content.setCaretPosition(0);
         }catch(Exception e){
             e.printStackTrace();
             TA_Content.append("\n"+e.getMessage());
