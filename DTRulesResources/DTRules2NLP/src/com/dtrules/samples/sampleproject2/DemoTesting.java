@@ -20,7 +20,7 @@ public class DemoTesting {
 //            PrintStream original = System.out;
 //            System.setOut(cacheout);
 			DTRulesCompiler.Compile(DTRulesCompiler.BasePath, DTRulesCompiler.ConfigFileName,
-					DTRulesPatientDev.RuleName_PatientDemo, DTRulesCompiler.BasePath, mapping);
+					"TheDecisionTable", DTRulesCompiler.BasePath, mapping);
 //			System.setOut(original);
 //			System.out.println("--->"+baos.toString()+"<---");
 			
@@ -28,7 +28,7 @@ public class DemoTesting {
 			DTRulesPatientDev dtpd = new DTRulesPatientDev();
 			dtpd.doExamine(patient, dtpd.BasePath,
 					dtpd.ConfigFileFileName,
-					dtpd.RuleName_PatientDemo,
+					"TheDecisionTable",
 					dtpd.EntryTable);
 
 		} catch (Exception e) {

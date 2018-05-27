@@ -70,6 +70,7 @@ public class DataGenerater {
 	}
 	
 	private static Date getDateUL(List<Integer> array, Random random, boolean delete) {
+                System.out.println(array.size());
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
 		int selected = random.nextInt(array.size());

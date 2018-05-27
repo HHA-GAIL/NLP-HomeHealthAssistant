@@ -335,12 +335,12 @@
 							<context execute='{ { { /Examine_MALE executeTable  } 0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop } getdate cvd allocate execute deallocate pop } bMI_Devs 0 getat cve allocate execute deallocate pop'>
 								<execute_table>
 									<allocate index='0' value='/bMI_Dev 10322 fce '></allocate>
-									<allocate index='1' value='&quot;05/25/2018 22:28:54:0180&quot; cvd'></allocate>
+									<allocate index='1' value='&quot;05/27/2018 23:27:15:0721&quot; cvd'></allocate>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
 									<entitypop></entitypop>
 									<entitypop></entitypop>
-									<allocate index='2' value='38'></allocate>
+									<allocate index='2' value='40'></allocate>
 									<initialActions></initialActions>
 									<entitypush entity='bMI_Dev' id='10322'></entitypush>
 									<entitypush value='bMI_Dev' id='10322'></entitypush>
@@ -385,7 +385,7 @@
 											<entitypop></entitypop>
 											<entitypush entity='result' id='10337'></entitypush>
 											<entitypush value='result' id='10337'></entitypush>
-											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from38days ago&apos;s data:17.7&quot;</def>
+											<def id='10337' entity='result' name='resultMessage'>&quot;underweight ---&gt;from40days ago&apos;s data:17.7&quot;</def>
 											<entitypop></entitypop>
 											<entitypop></entitypop>
 										</action>
