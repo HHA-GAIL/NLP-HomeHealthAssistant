@@ -65,16 +65,17 @@ public class DTRulesPatientDev {
 	public List<Result> doExamine(Patient patient,String basePath, String configFileName, String ruleName, String entryTable)
 			throws Exception{
 		List<Result> results = new ArrayList<Result>();
+                System.out.println("DE111");
 		try{
 			RulesDirectory rd = new RulesDirectory(basePath, configFileName);
 			RName rsName   = RName.getRName(ruleName);
 			RuleSet rs = rd.getRuleSet(rsName);
 			rs.newSession();
-			
+		System.out.println("DE222");
 			IRSession session = rs.newSession();
 			Mapping mapping = session.getMapping();
 	        DataMap datamap = session.getDataMap(mapping,null);
-	        
+	        System.out.println("DE333");
 	        File file = new File(basePath + ruleName + "TEST/output");
 	        if(!file.exists())
 	        	file.mkdirs();
@@ -82,10 +83,10 @@ public class DTRulesPatientDev {
 	       	session.getState().setOutput(out, System.out);
 	       	session.getState().setState(DTState.TRACE | DTState.DEBUG);
 	       	session.getState().traceStart();
-	        
+	        System.out.println("DE444");
 	        datamap.opentag(patient, "patient");
 	        datamap.readDO(patient, "patient");
-	        
+	        System.out.println("DE555");
 	        	datamap.opentag("sleep_Devs");
 	        	for(Sleep_Dev slp : patient.getSleep_Devs()){
 	        		datamap.opentag(slp, "sleep_Dev");
@@ -93,7 +94,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE666");
 	        	datamap.opentag("steps_Devs");
 	        	for(Steps_Dev slp : patient.getSteps_Devs()){
 	        		datamap.opentag(slp, "steps_Dev");
@@ -101,7 +102,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE777");
 	        	datamap.opentag("bMI_Devs");
 	        	for(BMI_Dev slp : patient.getBMI_Devs()){
 	        		datamap.opentag(slp, "bMI_Dev");
@@ -109,7 +110,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE888");
 	        	datamap.opentag("hR_Devs");
 	        	for(HR_Dev slp : patient.getHR_Devs()){
 	        		datamap.opentag(slp, "hR_Dev");
@@ -117,7 +118,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE999");
 	        	datamap.opentag("floors_Devs");
 	        	for(Floors_Dev slp : patient.getFloors_Devs()){
 	        		datamap.opentag(slp, "floors_Dev");
@@ -125,7 +126,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE101010");
 	        	datamap.opentag("weight_Devs");
 	        	for(Weight_Dev slp : patient.getWeight_Devs()){
 	        		datamap.opentag(slp, "weight_Dev");
@@ -133,7 +134,7 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE111111");
 	        	datamap.opentag("results");
 	        	for(Result slp : patient.getResults()){
 	        		datamap.opentag(slp, "result");
@@ -141,14 +142,14 @@ public class DTRulesPatientDev {
 	        		datamap.closetag();
 	        	}
 	        	datamap.closetag();
-	        	
+	        System.out.println("DE121212");
 
 	        datamap.closetag();
 	        
 	        mapping.loadData(session, datamap);
-            session.execute(entryTable);
+                session.execute(entryTable);
 	        session.getState().traceEnd();
-	        
+	        System.out.println("DE131313");
 	        RArray resultsArray = session.getState().find("results").rArrayValue();
 	        for(IRObject r: resultsArray){
 	        	IREntity result = r.rEntityValue();
@@ -160,6 +161,7 @@ public class DTRulesPatientDev {
 	        	tmp.setResultMessage(message);
 	        	results.add(tmp);
 	        }
+                System.out.println("DE141414");
 		}catch(Exception e){
 			e.printStackTrace();
 			System.out.println(e.getMessage());

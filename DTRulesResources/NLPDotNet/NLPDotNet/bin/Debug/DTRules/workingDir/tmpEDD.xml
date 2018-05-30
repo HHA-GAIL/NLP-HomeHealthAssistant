@@ -1,0 +1,151 @@
+<edd_header>
+	<edd_create_stamp>星期日, 27 五月 2018 23:10:28 +0800</edd_create_stamp>
+	<Excel_File_Name>D:\dotNet\NLPDotNet\NLPDotNet\bin\Debug\DTRules\DevEDD\Dev_edd.xls</Excel_File_Name>
+</edd_header>
+<edd>
+	<entry>
+		<entity entityname='patient' attribute='patientID' type='integer' subtype='' default='' access='r' input='main' comment='the id of the patient'></entity>
+		<comment>the id of the patient</comment>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='fullName' type='string' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='age' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='gender' type='string' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='memberSince' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='bMI_Devs' type='array' subtype='bMI_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='floors_Devs' type='array' subtype='floors_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='hR_Devs' type='array' subtype='hR_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='sleep_Devs' type='array' subtype='sleep_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='steps_Devs' type='array' subtype='steps_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='weight_Devs' type='array' subtype='weight_Dev' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='results' type='array' subtype='result' default='' access='rw' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='bMI_Dev' attribute='bMIID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='bMI_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='bMI_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='bMI_Dev' attribute='bMI' type='double' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='bMI_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='floors_Dev' attribute='floorsID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='floors_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='floors_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='floors_Dev' attribute='floors' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='floors_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='hR_Dev' attribute='hRID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='hR_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='hR_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='hR_Dev' attribute='hR' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='hR_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='sleepID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='sleepMeasurement' type='double' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='steps_Dev' attribute='stepsID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='steps_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='steps_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='steps_Dev' attribute='steps' type='double' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='steps_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='weight_Dev' attribute='weightID' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='weight_Dev' attribute='patientID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='weight_Dev' attribute='devID_FK' type='integer' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='weight_Dev' attribute='weight' type='double' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='weight_Dev' attribute='dateTime' type='date' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='result' attribute='resultCode' type='integer' subtype='' default='' access='rw' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='result' attribute='resultMessage' type='string' subtype='' default='' access='rw' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='result' attribute='eX1' type='entity' subtype='' default='' access='rw' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='result' attribute='eX2' type='entity' subtype='' default='' access='rw' input='main' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='patient' attribute='caltemp' type='double' subtype='' default='0' access='rw' input='' comment=''></entity>
+	</entry>
+	<entry>
+		<entity entityname='sleep_Dev' attribute='sleepResults' type='string' subtype='' default='' access='r' input='main' comment=''></entity>
+	</entry>
+</edd>

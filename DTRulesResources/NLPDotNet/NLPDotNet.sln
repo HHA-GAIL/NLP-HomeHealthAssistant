@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLPDotNetForm", "NLPDotNet\NLPDotNetForm.csproj", "{AA62BE32-147F-4DD0-A483-286AD8A13637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLPDotNetLib", "NLPDotNetLib\NLPDotNetLib.csproj", "{DBE07A9E-8CC2-4EB4-9B53-386F29BB471A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA62BE32-147F-4DD0-A483-286AD8A13637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA62BE32-147F-4DD0-A483-286AD8A13637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA62BE32-147F-4DD0-A483-286AD8A13637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA62BE32-147F-4DD0-A483-286AD8A13637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE07A9E-8CC2-4EB4-9B53-386F29BB471A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE07A9E-8CC2-4EB4-9B53-386F29BB471A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE07A9E-8CC2-4EB4-9B53-386F29BB471A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE07A9E-8CC2-4EB4-9B53-386F29BB471A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BE582C8-E1B8-464C-8478-61C850808091}
+	EndGlobalSection
+EndGlobal
