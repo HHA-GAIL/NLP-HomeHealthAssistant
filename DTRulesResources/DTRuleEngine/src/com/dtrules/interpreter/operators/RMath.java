@@ -357,18 +357,18 @@ public class RMath {
                     methodString = firstPart;   //only a method name
                 }
                
-                String parameterTypeString =funcString.substring(indexLess+1, funcString.indexOf(">")).trim();//½ØÈ¡²ÎÊýÀàÐÍ
+                String parameterTypeString =funcString.substring(indexLess+1, funcString.indexOf(">")).trim();
                 List<String> paramTypeList =Arrays.asList(parameterTypeString.split(","));
                 
                 
-                String parameterString=funcString.substring(funcString.indexOf("(")+1,funcString.lastIndexOf(")")).trim();//½ØÈ¡²ÎÊý
+                String parameterString=funcString.substring(funcString.indexOf("(")+1,funcString.lastIndexOf(")")).trim();
                 List<String> paramList0=Arrays.asList(parameterString.split(","));
                 List paramList = new ArrayList(paramList0);
                 char  item1 ;
                 char  item2 ;
-                int j=0;       //·Ç¾Ö²¿Ñ­»·±äÁ¿
-                String s;      //¼Ó¹¤×Ö·û´®ÖÐ¼ä±äÁ¿
-                //´¦Àí×Ö·û´®²ÎÊý·½·¨
+                int j=0;
+                String s;
+                //ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½
                 while (j<paramList.size()) {
                     String aParam = paramList.get(j).toString().trim();
                     item1 =aParam.charAt(0);
@@ -389,9 +389,9 @@ public class RMath {
                 {
                 	throw new Exception("should provide enough parameters");
                 }
-                 Class[] classes =new  Class[paramTypeList.size()];//²ÎÊýÀàÐÍ¼¯ºÏ
+                 Class[] classes =new  Class[paramTypeList.size()];//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½
                  
-                 //²ÎÊýÀàÐÍ¼Ó¹¤
+                 
                  for (int k = 0; k <classes.length; k++) {
                      if(null != paramTypeList.get(k))
                          switch (paramTypeList.get(k).trim().toLowerCase()) {
@@ -420,7 +420,7 @@ public class RMath {
                  Class c = Class.forName(classNameString);
                  java.lang.reflect.Method m = c.getMethod(methodString,classes);  
                  
-                 //¾ßÌå²ÎÊý¸öÊýÈë¿Ú
+                 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                  switch(classes.length){
                     case 0:
                     result = m.invoke(null);
