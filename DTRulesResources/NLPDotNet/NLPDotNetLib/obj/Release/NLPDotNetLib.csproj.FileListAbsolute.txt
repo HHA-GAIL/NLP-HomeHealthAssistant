@@ -1,0 +1,1 @@
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\obj\Release\NLPDotNetLib.csprojResolveAssemblyReference.cache

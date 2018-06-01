@@ -19,3 +19,16 @@ D:\dotNet\NLPDotNet\NLPDotNetLib\bin\Debug\ant-1.7.1.dll
 D:\dotNet\NLPDotNet\NLPDotNetLib\bin\Debug\commons-logging-1.1.1.dll
 D:\dotNet\NLPDotNet\NLPDotNetLib\bin\Debug\NLPDotNetLib.dll.config
 D:\dotNet\NLPDotNet\NLPDotNetLib\bin\Debug\MySql.Data.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\obj\Debug\NLPDotNetLib.csprojResolveAssemblyReference.cache
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\obj\Debug\NLPDotNetLib.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\obj\Debug\NLPDotNetLib.pdb
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\NLPDotNetLib.dll.config
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\NLPDotNetLib.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\NLPDotNetLib.pdb
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Core.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Text.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Util.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.XML.API.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.Runtime.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.Runtime.JNI.dll
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\MySql.Data.dll

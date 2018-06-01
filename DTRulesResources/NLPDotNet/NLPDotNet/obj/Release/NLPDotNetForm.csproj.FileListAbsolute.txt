@@ -1,0 +1,5 @@
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Release\NLPDotNet.exe.config
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Release\NLPDotNetForm.csprojResolveAssemblyReference.cache
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Release\NLPDotNet.Form1.resources
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Release\NLPDotNet.Properties.Resources.resources
+C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Release\NLPDotNetForm.csproj.GenerateResource.Cache

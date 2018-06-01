@@ -14,10 +14,13 @@ namespace NLPDotNetLib.Entity
         private string entryTable;
         private string dTXMLContent;
 
-        public int DTID { get => dTID; set => dTID = value; }
-        public string RuleName { get => ruleName; set => ruleName = value; }
-        public string TriggerAttributes { get => triggerAttributes; set => triggerAttributes = value; }
-        public string EntryTable { get => entryTable; set => entryTable = value; }
-        public string DTXMLContent { get => dTXMLContent; set => dTXMLContent = value; }
+        public int DTID { 
+            get{return dTID;}
+            set{dTID = value; }
+        }
+        public string RuleName { get { return ruleName;} set{ruleName = value; }}
+        public string TriggerAttributes { get { return triggerAttributes;} set { triggerAttributes = value; }}
+        public string EntryTable { get { return entryTable;} set { entryTable = value; }}
+        public string DTXMLContent { get { return dTXMLContent; } set { dTXMLContent = value; } }
     }
 }

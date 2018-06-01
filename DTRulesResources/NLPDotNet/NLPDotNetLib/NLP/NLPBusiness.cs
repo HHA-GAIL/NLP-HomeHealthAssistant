@@ -32,7 +32,7 @@ namespace NLPDotNetLib.NLP
             }
         }
 
-        public Patient Patient { get => patient; set => patient = value; }
+        public Patient Patient { get { return patient; } set { patient = value; } }
 
         /// <summary>
         /// used to get the rule names via trigger attributes
