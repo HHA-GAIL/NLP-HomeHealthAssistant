@@ -1,4 +1,5 @@
-﻿using NLPDotNetLib.NLP;
+﻿using NLPDotNetLib.Entity;
+using NLPDotNetLib.NLP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,9 +130,8 @@ namespace NLPDotNet
                 return;
             //get all the triggered rule name
             NLPBusiness business = NLPBusiness.Business;
-            List<String> triggeredRuleNames = business.GetTriggeredRuleName(bmi, hr, sleep, steps, floor, weight);
             RTB_Results.AppendText("\nGetting Data from database...");
-            if (!business.GetPatientDate(TB_PatientID.Text
+            if (!business.GetPatientData(TB_PatientID.Text
                     , bmi, hr, sleep, steps, floor, weight))
             {
                 RTB_Results.Text = "The Patient does not have certain data of PatientID: " + TB_PatientID.Text;
@@ -141,11 +141,14 @@ namespace NLPDotNet
             {
                 RTB_Results.AppendText(business.GetPatientInfo());
             }
+            List<DTRulesEntity> triggeredRules = business.GetTriggeredRules(bmi, hr, sleep, steps, floor, weight);
             //do all the triggered DRTules
-            foreach(String ruleName in triggeredRuleNames)
+            foreach (DTRulesEntity dtRules in triggeredRules)
             {
-                RTB_Results.AppendText("\n\n" + ruleName + ":\n" + business.RunWithNewData(ruleName));
+                RTB_Results.AppendText("\n\n" + dtRules.RuleName + ":\n" + business.RunARule(dtRules.EntryTable, dtRules.DTXMLContent));
             }
+            if (triggeredRules.Count == 0)
+                RTB_Results.AppendText("\n\nNo triggered Rules...");
         }
     }
 }

@@ -25,6 +25,8 @@ import edu.dhu.DTRules.entities.Result;
 import edu.dhu.DTRules.entities.Sleep_Dev;
 import edu.dhu.DTRules.entities.Steps_Dev;
 import edu.dhu.DTRules.entities.Weight_Dev;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class DTRulesPatientDev {
@@ -33,9 +35,11 @@ public class DTRulesPatientDev {
 	public static final String BasePath = System.getProperty("user.dir")+"/DTRules/";
 	public static final String ConfigFileFileName = "DTRules.xml";
 	public static final String EntryTable = "Test_Patient";
+        public static final String RuleName = "TheDecisionTable";
 	public static DTRulesPatientDev dtr;
 	
 	private boolean trace = false;
+        private String WorkingPath = System.getProperty("user.dir");
 	
 	public static DTRulesPatientDev getInstance(){
 		if(dtr == null){
@@ -169,5 +173,106 @@ public class DTRulesPatientDev {
 		}
 		return results;
 	}
-	
+	/***
+         * to save the XMLContent to the certain xml file and do the examine.
+         * @param patient
+         * @param XMLContent
+         * @param entryTable
+         * @return
+         * @throws Exception 
+         */
+        public List<Result> doExamine(Patient patient, String XMLContent, String entryTable)
+			throws Exception{
+            //write the XMLContent into the certain xml file
+            writeRuleContentXmlFile(XMLContent);
+            return doExamine(patient, WorkingPath + "/DTRules/", ConfigFileFileName, RuleName, entryTable);
+        }
+        
+        /***
+         * to run the DTRules with the files exist now
+         * @param patient
+         * @param entryTable
+         * @return
+         * @throws Exception 
+         */
+        public List<Result> doExamine(Patient patient, String entryTable)
+			throws Exception{
+            return doExamine(patient, BasePath, ConfigFileFileName, RuleName, entryTable);
+        }
+        
+        public void writeRuleContentXmlFile(String RuleSetString) throws FileNotFoundException, IOException {
+            //write a temp file for the new RuleSetString
+            File dtrules = new File(WorkingPath + "/DTRules/xml/TheDecisionTable_dt.xml");
+            dtrules.createNewFile();
+            FileOutputStream fos = new FileOutputStream(dtrules);
+            fos.write(RuleSetString.getBytes("utf-8"));
+            fos.close();
+        }
+        
+        /***
+         * used to check for the necessary files 
+         * @return 
+         */
+        public String checkForDirsAndNecessaryFiles(){
+//            System.out.println("---GG--->"+);
+            StringBuilder sb = new StringBuilder();
+            boolean can = true;
+            File file = null;
+            String tmpWorkingPath = WorkingPath + "/DTRules/";
+            file = new File(tmpWorkingPath);
+            file.mkdirs();
+            file = new File(tmpWorkingPath + "workingDir");
+            file.mkdirs();
+            file = new File(tmpWorkingPath + ConfigFileFileName);
+            if(!file.exists())
+            {
+                sb.append("Missing " + tmpWorkingPath + "DTRules.xml\n");
+                can = false;
+            }
+            file = new File(tmpWorkingPath + "xml/Dev_edd.xml");
+            if(!file.exists())
+            {
+                sb.append("Missing " + tmpWorkingPath + "xml/Dev_edd.xml\n");
+                can = false;
+            }
+            file = new File(tmpWorkingPath + "xml/Dev_map.xml");
+            if(!file.exists())
+            {
+                sb.append("Missing " + tmpWorkingPath + "xml/Dev_map.xml\n");
+                can = false;
+            }
+            if(!can)
+                sb.append("<--!MISSINGFILES!-->");
+            else
+                sb.append("<--!OK!-->");
+            return sb.toString();
+        }
+
+    /**
+     * @return the WorkingPath
+     */
+    public String getWorkingPath() {
+        return WorkingPath;
+    }
+
+    /**
+     * @param WorkingPath the WorkingPath to set
+     */
+    public void setWorkingPath(String WorkingPath) {
+        this.WorkingPath = WorkingPath;
+    }
+    
+    private String getCurrentPath()  
+    {
+        String path = DTRulesPatientDev.class.getProtectionDomain().getCodeSource().getLocation().getFile();  
+        try  
+        {  
+            path = java.net.URLDecoder.decode(path, "UTF-8");
+        }  
+        catch (java.io.UnsupportedEncodingException e)  
+        {  
+            return null;  
+        }  
+        return new File(path).getParent();  
+    }  
 }

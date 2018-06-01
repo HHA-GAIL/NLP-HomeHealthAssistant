@@ -30,15 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ant-1.7.1">
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\ant-1.7.1.dll</HintPath>
+    <Reference Include="ant-1.7.1, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\ant-1.7.1.dll</HintPath>
     </Reference>
-    <Reference Include="commons-logging-1.1.1">
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\commons-logging-1.1.1.dll</HintPath>
+    <Reference Include="commons-logging-1.1.1, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\commons-logging-1.1.1.dll</HintPath>
     </Reference>
     <Reference Include="DTRules2NLP, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\DTRules2NLP.dll</HintPath>
+      <HintPath>..\..\DLLs\DTRules2NLP.dll</HintPath>
     </Reference>
     <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
       <HintPath>..\packages\IKVM.OpenJDK.Core.7.2.4630.5\lib\IKVM.OpenJDK.Core.dll</HintPath>
@@ -60,18 +62,18 @@
     </Reference>
     <Reference Include="java-cup-10k, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\java-cup-10k.dll</HintPath>
+      <HintPath>..\..\DLLs\java-cup-10k.dll</HintPath>
     </Reference>
     <Reference Include="JFlex, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\JFlex.dll</HintPath>
+      <HintPath>..\..\DLLs\JFlex.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="poi-3.7, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Java\NLP-HomeHealthAssistant\DTRulesResources\DLLs\poi-3.7.dll</HintPath>
+      <HintPath>..\..\DLLs\poi-3.7.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

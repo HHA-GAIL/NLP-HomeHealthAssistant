@@ -582,13 +582,9 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             return;
         try{
             EntryTable = Select_EntryTable.getItemAt(Select_EntryTable.getSelectedIndex());
-            edu.dhu.DTRules.DTRulesPatientDev dtrpd = new edu.dhu.DTRules.DTRulesPatientDev();
+            edu.dhu.DTRules.DTRulesPatientDev dtrpd = edu.dhu.DTRules.DTRulesPatientDev.getInstance();
             for(Patients pt : patientList){
                 List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
-                        DTRulesXML.BASEPATH , 
-                        "DTRules.xml", 
-                        DTRulesXML.DTName,
-//                        "123",
                         EntryTable);
                 if(results.size() != 0){
                     WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName());
@@ -619,6 +615,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             System.out.println("XML String Read done...");
             GaleDTRulesDAO gdtrdao = new GaleDTRulesDAO();
             StringBuilder Attributes = new StringBuilder();
+            Attributes.append(";");
             if(CB_BMI.isSelected())
                 Attributes.append("BMI;");
             if(CB_HR.isSelected())

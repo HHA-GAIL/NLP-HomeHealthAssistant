@@ -1272,8 +1272,4 @@ true
 caltemp weight_Dev entitypush weight entitypop fadd  cvr /caltemp xdef  
 </action_postfix>
 <action_column column_number="1" column_value="X"></action_column></action_details></actions>
-<policy_statements></policy_statements></decision_table></decision_tables>x>
-caltemp weight_Dev entitypush weight entitypop fadd  cvr /caltemp xdef  
-</action_postfix>
-<action_column column_number="1" column_value="X"></action_column></action_details></actions>
 <policy_statements></policy_statements></decision_table></decision_tables>

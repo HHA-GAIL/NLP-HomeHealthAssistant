@@ -21,7 +21,7 @@ namespace NLPDotNetLib.NLP
         private static String Floors_String = "Floors";
         private static String Weight_String = "Weight";
         private static String HR_String = "HR";
-        private static String BasePath = Environment.CurrentDirectory;
+        private static String BasePath = AppDomain.CurrentDomain.BaseDirectory;
         private edu.dhu.DTRules.entities.Patient patient = null;
 
         public static NLPBusiness Business {
@@ -35,7 +35,7 @@ namespace NLPDotNetLib.NLP
         public Patient Patient { get { return patient; } set { patient = value; } }
 
         /// <summary>
-        /// used to get the rule names via trigger attributes
+        /// used to get the rules via trigger attributes
         /// </summary>
         /// <param name="BMI"></param>
         /// <param name="HR"></param>
@@ -44,7 +44,7 @@ namespace NLPDotNetLib.NLP
         /// <param name="Floors"></param>
         /// <param name="Weight"></param>
         /// <returns>a list of rule name</returns>
-        public List<String> GetTriggeredRuleName(String BMI, String HR,
+        public List<DTRulesEntity> GetTriggeredRules(String BMI, String HR,
             String Sleep, String Steps, String Floors, String Weight)
         {
             List<String> result = new List<string>();
@@ -62,25 +62,8 @@ namespace NLPDotNetLib.NLP
             if (Weight != null)
                 has.Add(Weight_String);
             DTRulesDAO DTDAO = DTRulesDAO.DTDAO;
-            Dictionary<String, String> dict = DTDAO.GetAllTriggers();
-            foreach(String key in dict.Keys)
-            {
-                String triggers = dict[key];
-                Boolean none = false;
-                foreach(String attri in has)
-                {
-                    if(!triggers.Contains(attri))
-                    {
-                        none = true;
-                        break;
-                    }
-                }
-                if (none)
-                    break;
-                else
-                    result.Add(key);
-            }
-            return result;
+            List<DTRulesEntity> dict = DTDAO.GetAllTriggeredRules(has);
+            return dict;
         }
 
         /// <summary>
@@ -89,20 +72,17 @@ namespace NLPDotNetLib.NLP
         /// </summary>
         /// <param name="RuleName"></param>
         /// <returns>the result String</returns>
-        public String RunWithNewData(String RuleName)
+        public String RunARule(String EntryTable, String XMLContent)
         {
-
+            //Environment.CurrentDirectory = "C:/";
             StringBuilder sb = new StringBuilder();
-            //System.Diagnostics.Debug.WriteLine(BasePath);
-            DTRulesPatientDev dtpd = new DTRulesPatientDev();
-            //download the DTRules from database
-            DTRulesEntity dTRules = DTRulesDAO.DTDAO.GetDTRulesByRuleName(RuleName);
-            FileStream fs = new FileStream(BasePath + @"\DTRules\xml\TheDecisionTable_dt.xml", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.Write(dTRules.DTXMLContent);
-            sw.Close();
-            fs.Close();
-            java.util.List results = dtpd.doExamine(Patient, BasePath + @"\DTRules", "DTRules.xml", "TheDecisionTable", dTRules.EntryTable);
+            DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
+            //need to setWorkingPath to ensure the Environment.CurrentDirectory being modified
+            dtpd.setWorkingPath(BasePath);
+            String checkResult = dtpd.checkForDirsAndNecessaryFiles();
+            if (checkResult.Contains("<--!MISSINGFILES!-->")) 
+                return checkResult;
+            java.util.List results = dtpd.doExamine(Patient, XMLContent, EntryTable);
             for(int i = 0; i < results.size(); i++)
             {
                 edu.dhu.DTRules.entities.Result result = (edu.dhu.DTRules.entities.Result)results.get(i);
@@ -122,7 +102,7 @@ namespace NLPDotNetLib.NLP
         /// <param name="Steps"></param>
         /// <param name="Floors"></param>
         /// <param name="Weight"></param>
-        public bool GetPatientDate(String PatientID, String BMI, String HR,
+        public bool GetPatientData(String PatientID, String BMI, String HR,
             String Sleep, String Steps, String Floors, String Weight)
         {
             this.Patient = PatientDAO.Patient_DAO.GetPatientByID(PatientID);
