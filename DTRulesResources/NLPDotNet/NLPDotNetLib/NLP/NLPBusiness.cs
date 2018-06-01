@@ -78,12 +78,14 @@ namespace NLPDotNetLib.NLP
             StringBuilder sb = new StringBuilder();
             DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
             //need to setWorkingPath to ensure the Environment.CurrentDirectory being modified
-            dtpd.setWorkingPath(BasePath);
-            String checkResult = dtpd.checkForDirsAndNecessaryFiles();
-            if (checkResult.Contains("<--!MISSINGFILES!-->")) 
-                return checkResult;
-            java.util.List results = dtpd.doExamine(Patient, XMLContent, EntryTable);
-            for(int i = 0; i < results.size(); i++)
+            //dtpd.setWorkingPath(BasePath);
+            edu.dhu.DTRules.entities.ExaminResult examinResult = dtpd.doExamine(Patient, XMLContent, EntryTable);
+            if (examinResult.getStatus().Equals(edu.dhu.DTRules.entities.ExaminResult.FAIL))
+            {
+                return examinResult.getMessage();
+            }
+            java.util.List results = examinResult.getResults();
+            for (int i = 0; i < results.size(); i++)
             {
                 edu.dhu.DTRules.entities.Result result = (edu.dhu.DTRules.entities.Result)results.get(i);
                 sb.Append(result.getResultCode()).Append("--->").Append(result.getResultMessage()).Append("\n");

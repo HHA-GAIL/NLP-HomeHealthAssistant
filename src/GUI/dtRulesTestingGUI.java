@@ -15,6 +15,7 @@ import GaleDTRules.DAO.GaleSleepDevDAO;
 import GaleDTRules.DAO.GaleStepsDevDAO;
 import GaleDTRules.DAO.GaleWeightDevDAO;
 import GaleDTRules.Tools.DTRulesXML;
+import edu.dhu.DTRules.entities.ExaminResult;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.PrintStream;
@@ -584,14 +585,18 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             EntryTable = Select_EntryTable.getItemAt(Select_EntryTable.getSelectedIndex());
             edu.dhu.DTRules.DTRulesPatientDev dtrpd = edu.dhu.DTRules.DTRulesPatientDev.getInstance();
             for(Patients pt : patientList){
-                List<edu.dhu.DTRules.entities.Result> results = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
+                ExaminResult er = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
                         EntryTable);
-                if(results.size() != 0){
+                if(er.getStatus().equals(ExaminResult.FAIL))
+                    WriteTA(TA_Results, "\n\n"+er.getMessage());
+                List<edu.dhu.DTRules.entities.Result> results = er.getResults();
+                if(!results.isEmpty()){
                     WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName());
                     for(edu.dhu.DTRules.entities.Result result : results){
                         WriteTA(TA_Results, "\n"+result.getResultCode()+"--->"+result.getResultMessage());
                     }
-                }
+                }else
+                    WriteTA(TA_Results, "\n\nResult of patient "+pt.getFullName()+"\n No Results defined...");
             }
             Tested = true;
             CheckForUpload();

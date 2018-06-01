@@ -34,12 +34,12 @@
 								</sleepID>
 								<sleepMeasurement></sleepMeasurement>
 								<sleepResults>
-									<def id='10318' entity='sleep_Dev' name='sleepresults'>&quot;3&quot;</def>
-									<message>   /sleepresults &quot;3&quot; def</message>
+									<def id='10318' entity='sleep_Dev' name='sleepresults'>&quot;123&quot;</def>
+									<message>   /sleepresults &quot;123&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10318' entity='sleep_Dev' name='datetime'>&quot;06/01/2018 22:04:30:0799&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 01 22:04:30 CST 2018&quot; def</message>
+									<def id='10318' entity='sleep_Dev' name='datetime'>&quot;06/01/2018 22:59:17:0190&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 01 22:59:17 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10318' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -361,7 +361,7 @@
 							<context execute='{ { { /Examine_MALE executeTable  } 0 local@  entitypush dateTime entitypop 1 local@  daysbetween  cvi allocate execute deallocate pop } getdate cvd allocate execute deallocate pop } bMI_Devs 0 getat cve allocate execute deallocate pop'>
 								<execute_table>
 									<allocate index='0' value='/bMI_Dev 10324 fce '></allocate>
-									<allocate index='1' value='&quot;06/01/2018 22:04:44:0945&quot; cvd'></allocate>
+									<allocate index='1' value='&quot;06/01/2018 22:59:23:0895&quot; cvd'></allocate>
 									<entitypush entity='bMI_Dev' id='10324'></entitypush>
 									<entitypush value='bMI_Dev' id='10324'></entitypush>
 									<entitypop></entitypop>
@@ -576,7 +576,7 @@
 											<entitypop></entitypop>
 											<entitypush entity='result' id='10342'></entitypush>
 											<entitypush value='result' id='10342'></entitypush>
-											<def id='10342' entity='result' name='resultMessage'>&quot;your recent sleep result is: 3&quot;</def>
+											<def id='10342' entity='result' name='resultMessage'>&quot;your recent sleep result is: 123&quot;</def>
 											<entitypop></entitypop>
 											<entitypop></entitypop>
 										</action>

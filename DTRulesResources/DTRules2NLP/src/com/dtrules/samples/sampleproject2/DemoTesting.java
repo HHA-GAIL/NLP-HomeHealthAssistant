@@ -26,10 +26,7 @@ public class DemoTesting {
 			
 			edu.dhu.DTRules.entities.Patient patient = DataGenerater.GenerateDTRulesPatient();
 			DTRulesPatientDev dtpd = new DTRulesPatientDev();
-			dtpd.doExamine(patient, dtpd.BasePath,
-					dtpd.ConfigFileFileName,
-					"TheDecisionTable",
-					dtpd.EntryTable);
+			dtpd.doExamine(patient, dtpd.EntryTable);
 
 		} catch (Exception e) {
 			e.printStackTrace();

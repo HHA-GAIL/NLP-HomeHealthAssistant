@@ -18,6 +18,7 @@ import com.dtrules.session.RuleSet;
 import com.dtrules.session.RulesDirectory;
 
 import edu.dhu.DTRules.entities.BMI_Dev;
+import edu.dhu.DTRules.entities.ExaminResult;
 import edu.dhu.DTRules.entities.Floors_Dev;
 import edu.dhu.DTRules.entities.HR_Dev;
 import edu.dhu.DTRules.entities.Patient;
@@ -39,9 +40,10 @@ public class DTRulesPatientDev {
 	public static DTRulesPatientDev dtr;
 	
 	private boolean trace = false;
-        private String WorkingPath = System.getProperty("user.dir");
+        private String WorkingPath = System.getProperty("java.library.path").split(";;")[0];
 	
 	public static DTRulesPatientDev getInstance(){
+                System.out.println("---GG--->"+System.getProperty("java.library.path"));
 		if(dtr == null){
 			dtr = new DTRulesPatientDev();
 			return dtr;
@@ -66,7 +68,7 @@ public class DTRulesPatientDev {
 	 * @param entryTable - the entry table of the decision table
 	 * @return the list of Result
 	 */
-	public List<Result> doExamine(Patient patient,String basePath, String configFileName, String ruleName, String entryTable)
+	private List<Result> doExamine(Patient patient,String basePath, String configFileName, String ruleName, String entryTable)
 			throws Exception{
 		List<Result> results = new ArrayList<Result>();
                 System.out.println("DE111");
@@ -181,11 +183,24 @@ public class DTRulesPatientDev {
          * @return
          * @throws Exception 
          */
-        public List<Result> doExamine(Patient patient, String XMLContent, String entryTable)
+        public ExaminResult doExamine(Patient patient, String XMLContent, String entryTable)
 			throws Exception{
             //write the XMLContent into the certain xml file
+//            throw new Exception("Some thing wrong in the do Examine");
+            ExaminResult er = new ExaminResult();
+            String check = checkForDirsAndNecessaryFiles(null);
+            if(check.contains("<--!MISSINGFILES!-->"))
+            {
+                er.setStatus(ExaminResult.FAIL);
+                er.setMessage(check);
+                return er;
+            }
             writeRuleContentXmlFile(XMLContent);
-            return doExamine(patient, WorkingPath + "/DTRules/", ConfigFileFileName, RuleName, entryTable);
+            List<Result> results = doExamine(patient, WorkingPath + "/DTRules/", ConfigFileFileName, RuleName, entryTable);
+            er.setStatus(ExaminResult.SUCC);
+            er.setMessage("");
+            er.setResults(results);
+            return er;
         }
         
         /***
@@ -195,9 +210,21 @@ public class DTRulesPatientDev {
          * @return
          * @throws Exception 
          */
-        public List<Result> doExamine(Patient patient, String entryTable)
+        public ExaminResult doExamine(Patient patient, String entryTable)
 			throws Exception{
-            return doExamine(patient, BasePath, ConfigFileFileName, RuleName, entryTable);
+            ExaminResult er = new ExaminResult();
+            String check = checkForDirsAndNecessaryFiles(BasePath);
+            if(check.contains("<--!MISSINGFILES!-->"))
+            {
+                er.setStatus(ExaminResult.FAIL);
+                er.setMessage(check);
+                return er;
+            }
+            List<Result> results = doExamine(patient, BasePath, ConfigFileFileName, RuleName, entryTable);
+            er.setStatus(ExaminResult.SUCC);
+            er.setMessage("");
+            er.setResults(results);
+            return er;
         }
         
         public void writeRuleContentXmlFile(String RuleSetString) throws FileNotFoundException, IOException {
@@ -213,12 +240,15 @@ public class DTRulesPatientDev {
          * used to check for the necessary files 
          * @return 
          */
-        public String checkForDirsAndNecessaryFiles(){
-//            System.out.println("---GG--->"+);
+        public String checkForDirsAndNecessaryFiles(String basepathString){
             StringBuilder sb = new StringBuilder();
             boolean can = true;
             File file = null;
-            String tmpWorkingPath = WorkingPath + "/DTRules/";
+            String tmpWorkingPath = null;   
+            if(basepathString == null)
+                tmpWorkingPath = WorkingPath + "/DTRules/";
+            else
+                tmpWorkingPath = basepathString;
             file = new File(tmpWorkingPath);
             file.mkdirs();
             file = new File(tmpWorkingPath + "workingDir");
