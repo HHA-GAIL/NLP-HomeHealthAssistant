@@ -118,7 +118,7 @@ namespace NLPDotNetLib.DAO
                     isfirst = false;
                 }
                 else
-                    sb.Append(" and TriggerAttributes like '%;").Append(trigger).Append(";%'");
+                    sb.Append(" or TriggerAttributes like '%;").Append(trigger).Append(";%'");
             }
             sb.Append(";");
             try

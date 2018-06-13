@@ -783,88 +783,109 @@
 				<action_number>37</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set caltemp = 0</action_description>
+				<action_description>set the result&apos;s resultMessage = the result&apos;s resultMessage + &quot;---&gt;&quot; + the string value of callfunction(&quot;edu.dhu.lib.DevUtils.TestSleep&lt;entity&gt;&quot;, patient)</action_description>
 				<action_column column_number='5' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>38</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>add a new result entity to the context of this table</action_description>
-				<action_column column_number='7' column_value='X'></action_column>
+				<action_description>set caltemp = 0</action_description>
+				<action_column column_number='5' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>39</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>add the result to the patient&apos;s results</action_description>
+				<action_description>add a new result entity to the context of this table</action_description>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>40</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>perform Calculate_StepsDev</action_description>
+				<action_description>add the result to the patient&apos;s results</action_description>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>41</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultCode = 41</action_description>
+				<action_description>perform Calculate_StepsDev</action_description>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>42</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Steps is &quot;+caltemp/steps_DevLength</action_description>
+				<action_description>set the result&apos;s resultCode = 41</action_description>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>43</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set caltemp = 0</action_description>
+				<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Steps is &quot;+caltemp/steps_DevLength</action_description>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>44</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>add a new result entity to the context of this table</action_description>
-				<action_column column_number='9' column_value='X'></action_column>
+				<action_description>set the result&apos;s resultMessage = the result&apos;s resultMessage + &quot;---&gt;&quot; + the string value of callfunction(&quot;edu.dhu.lib.DevUtils.TestSteps&lt;entity&gt;&quot;, patient)</action_description>
+				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>45</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>add the result to the patient&apos;s results</action_description>
-				<action_column column_number='9' column_value='X'></action_column>
+				<action_description>set caltemp = 0</action_description>
+				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>46</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>perform Calculate_WeightDev</action_description>
+				<action_description>add a new result entity to the context of this table</action_description>
 				<action_column column_number='9' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>47</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultCode = 52</action_description>
+				<action_description>add the result to the patient&apos;s results</action_description>
 				<action_column column_number='9' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>48</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Weight is &quot;+caltemp/steps_DevLength</action_description>
+				<action_description>perform Calculate_WeightDev</action_description>
 				<action_column column_number='9' column_value='X'></action_column>
 			</action_details>
 			<action_details>
 				<action_number>49</action_number>
+				<action_comment></action_comment>
+				<action_requirement></action_requirement>
+				<action_description>set the result&apos;s resultCode = 52</action_description>
+				<action_column column_number='9' column_value='X'></action_column>
+			</action_details>
+			<action_details>
+				<action_number>50</action_number>
+				<action_comment></action_comment>
+				<action_requirement></action_requirement>
+				<action_description>set the result&apos;s resultMessage = &quot;your recent &quot;+steps_DevLength+&quot; average Weight is &quot;+caltemp/steps_DevLength</action_description>
+				<action_column column_number='9' column_value='X'></action_column>
+			</action_details>
+			<action_details>
+				<action_number>51</action_number>
+				<action_comment></action_comment>
+				<action_requirement></action_requirement>
+				<action_description>set the result&apos;s resultMessage = the result&apos;s resultMessage + &quot;---&gt;&quot; + the string value of callfunction(&quot;edu.dhu.lib.DevUtils.TestWeight&lt;entity&gt;&quot;, patient)</action_description>
+				<action_column column_number='9' column_value='X'></action_column>
+			</action_details>
+			<action_details>
+				<action_number>52</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
 				<action_description>set caltemp = 0</action_description>

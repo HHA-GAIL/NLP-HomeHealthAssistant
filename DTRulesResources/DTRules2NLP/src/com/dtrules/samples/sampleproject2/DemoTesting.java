@@ -7,6 +7,7 @@ import java.util.Date;
 import edu.dhu.DTRules.DTRulesCompiler;
 import edu.dhu.DTRules.DTRulesPatientDev;
 import edu.dhu.DTRules.entities.BMI_Dev;
+import edu.dhu.DTRules.entities.ExaminResult;
 import edu.dhu.DTRules.entities.Patient;
 
 public class DemoTesting {
@@ -19,15 +20,19 @@ public class DemoTesting {
 //            PrintStream cacheout = new PrintStream(baos);
 //            PrintStream original = System.out;
 //            System.setOut(cacheout);
-			DTRulesCompiler.Compile(DTRulesCompiler.BasePath, DTRulesCompiler.ConfigFileName,
-					"TheDecisionTable", DTRulesCompiler.BasePath, mapping);
+                        String basePath = System.getProperty("user.dir") + "/DTRulesTest/";
+                        DTRulesCompiler.getInstance().setWorkingPath(basePath);
+                        ExaminResult er = DTRulesCompiler.getInstance().Compile(mapping);
 //			System.setOut(original);
 //			System.out.println("--->"+baos.toString()+"<---");
-			
-			edu.dhu.DTRules.entities.Patient patient = DataGenerater.GenerateDTRulesPatient();
-			DTRulesPatientDev dtpd = new DTRulesPatientDev();
-			dtpd.doExamine(patient, dtpd.EntryTable);
-
+			if(er.getStatus().equals(ExaminResult.FAIL)){
+                            System.out.println(er.getMessage());
+                        }else{
+                            edu.dhu.DTRules.entities.Patient patient = DataGenerater.GenerateDTRulesPatient();
+                            DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
+                            dtpd.setWorkingPath(basePath);
+                            dtpd.doExamine(patient, er.getMessage(), dtpd.EntryTable);
+                        }
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

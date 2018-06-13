@@ -49,5 +49,9 @@ public class Sleep_Dev extends baseEntity {
 	public void setSleepResults(String sleepResult) {
 		SleepResults = sleepResult;
 	}
+
+    public void setSleep(double doubleValue) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

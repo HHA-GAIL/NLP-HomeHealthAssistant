@@ -70,3 +70,8 @@ C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Debu
 C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Debug\NLPDotNet.Form1.resources
 C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Debug\NLPDotNet.Properties.Resources.resources
 C:\project\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\obj\Debug\NLPDotNetForm.csproj.GenerateResource.Cache
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Debug\IKVM.AWT.WinForms.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNet\bin\Debug\IKVM.OpenJDK.Beans.dll

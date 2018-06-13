@@ -39,6 +39,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
 
     List<Patients> patientList = new LinkedList<>();
     private String RuleSetString = null;
+    private String RuleSetContent = null;
     private String EntryTable = null;
     
     private boolean Compiled = false;
@@ -556,9 +557,14 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             PrintStream cacheout = new PrintStream(baos);
             PrintStream original = System.out;
             System.setOut(cacheout);
-            dtrxml.Compile(dtFile);
+            ExaminResult er = dtrxml.Compile(dtFile);
             System.setOut(original);
             WriteTA(TA_CompileMsg, baos.toString());
+            if(er.getStatus().equals(ExaminResult.FAIL)){
+                WriteTA(TA_CompileMsg, "\n\n"+er.getMessage());
+                return;
+            }else
+                RuleSetContent = er.getMessage();
             //get the decision tables from the dt xml file
             //to delete the former entry table
             Select_EntryTable.removeAllItems();
@@ -584,9 +590,9 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
         try{
             EntryTable = Select_EntryTable.getItemAt(Select_EntryTable.getSelectedIndex());
             edu.dhu.DTRules.DTRulesPatientDev dtrpd = edu.dhu.DTRules.DTRulesPatientDev.getInstance();
+            dtrpd.setWorkingPath(System.getProperty("user.dir")+"/DTRules/");
             for(Patients pt : patientList){
-                ExaminResult er = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(),
-                        EntryTable);
+                ExaminResult er = dtrpd.doExamine((edu.dhu.DTRules.entities.Patient)pt.ConvertToDTRulesDataType(), RuleSetContent, EntryTable);
                 if(er.getStatus().equals(ExaminResult.FAIL))
                     WriteTA(TA_Results, "\n\n"+er.getMessage());
                 List<edu.dhu.DTRules.entities.Result> results = er.getResults();

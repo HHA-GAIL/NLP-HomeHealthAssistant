@@ -820,14 +820,16 @@ public class RDecisionTable extends ARObject {
 	 */
 	public void executeTable(DTState state) throws RulesException {
         boolean trace = state.testState(DTState.TRACE);
-		
-		if(compiled==false){
-            throw new RulesException(
-                "UncompiledDecisionTable",
-                "RDecisionTable.execute",
-                "Attempt to execute an uncompiled decision table: "+dtname.stringValue()
-            );
-        }
+//NazonaX Delete
+//		if(compiled==false){
+//            throw new RulesException(
+//                "UncompiledDecisionTable",
+//                "RDecisionTable.execute",
+//                "Attempt to execute an uncompiled decision table: "+dtname.stringValue()
+//            );
+//        }
+if(!compiled)
+System.err.println("NazonaX....Uncompiled decision table: "+dtname.stringValue()+"\n");
         
         int edepth    = state.edepth();  // Get the initial depth of the entity stack 
                                          //  so we can toss any extra entities added...

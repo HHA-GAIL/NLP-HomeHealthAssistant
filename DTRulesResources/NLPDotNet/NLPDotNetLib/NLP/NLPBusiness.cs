@@ -78,17 +78,24 @@ namespace NLPDotNetLib.NLP
             StringBuilder sb = new StringBuilder();
             DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
             //need to setWorkingPath to ensure the Environment.CurrentDirectory being modified
-            //dtpd.setWorkingPath(BasePath);
-            edu.dhu.DTRules.entities.ExaminResult examinResult = dtpd.doExamine(Patient, XMLContent, EntryTable);
-            if (examinResult.getStatus().Equals(edu.dhu.DTRules.entities.ExaminResult.FAIL))
+            dtpd.setWorkingPath(BasePath+"DTRules/");
+            try
             {
-                return examinResult.getMessage();
+                edu.dhu.DTRules.entities.ExaminResult examinResult = dtpd.doExamine(Patient, XMLContent, EntryTable);
+                if (examinResult.getStatus().Equals(edu.dhu.DTRules.entities.ExaminResult.FAIL))
+                {
+                    return examinResult.getMessage();
+                }
+                java.util.List results = examinResult.getResults();
+                for (int i = 0; i < results.size(); i++)
+                {
+                    edu.dhu.DTRules.entities.Result result = (edu.dhu.DTRules.entities.Result)results.get(i);
+                    sb.Append(result.getResultCode()).Append("--->").Append(result.getResultMessage()).Append("\n");
+                }
             }
-            java.util.List results = examinResult.getResults();
-            for (int i = 0; i < results.size(); i++)
+            catch(Exception e)
             {
-                edu.dhu.DTRules.entities.Result result = (edu.dhu.DTRules.entities.Result)results.get(i);
-                sb.Append(result.getResultCode()).Append("--->").Append(result.getResultMessage()).Append("\n");
+                sb.Append(e.Message).Append("\n");
             }
             return sb.ToString();
         }

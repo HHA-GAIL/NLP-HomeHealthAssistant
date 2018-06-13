@@ -1,0 +1,82 @@
+<entity_data_dictionary version='2' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+	<entity name='bMI_Dev' access='rw' comment=''>
+		<field name='bMI' type='double' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='bMI_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='bMIID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='floors_Dev' access='rw' comment=''>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='floors' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='floors_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='floorsID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='hR_Dev' access='rw' comment=''>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='hR' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='hR_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='hRID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='patient' access='rw' comment=''>
+		<field name='age' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='bMI_Devs' type='array' subtype='bMI_Dev' access='r' input='main' default_value='' comment=''></field>
+		<field name='caltemp' type='double' subtype='' access='rw' input='' default_value='0' comment=''></field>
+		<field name='floors_Devs' type='array' subtype='floors_Dev' access='r' input='main' default_value='' comment=''></field>
+		<field name='fullName' type='string' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='gender' type='string' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='hR_Devs' type='array' subtype='hR_Dev' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='memberSince' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='patient' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='patientID' type='integer' subtype='' access='r' input='main' default_value='' comment='the id of the patient'></field>
+		<field name='results' type='array' subtype='result' access='rw' input='main' default_value='' comment=''></field>
+		<field name='sleep_Devs' type='array' subtype='sleep_Dev' access='r' input='main' default_value='' comment=''></field>
+		<field name='steps_Devs' type='array' subtype='steps_Dev' access='r' input='main' default_value='' comment=''></field>
+		<field name='weight_Devs' type='array' subtype='weight_Dev' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='result' access='rw' comment=''>
+		<field name='eX1' type='entity' subtype='' access='rw' input='main' default_value='' comment=''></field>
+		<field name='eX2' type='entity' subtype='' access='rw' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='result' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='resultCode' type='integer' subtype='' access='rw' input='main' default_value='' comment=''></field>
+		<field name='resultMessage' type='string' subtype='' access='rw' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='sleep_Dev' access='rw' comment=''>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='sleep_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='sleepID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='sleepMeasurement' type='double' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='sleepResults' type='string' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='steps_Dev' access='rw' comment=''>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='steps' type='double' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='steps_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='stepsID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+	<entity name='weight_Dev' access='rw' comment=''>
+		<field name='dateTime' type='date' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='devID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='mapping*key' type='string' subtype='' access='r' input='' default_value='' comment='Mapping Key'></field>
+		<field name='patientID_FK' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='weight' type='double' subtype='' access='r' input='main' default_value='' comment=''></field>
+		<field name='weight_Dev' type='entity' subtype='' access='r' input='' default_value='' comment='Self Reference'></field>
+		<field name='weightID' type='integer' subtype='' access='r' input='main' default_value='' comment=''></field>
+	</entity>
+</entity_data_dictionary>

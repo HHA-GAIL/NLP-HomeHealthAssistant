@@ -47,7 +47,7 @@ namespace NLPDotNetLib.DAO
                 {
                     DataRow dr = dt.Rows[0];
                     patient.setAge(new java.lang.Integer((int)dr["Age"]));
-                    patient.setId((int)dr["PatientID"]);
+                    patient.setPatientID(new java.lang.Integer((int)dr["PatientID"]));
                     patient.setFullName((string)dr["FullName"]);
                     patient.setGender((string)dr["Gender"]);
                     //patient.setMemberSince(new java.util.Date());

@@ -5,6 +5,7 @@
  */
 package GaleDTRules.Tools;
 
+import edu.dhu.DTRules.entities.ExaminResult;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -265,7 +266,7 @@ public class DTRulesXML {
      * compile the RuleSet using the RulesName, the RulesName should be in the DTRules.xml first
      * @param RulesName 
      */
-    public void Compile(File dtfile) throws Exception {
+    public ExaminResult Compile(File dtfile) throws Exception {
 //        com.dtrules.samples.sampleproject2.DemoTesting.main(null);//no problem
 //        edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", RulesName, BASEPATH, new String[] {"main"});
         try {
@@ -276,7 +277,9 @@ public class DTRulesXML {
                 fir.delete();
             }
             copyFileToCertainDir(dtfile);
-            edu.dhu.DTRules.DTRulesCompiler.Compile(BASEPATH, "DTRules.xml", DTName, BASEPATH, new String[] {"main"});
+            edu.dhu.DTRules.DTRulesCompiler.getInstance().setWorkingPath(BASEPATH);
+            ExaminResult er = edu.dhu.DTRules.DTRulesCompiler.getInstance().Compile(new String[] {"main"});
+            return er;
         } catch (Exception e) {
             throw e;
         }

@@ -53,3 +53,8 @@ D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debu
 D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\java-cup-10k.dll
 D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\JFlex.dll
 D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\poi-3.7.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.AWT.WinForms.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\Java\NLP-HomeHealthAssistant\DTRulesResources\NLPDotNet\NLPDotNetLib\bin\Debug\IKVM.OpenJDK.Beans.dll

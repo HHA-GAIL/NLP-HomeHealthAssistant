@@ -37,13 +37,14 @@ public class DTRulesPatientDev {
 	public static final String ConfigFileFileName = "DTRules.xml";
 	public static final String EntryTable = "Test_Patient";
         public static final String RuleName = "TheDecisionTable";
-	public static DTRulesPatientDev dtr;
+	private static DTRulesPatientDev dtr;
 	
 	private boolean trace = false;
-        private String WorkingPath = System.getProperty("java.library.path").split(";;")[0];
+        private String WorkingPath = System.getProperty("user.dir")+"/DTRules/";
 	
+        
 	public static DTRulesPatientDev getInstance(){
-                System.out.println("---GG--->"+System.getProperty("java.library.path"));
+//                System.out.println("---GG--->"+System.getProperty("java.library.path"));
 		if(dtr == null){
 			dtr = new DTRulesPatientDev();
 			return dtr;
@@ -196,7 +197,7 @@ public class DTRulesPatientDev {
                 return er;
             }
             writeRuleContentXmlFile(XMLContent);
-            List<Result> results = doExamine(patient, WorkingPath + "/DTRules/", ConfigFileFileName, RuleName, entryTable);
+            List<Result> results = doExamine(patient, WorkingPath, ConfigFileFileName, RuleName, entryTable);
             er.setStatus(ExaminResult.SUCC);
             er.setMessage("");
             er.setResults(results);
@@ -210,30 +211,31 @@ public class DTRulesPatientDev {
          * @return
          * @throws Exception 
          */
-        public ExaminResult doExamine(Patient patient, String entryTable)
-			throws Exception{
-            ExaminResult er = new ExaminResult();
-            String check = checkForDirsAndNecessaryFiles(BasePath);
-            if(check.contains("<--!MISSINGFILES!-->"))
-            {
-                er.setStatus(ExaminResult.FAIL);
-                er.setMessage(check);
-                return er;
-            }
-            List<Result> results = doExamine(patient, BasePath, ConfigFileFileName, RuleName, entryTable);
-            er.setStatus(ExaminResult.SUCC);
-            er.setMessage("");
-            er.setResults(results);
-            return er;
-        }
+//        public ExaminResult doExamine(Patient patient, String entryTable)
+//			throws Exception{
+//            ExaminResult er = new ExaminResult();
+//            String check = checkForDirsAndNecessaryFiles(BasePath);
+//            if(check.contains("<--!MISSINGFILES!-->"))
+//            {
+//                er.setStatus(ExaminResult.FAIL);
+//                er.setMessage(check);
+//                return er;
+//            }
+//            List<Result> results = doExamine(patient, BasePath, ConfigFileFileName, RuleName, entryTable);
+//            er.setStatus(ExaminResult.SUCC);
+//            er.setMessage("");
+//            er.setResults(results);
+//            return er;
+//        }
         
         public void writeRuleContentXmlFile(String RuleSetString) throws FileNotFoundException, IOException {
             //write a temp file for the new RuleSetString
-            File dtrules = new File(WorkingPath + "/DTRules/xml/TheDecisionTable_dt.xml");
+            File dtrules = new File(WorkingPath + "xml/TheDecisionTable_dt.xml");
             dtrules.createNewFile();
             FileOutputStream fos = new FileOutputStream(dtrules);
             fos.write(RuleSetString.getBytes("utf-8"));
             fos.close();
+//            System.err.println("Write XML Content Done...at"+WorkingPath + "xml/TheDecisionTable_dt.xml");
         }
         
         /***
@@ -244,11 +246,7 @@ public class DTRulesPatientDev {
             StringBuilder sb = new StringBuilder();
             boolean can = true;
             File file = null;
-            String tmpWorkingPath = null;   
-            if(basepathString == null)
-                tmpWorkingPath = WorkingPath + "/DTRules/";
-            else
-                tmpWorkingPath = basepathString;
+            String tmpWorkingPath = WorkingPath;   
             file = new File(tmpWorkingPath);
             file.mkdirs();
             file = new File(tmpWorkingPath + "workingDir");
@@ -292,17 +290,4 @@ public class DTRulesPatientDev {
         this.WorkingPath = WorkingPath;
     }
     
-    private String getCurrentPath()  
-    {
-        String path = DTRulesPatientDev.class.getProtectionDomain().getCodeSource().getLocation().getFile();  
-        try  
-        {  
-            path = java.net.URLDecoder.decode(path, "UTF-8");
-        }  
-        catch (java.io.UnsupportedEncodingException e)  
-        {  
-            return null;  
-        }  
-        return new File(path).getParent();  
-    }  
 }

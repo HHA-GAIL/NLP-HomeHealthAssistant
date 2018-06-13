@@ -18,7 +18,9 @@
   
 package com.dtrules.interpreter.operators;
 
+import com.dtrules.entity.IREntity;
 import com.dtrules.infrastructure.RulesException;
+import com.dtrules.interpreter.ARObject;
 import com.dtrules.interpreter.IRObject;
 import com.dtrules.interpreter.RDouble;
 import com.dtrules.interpreter.RInteger;
@@ -27,6 +29,7 @@ import com.dtrules.session.DTState;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.LinkedList;
 /**
  * Defines math operators.
  * @author paul snow
@@ -317,7 +320,7 @@ public class RMath {
 		}
 
 		public void execute(DTState state) throws RulesException {
-			state.datapush(RDouble.getRDoubleValue(state.datapop().doubleValue()+state.datapop().doubleValue()));
+                    state.datapush(RDouble.getRDoubleValue(state.datapop().doubleValue()+state.datapop().doubleValue()));
 		}
 	}
 	
@@ -326,143 +329,251 @@ public class RMath {
      * @author Turbo
      *
      */
-	public static class CallFunction extends ROperator {
-		CallFunction(){
-			super("callfunction"); alias("call");
-		}
-
-		public void execute(DTState state) throws RulesException {
-            Object result;
-            String a; String b;
-            try {
-                String funcString = state.datapop().stringValue();
-                
-                int indexLess = funcString.indexOf("<");
-                if (indexLess < 0)
-                {
-                	throw new Exception("must provide parameter type, such as fun<int, double>(1,2.2)");
-                }
-                String firstPart = funcString.substring(0, indexLess).trim();
-                int i = firstPart.lastIndexOf(".");
-                String classNameString;
-                String methodString;
-                if (i>=0)
-                {
-                classNameString=firstPart.substring(0, i).trim(); //get the class name
-                methodString = firstPart.substring(i+1).trim(); // get the method name
-                }
-                else
-                {
-                    classNameString = "dhu.edu.lib.Utils";  //specify the class name
-                    methodString = firstPart;   //only a method name
-                }
-               
-                String parameterTypeString =funcString.substring(indexLess+1, funcString.indexOf(">")).trim();//截取参数类型
-                List<String> paramTypeList =Arrays.asList(parameterTypeString.split(","));
-                
-                
-                String parameterString=funcString.substring(funcString.indexOf("(")+1,funcString.lastIndexOf(")")).trim();//截取参数
-                List<String> paramList0=Arrays.asList(parameterString.split(","));
-                List paramList = new ArrayList(paramList0);
-                char  item1 ;
-                char  item2 ;
-                int j=0;       //非局部循环变量
-                String s;      //加工字符串中间变量
-                //处理字符串参数方法
-                while (j<paramList.size()) {
-                    String aParam = paramList.get(j).toString().trim();
-                    item1 =aParam.charAt(0);
-                    item2 =aParam.charAt(aParam.length()-1);
-                   //if(item1=='\"'&&item2!='\"')
-                    if(item1=='\''&&item2!='\'')
-                   {                
-                   s=paramList.get(j).toString();
-                   s+=","+paramList.get(j+1);
-                   paramList.set(j, s);
-                   paramList.remove(j+1);
-                  }else{
-                     j++;               
-                   }
-                }
-
-                if (paramList.size() < paramTypeList.size())
-                {
-                	throw new Exception("should provide enough parameters");
-                }
-                 Class[] classes =new  Class[paramTypeList.size()];//参数类型集合
-                 
-                 //参数类型加工
-                 for (int k = 0; k <classes.length; k++) {
-                     if(null != paramTypeList.get(k))
-                         switch (paramTypeList.get(k).trim().toLowerCase()) {
-                        case "double":
-                            classes[k]=double.class;
-                            paramList.set(k, Double.parseDouble(((String) paramList.get(k)).trim()));
-                            break;
-                        case "string":
-                            classes[k]=String.class;
-                            paramList.set(k, ((String) paramList.get(k)).trim().substring(1, ((String) paramList.get(k)).trim().length()-1));
-                            break;
-                        case "int":
-                            classes[k]=int.class;
-                            paramList.set(k, Integer.parseInt(((String) paramList.get(k)).trim()));
-                            break;
-                        case "char":
-                        	classes[k]=char.class;
-                        	paramList.set(k,  ((String) paramList.get(k)).trim().charAt(1));
-                        	break;
-                        default:
-                            throw new Exception("parameter type wrong,only double, string, int, char are allowed");                 
-                    }
-                }
-                 
-                 //Class c = urlClassLoader.loadClass("dhu.edu.lib."+classNameString);     
-                 Class c = Class.forName(classNameString);
-                 java.lang.reflect.Method m = c.getMethod(methodString,classes);  
-                 
-                 //具体参数个数入口
-                 switch(classes.length){
-                    case 0:
-                    result = m.invoke(null);
-                    break;
-                    case 1:
-                    result = m.invoke(null, paramList.get(0));
-                    break;
-                    case 2:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1));
-                    break;
-                    case 3:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1),paramList.get(2));
-                    break;
-                    case 4:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3));
-                    break;
-                    case 5:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4));
-                    break;
-                    case 6:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5));
-                    break;
-                    case 7:
-                    result = m.invoke(null,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6));
-                    break;
-                    case 8:
-                    result = m.invoke(null, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7));
-                    break;
-                    case 9:
-                    result = m.invoke(null,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8));
-                    break;
-                    case 10:
-                    result = m.invoke(null,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8),paramList.get(9));
-                    break;
-                   default:
-                       result = "too many parameters, maximum is 10";
-                    break;
-                 }
-            } catch (Exception e) {
-                result = "Exception in CallFunction:  "+e;
+//	public static class CallFunction extends ROperator {
+//            CallFunction(){
+//            	super("callfunction"); alias("call");
+//            }
+//
+//            public void execute(DTState state) throws RulesException {
+//                Object result;
+//                String a; String b;
+//                try {
+//                    String funcString = state.datapop().stringValue();
+//
+//                    int indexLess = funcString.indexOf("<");
+//                    if (indexLess < 0)
+//                    {
+//                            throw new Exception("must provide parameter type, such as fun<int, double>(1,2.2)");
+//                    }
+//                    String firstPart = funcString.substring(0, indexLess).trim();
+//                    int i = firstPart.lastIndexOf(".");
+//                    String classNameString;
+//                    String methodString;
+//                    if (i>=0)
+//                    {
+//                    classNameString=firstPart.substring(0, i).trim(); //get the class name
+//                    methodString = firstPart.substring(i+1).trim(); // get the method name
+//                    }
+//                    else
+//                    {
+//                        classNameString = "dhu.edu.lib.Utils";  //specify the class name
+//                        methodString = firstPart;   //only a method name
+//                    }
+//
+//                    String parameterTypeString =funcString.substring(indexLess+1, funcString.indexOf(">")).trim();//截取参数类型
+//                    List<String> paramTypeList =Arrays.asList(parameterTypeString.split(","));
+//
+//
+//                    String parameterString=funcString.substring(funcString.indexOf("(")+1,funcString.lastIndexOf(")")).trim();//截取参数
+//                    List<String> paramList0=Arrays.asList(parameterString.split(","));
+//                    List paramList = new ArrayList(paramList0);
+//                    char  item1 ;
+//                    char  item2 ;
+//                    int j=0;       //非局部循环变量
+//                    String s;      //加工字符串中间变量
+//                    //处理字符串参数方法
+//                    while (j<paramList.size()) {
+//                        String aParam = paramList.get(j).toString().trim();
+//                        item1 =aParam.charAt(0);
+//                        item2 =aParam.charAt(aParam.length()-1);
+//                       //if(item1=='\"'&&item2!='\"')
+//                        if(item1=='\''&&item2!='\'')
+//                       {                
+//                       s=paramList.get(j).toString();
+//                       s+=","+paramList.get(j+1);
+//                       paramList.set(j, s);
+//                       paramList.remove(j+1);
+//                      }else{
+//                         j++;               
+//                       }
+//                    }
+//
+//                    if (paramList.size() < paramTypeList.size())
+//                    {
+//                            throw new Exception("should provide enough parameters");
+//                    }
+//                     Class[] classes =new  Class[paramTypeList.size()];//参数类型集合
+//
+//                     //参数类型加工
+//                     for (int k = 0; k <classes.length; k++) {
+//                         if(null != paramTypeList.get(k))
+//                             switch (paramTypeList.get(k).trim().toLowerCase()) {
+//                            case "double":
+//                                classes[k]=double.class;
+//                                paramList.set(k, (double)Double.parseDouble(((String) paramList.get(k)).trim()));
+//                                break;
+//                            case "string":
+//                                classes[k]=String.class;
+//                                paramList.set(k, ((String) paramList.get(k)).trim().substring(1, ((String) paramList.get(k)).trim().length()-1));
+//                                break;
+//                            case "int":
+//                                classes[k]=int.class;
+//                                paramList.set(k, (int)Integer.parseInt(((String) paramList.get(k)).trim()));
+//                                break;
+//                            case "char":
+//                                    classes[k]=char.class;
+//                                    paramList.set(k,  ((String) paramList.get(k)).trim().charAt(1));
+//                                    break;
+//                            default:
+//                                throw new Exception("parameter type wrong,only double, string, int, char are allowed");                 
+//                        }
+//                    }
+//
+//                     //Class c = urlClassLoader.loadClass("dhu.edu.lib."+classNameString);     
+//                     Class c = Class.forName(classNameString);
+//                     Object obj = c.newInstance();
+//                     java.lang.reflect.Method m = c.getMethod(methodString,classes);
+//
+//                     //具体参数个数入口
+//                     switch(classes.length){
+//                        case 0:
+//                        result = m.invoke(obj);
+//                        break;
+//                        case 1:
+//                        result = m.invoke(obj, paramList.get(0));
+//                        break;
+//                        case 2:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1));
+//                        break;
+//                        case 3:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2));
+//                        break;
+//                        case 4:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3));
+//                        break;
+//                        case 5:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4));
+//                        break;
+//                        case 6:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5));
+//                        break;
+//                        case 7:
+//                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6));
+//                        break;
+//                        case 8:
+//                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7));
+//                        break;
+//                        case 9:
+//                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8));
+//                        break;
+//                        case 10:
+//                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8),paramList.get(9));
+//                        break;
+//                       default:
+//                           result = "too many parameters, maximum is 10";
+//                        break;
+//                     }
+//                } catch (Exception e) {
+//                    result = "Exception in CallFunction:  "+e;
+//                    e.printStackTrace();
+//                }
+//                state.datapush(RString.newRString(result.toString()));		
+//            }
+//	}
+        
+        public static class CallFunction extends ROperator {
+            CallFunction(){
+            	super("callfunction"); alias("call");
             }
-            state.datapush(RString.newRString(result.toString()));		
+
+            public void execute(DTState state) throws RulesException {
+                Object result;
+                try {
+                    String funcString = state.datapop().stringValue();
+
+                    int indexLess = funcString.indexOf("<");
+                    if (indexLess < 0)
+                    {
+                            throw new Exception("must provide parameter type, such as fun<int, double>");
+                    }
+                    String firstPart = funcString.substring(0, indexLess).trim();
+                    int i = firstPart.lastIndexOf(".");
+                    String classNameString;
+                    String methodString;
+                    if (i>=0)
+                    {
+                    classNameString=firstPart.substring(0, i).trim(); //get the class name
+                    methodString = firstPart.substring(i+1).trim(); // get the method name
+                    }
+                    else
+                    {
+                        classNameString = "dhu.edu.lib.Utils";  //specify the class name
+                        methodString = firstPart;   //only a method name
+                    }
+
+                    String parameterTypeString =funcString.substring(indexLess+1, funcString.indexOf(">")).trim();//截取参数类型
+                    List<String> paramTypeList = new LinkedList<>();
+                    if(!parameterTypeString.equals(""))
+                        paramTypeList =Arrays.asList(parameterTypeString.split(","));
+                    List<IRObject> paramList = new LinkedList<>();
+
+                    Class[] classes =new  Class[paramTypeList.size()];
+                    for (int k = 0; k <classes.length; k++) {
+                        switch (paramTypeList.get(k).trim().toLowerCase()) {
+                            case "double":
+                            case "string":
+                            case "int":
+                            case "char":
+                            case "entity":
+                            case "array":
+                                classes[k] = IRObject.class;
+                                paramList.add(state.datapop());
+                                break;
+                            default:
+                                throw new Exception("parameter type wrong,only double, string, int, char, entity are allowed");   
+                        }
+                    }
+
+                     //Class c = urlClassLoader.loadClass("dhu.edu.lib."+classNameString);     
+                     Class c = Class.forName(classNameString);
+                     Object obj = c.newInstance();
+                     java.lang.reflect.Method m = c.getMethod(methodString,classes);
+
+                     //具体参数个数入口
+                     switch(classes.length){
+                        case 0:
+                        result = m.invoke(obj);
+                        break;
+                        case 1:
+                        result = m.invoke(obj, paramList.get(0));
+                        break;
+                        case 2:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1));
+                        break;
+                        case 3:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2));
+                        break;
+                        case 4:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3));
+                        break;
+                        case 5:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4));
+                        break;
+                        case 6:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5));
+                        break;
+                        case 7:
+                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6));
+                        break;
+                        case 8:
+                        result = m.invoke(obj, paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7));
+                        break;
+                        case 9:
+                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8));
+                        break;
+                        case 10:
+                        result = m.invoke(obj,paramList.get(0),paramList.get(1),paramList.get(2),paramList.get(3),paramList.get(4),paramList.get(5),paramList.get(6),paramList.get(7),paramList.get(8),paramList.get(9));
+                        break;
+                       default:
+                           result = "too many parameters, maximum is 10";
+                        break;
+                     }
+                } catch (Exception e) {
+                    result = "Exception in CallFunction:  "+e;
+                    e.printStackTrace();
+                }
+                state.datapush(RString.newRString(result.toString()));
             }
 	}
+        
 }
