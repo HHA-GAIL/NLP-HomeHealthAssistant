@@ -15,9 +15,12 @@ import GaleDTRules.DAO.GaleSleepDevDAO;
 import GaleDTRules.DAO.GaleStepsDevDAO;
 import GaleDTRules.DAO.GaleWeightDevDAO;
 import GaleDTRules.Tools.DTRulesXML;
+import edu.dhu.DTRules.DTRulesCompiler;
 import edu.dhu.DTRules.entities.ExaminResult;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
@@ -556,10 +559,21 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             ByteArrayOutputStream baos = new ByteArrayOutputStream(2048);
             PrintStream cacheout = new PrintStream(baos);
             PrintStream original = System.out;
+//            PipedInputStream pipedIS = new PipedInputStream();
+//            PipedOutputStream pipedOS = new PipedOutputStream();
+//            pipedOS.connect(pipedIS); 
+//            PrintStream ps = new PrintStream(pipedOS); 
+//            System.setOut(ps); 
+//            System.setErr(ps);
             System.setOut(cacheout);
             ExaminResult er = dtrxml.Compile(dtFile);
             System.setOut(original);
+//            byte[] readed = new byte[pipedIS.available()];
+//            pipedIS.read(readed, 0, pipedIS.available());
+//            WriteTA(TA_CompileMsg, new String(readed));
             WriteTA(TA_CompileMsg, baos.toString());
+            System.out.println("out...");
+            
             if(er.getStatus().equals(ExaminResult.FAIL)){
                 WriteTA(TA_CompileMsg, "\n\n"+er.getMessage());
                 return;

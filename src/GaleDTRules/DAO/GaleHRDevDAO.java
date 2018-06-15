@@ -28,7 +28,7 @@ public class GaleHRDevDAO {
     public DefaultTableModel getTableModel(int patientID) {
         try {
             conn = JDBCMySQLConnection.getConnection(JDBCMySQLConnection.TYPE.GALE);
-            pstmt = conn.prepareStatement("SELECT * FROM HR_Dev where PatientID_FK=? order by DateTime desc limit 0, 20;");
+            pstmt = conn.prepareStatement("SELECT * FROM HR_Dev where PatientID_FK=? order by DateTime desc limit 0, 200;");
             pstmt.setInt(1, patientID);
             rst = pstmt.executeQuery();
             ResultSetMetaData metaData = rst.getMetaData();

@@ -115,7 +115,7 @@ terminal String		ABSOLUTEVALUE, ACTION, ADD, AFTER, ALL, ALLOWING, AND,
 					RSTRING, RTABLE, RXMLVALUE, SEMI, SET, SORT, STARTS_WITH,  
 					STRING, SUBSTRING, SUBTRACT, SUM_OF, TABLE, TABLEINFORMATION, 
 					THEN, THENAME, THERE, THIS, TIMES, THROUGH, TO, 
-					TOBEREMOVED, MYADD, CALLFUNCTION                                 //Turbo add "myadd","CallFunction"
+					TOBEREMOVED, MYADD, CALLFUNCTION, CALLFUNCTIOMWITHOBJ                     //Turbo add "myadd","CallFunction"
 					TOKENIZE, TRIM, UMINUS, UNDEFINED, UPPER_CASE, USING, VALUE, 
 					WAS, WHERE, WITHIN, WITH_BOUNDRY, YEARS, YEAROF; 
  
@@ -811,23 +811,25 @@ strexpr  ::=  ATTRIBUTE strexpr:s OF eexpr:e
               //Turbo
               CALLFUNCTION strexpr:e1 {: RESULT = e1+"callfunction "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 {: RESULT = e1+e2+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 {: RESULT = e1+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 {: RESULT = e1+e2+e3+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 {: RESULT = e1+e2+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 {: RESULT = e1+e2+e3+e4+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 {: RESULT = e1+e2+e3+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 {: RESULT = e1+e2+e3+e4+e5+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 {: RESULT = e1+e2+e3+e4+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 {: RESULT = e1+e2+e3+e4+e5+e6+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 {: RESULT = e1+e2+e3+e4+e5+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 {: RESULT = e1+e2+e3+e4+e5+e6+e7+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 {: RESULT = e1+e2+e3+e4+e5+e6+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 {: RESULT = e1+e2+e3+e4+e5+e6+e7+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 AND eexpr:e9 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+e9+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+"callfunctionwithobj "; :}
               |
-              CALLFUNCTION strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 AND eexpr:e9 AND eexpr:e10 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+"callfunction "; :}
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 AND eexpr:e9 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+e9+"callfunctionwithobj "; :}
+              |
+              CALLFUNCTIONWITHOBJ strexpr:e1 AND eexpr:e2 AND eexpr:e3 AND eexpr:e4 AND eexpr:e5 AND eexpr:e6 AND eexpr:e7 AND eexpr:e8 AND eexpr:e9 AND eexpr:e10 {: RESULT = e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+"callfunctionwithobj "; :}
               |
 			  // relationship Syntax              
               RELATIONSHIP_BETWEEN eexpr:e1 AND eexpr:e2 {: RESULT = e1+e2+

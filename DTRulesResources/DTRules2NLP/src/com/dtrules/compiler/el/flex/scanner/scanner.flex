@@ -256,7 +256,8 @@ string     = {stringdbl}|{stringsgl}
   "mapping"{ws}+"key"               {return build(sym.MAPPINGKEY); }
   "through"                         {return build(sym.THROUGH); }
   "myadd"                         {return build(sym.MYADD); }  
-"call"{ws}+a"|"an"|"the")+{ws}*+"function"   {return build(sym.CALLFUNCTION); }                                                                             
+"call"{ws}+a"|"an"|"the")+{ws}*+"function"   {return build(sym.CALLFUNCTION); } 
+"call"{ws}+a"|"an"|"the")+{ws}*+"functionwithobj"   {return build(sym.CALLFUNCTIONWITHOBJ); }                                                                                 
                    
   "//"[^\r\n]*     { }             //   //        comments
   "/*"([^/]|("/"[^*]))*"*/" { }    //   /* ... */ comments
