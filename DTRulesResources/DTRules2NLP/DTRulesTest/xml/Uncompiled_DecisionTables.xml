@@ -180,7 +180,7 @@
 				<action_number>11</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultMessage = &quot;Something wrong with your healt¡­Need to to to hospital to examine your heart or blood pressure.&quot;</action_description>
+				<action_description>set the result&apos;s resultMessage = &quot;Something wrong with your health... Need to to to hospital to examine your heart or blood pressure.&quot;</action_description>
 				<action_column column_number='6' column_value='X'></action_column>
 				<action_column column_number='7' column_value='X'></action_column>
 			</action_details>
@@ -188,7 +188,7 @@
 				<action_number>12</action_number>
 				<action_comment></action_comment>
 				<action_requirement></action_requirement>
-				<action_description>set the result&apos;s resultMessage = result&apos;s resultMessage + &quot;    Recent date time is: &quot; + recentHR&apos;s dateTime</action_description>
+				<action_description>set the result&apos;s resultMessage = result&apos;s resultMessage + &quot;...Your recent HR is: &quot;+recentHR&apos;s hR+&quot;...And your recent data&apos;s average is: &quot;+average+&quot;...Recent date time is: &quot; + recentHR&apos;s dateTime</action_description>
 				<action_column column_number='1' column_value='X'></action_column>
 				<action_column column_number='2' column_value='X'></action_column>
 				<action_column column_number='3' column_value='X'></action_column>

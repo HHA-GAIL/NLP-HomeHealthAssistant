@@ -21,8 +21,8 @@
 						<message>   /gender &quot;male&quot; def</message>
 					</gender>
 					<memberSince>
-						<def id='10096' entity='patient' name='membersince'>&quot;06/15/2018 12:00:00:0476&quot; cvd</def>
-						<message>   /membersince &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+						<def id='10096' entity='patient' name='membersince'>&quot;06/15/2018 14:08:21:0150&quot; cvd</def>
+						<message>   /membersince &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 					</memberSince>
 					<sleep_Devs>
 						<sleep_Dev>
@@ -39,16 +39,16 @@
 									<message>   /sleepid &quot;0&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10098' entity='sleep_Dev' name='sleepmeasurement'>570.0</def>
-									<message>   /sleepmeasurement &quot;570.0&quot; def</message>
+									<def id='10098' entity='sleep_Dev' name='sleepmeasurement'>812.0</def>
+									<message>   /sleepmeasurement &quot;812.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10098' entity='sleep_Dev' name='sleepresults'>&quot;better...0&quot;</def>
 									<message>   /sleepresults &quot;better...0&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10098' entity='sleep_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0477&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10098' entity='sleep_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0150&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10098' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -71,16 +71,16 @@
 									<message>   /sleepid &quot;1&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10100' entity='sleep_Dev' name='sleepmeasurement'>794.0</def>
-									<message>   /sleepmeasurement &quot;794.0&quot; def</message>
+									<def id='10100' entity='sleep_Dev' name='sleepmeasurement'>775.0</def>
+									<message>   /sleepmeasurement &quot;775.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10100' entity='sleep_Dev' name='sleepresults'>&quot;better...1&quot;</def>
 									<message>   /sleepresults &quot;better...1&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10100' entity='sleep_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10100' entity='sleep_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10100' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -103,16 +103,16 @@
 									<message>   /sleepid &quot;2&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10102' entity='sleep_Dev' name='sleepmeasurement'>818.0</def>
-									<message>   /sleepmeasurement &quot;818.0&quot; def</message>
+									<def id='10102' entity='sleep_Dev' name='sleepmeasurement'>669.0</def>
+									<message>   /sleepmeasurement &quot;669.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10102' entity='sleep_Dev' name='sleepresults'>&quot;better...2&quot;</def>
 									<message>   /sleepresults &quot;better...2&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10102' entity='sleep_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10102' entity='sleep_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10102' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -135,16 +135,16 @@
 									<message>   /sleepid &quot;3&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10104' entity='sleep_Dev' name='sleepmeasurement'>763.0</def>
-									<message>   /sleepmeasurement &quot;763.0&quot; def</message>
+									<def id='10104' entity='sleep_Dev' name='sleepmeasurement'>744.0</def>
+									<message>   /sleepmeasurement &quot;744.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10104' entity='sleep_Dev' name='sleepresults'>&quot;better...3&quot;</def>
 									<message>   /sleepresults &quot;better...3&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10104' entity='sleep_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10104' entity='sleep_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10104' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -167,16 +167,16 @@
 									<message>   /sleepid &quot;4&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10106' entity='sleep_Dev' name='sleepmeasurement'>574.0</def>
-									<message>   /sleepmeasurement &quot;574.0&quot; def</message>
+									<def id='10106' entity='sleep_Dev' name='sleepmeasurement'>502.0</def>
+									<message>   /sleepmeasurement &quot;502.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10106' entity='sleep_Dev' name='sleepresults'>&quot;better...4&quot;</def>
 									<message>   /sleepresults &quot;better...4&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10106' entity='sleep_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10106' entity='sleep_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10106' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -199,16 +199,16 @@
 									<message>   /sleepid &quot;5&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10108' entity='sleep_Dev' name='sleepmeasurement'>803.0</def>
-									<message>   /sleepmeasurement &quot;803.0&quot; def</message>
+									<def id='10108' entity='sleep_Dev' name='sleepmeasurement'>850.0</def>
+									<message>   /sleepmeasurement &quot;850.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10108' entity='sleep_Dev' name='sleepresults'>&quot;better...5&quot;</def>
 									<message>   /sleepresults &quot;better...5&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10108' entity='sleep_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10108' entity='sleep_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10108' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -231,16 +231,16 @@
 									<message>   /sleepid &quot;6&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10110' entity='sleep_Dev' name='sleepmeasurement'>737.0</def>
-									<message>   /sleepmeasurement &quot;737.0&quot; def</message>
+									<def id='10110' entity='sleep_Dev' name='sleepmeasurement'>832.0</def>
+									<message>   /sleepmeasurement &quot;832.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10110' entity='sleep_Dev' name='sleepresults'>&quot;better...6&quot;</def>
 									<message>   /sleepresults &quot;better...6&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10110' entity='sleep_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10110' entity='sleep_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10110' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -263,16 +263,16 @@
 									<message>   /sleepid &quot;7&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10112' entity='sleep_Dev' name='sleepmeasurement'>809.0</def>
-									<message>   /sleepmeasurement &quot;809.0&quot; def</message>
+									<def id='10112' entity='sleep_Dev' name='sleepmeasurement'>616.0</def>
+									<message>   /sleepmeasurement &quot;616.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10112' entity='sleep_Dev' name='sleepresults'>&quot;better...7&quot;</def>
 									<message>   /sleepresults &quot;better...7&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10112' entity='sleep_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10112' entity='sleep_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10112' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -295,16 +295,16 @@
 									<message>   /sleepid &quot;8&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10114' entity='sleep_Dev' name='sleepmeasurement'>529.0</def>
-									<message>   /sleepmeasurement &quot;529.0&quot; def</message>
+									<def id='10114' entity='sleep_Dev' name='sleepmeasurement'>512.0</def>
+									<message>   /sleepmeasurement &quot;512.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10114' entity='sleep_Dev' name='sleepresults'>&quot;better...8&quot;</def>
 									<message>   /sleepresults &quot;better...8&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10114' entity='sleep_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10114' entity='sleep_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10114' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -327,16 +327,16 @@
 									<message>   /sleepid &quot;9&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10116' entity='sleep_Dev' name='sleepmeasurement'>614.0</def>
-									<message>   /sleepmeasurement &quot;614.0&quot; def</message>
+									<def id='10116' entity='sleep_Dev' name='sleepmeasurement'>604.0</def>
+									<message>   /sleepmeasurement &quot;604.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10116' entity='sleep_Dev' name='sleepresults'>&quot;better...9&quot;</def>
 									<message>   /sleepresults &quot;better...9&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10116' entity='sleep_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10116' entity='sleep_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10116' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -359,16 +359,16 @@
 									<message>   /sleepid &quot;10&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10118' entity='sleep_Dev' name='sleepmeasurement'>572.0</def>
-									<message>   /sleepmeasurement &quot;572.0&quot; def</message>
+									<def id='10118' entity='sleep_Dev' name='sleepmeasurement'>758.0</def>
+									<message>   /sleepmeasurement &quot;758.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10118' entity='sleep_Dev' name='sleepresults'>&quot;better...10&quot;</def>
 									<message>   /sleepresults &quot;better...10&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10118' entity='sleep_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10118' entity='sleep_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10118' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -391,16 +391,16 @@
 									<message>   /sleepid &quot;11&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10120' entity='sleep_Dev' name='sleepmeasurement'>738.0</def>
-									<message>   /sleepmeasurement &quot;738.0&quot; def</message>
+									<def id='10120' entity='sleep_Dev' name='sleepmeasurement'>798.0</def>
+									<message>   /sleepmeasurement &quot;798.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10120' entity='sleep_Dev' name='sleepresults'>&quot;better...11&quot;</def>
 									<message>   /sleepresults &quot;better...11&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10120' entity='sleep_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10120' entity='sleep_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10120' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -423,16 +423,16 @@
 									<message>   /sleepid &quot;12&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10122' entity='sleep_Dev' name='sleepmeasurement'>530.0</def>
-									<message>   /sleepmeasurement &quot;530.0&quot; def</message>
+									<def id='10122' entity='sleep_Dev' name='sleepmeasurement'>616.0</def>
+									<message>   /sleepmeasurement &quot;616.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10122' entity='sleep_Dev' name='sleepresults'>&quot;better...12&quot;</def>
 									<message>   /sleepresults &quot;better...12&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10122' entity='sleep_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10122' entity='sleep_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10122' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -455,16 +455,16 @@
 									<message>   /sleepid &quot;13&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10124' entity='sleep_Dev' name='sleepmeasurement'>580.0</def>
-									<message>   /sleepmeasurement &quot;580.0&quot; def</message>
+									<def id='10124' entity='sleep_Dev' name='sleepmeasurement'>761.0</def>
+									<message>   /sleepmeasurement &quot;761.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10124' entity='sleep_Dev' name='sleepresults'>&quot;better...13&quot;</def>
 									<message>   /sleepresults &quot;better...13&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10124' entity='sleep_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10124' entity='sleep_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10124' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -487,16 +487,16 @@
 									<message>   /sleepid &quot;14&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10126' entity='sleep_Dev' name='sleepmeasurement'>627.0</def>
-									<message>   /sleepmeasurement &quot;627.0&quot; def</message>
+									<def id='10126' entity='sleep_Dev' name='sleepmeasurement'>643.0</def>
+									<message>   /sleepmeasurement &quot;643.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10126' entity='sleep_Dev' name='sleepresults'>&quot;better...14&quot;</def>
 									<message>   /sleepresults &quot;better...14&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10126' entity='sleep_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10126' entity='sleep_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10126' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -519,16 +519,16 @@
 									<message>   /sleepid &quot;15&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10128' entity='sleep_Dev' name='sleepmeasurement'>767.0</def>
-									<message>   /sleepmeasurement &quot;767.0&quot; def</message>
+									<def id='10128' entity='sleep_Dev' name='sleepmeasurement'>671.0</def>
+									<message>   /sleepmeasurement &quot;671.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10128' entity='sleep_Dev' name='sleepresults'>&quot;better...15&quot;</def>
 									<message>   /sleepresults &quot;better...15&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10128' entity='sleep_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10128' entity='sleep_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10128' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -551,16 +551,16 @@
 									<message>   /sleepid &quot;16&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10130' entity='sleep_Dev' name='sleepmeasurement'>834.0</def>
-									<message>   /sleepmeasurement &quot;834.0&quot; def</message>
+									<def id='10130' entity='sleep_Dev' name='sleepmeasurement'>683.0</def>
+									<message>   /sleepmeasurement &quot;683.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10130' entity='sleep_Dev' name='sleepresults'>&quot;better...16&quot;</def>
 									<message>   /sleepresults &quot;better...16&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10130' entity='sleep_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10130' entity='sleep_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10130' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -583,16 +583,16 @@
 									<message>   /sleepid &quot;17&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10132' entity='sleep_Dev' name='sleepmeasurement'>528.0</def>
-									<message>   /sleepmeasurement &quot;528.0&quot; def</message>
+									<def id='10132' entity='sleep_Dev' name='sleepmeasurement'>621.0</def>
+									<message>   /sleepmeasurement &quot;621.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10132' entity='sleep_Dev' name='sleepresults'>&quot;better...17&quot;</def>
 									<message>   /sleepresults &quot;better...17&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10132' entity='sleep_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10132' entity='sleep_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10132' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -615,16 +615,16 @@
 									<message>   /sleepid &quot;18&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10134' entity='sleep_Dev' name='sleepmeasurement'>570.0</def>
-									<message>   /sleepmeasurement &quot;570.0&quot; def</message>
+									<def id='10134' entity='sleep_Dev' name='sleepmeasurement'>514.0</def>
+									<message>   /sleepmeasurement &quot;514.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10134' entity='sleep_Dev' name='sleepresults'>&quot;better...18&quot;</def>
 									<message>   /sleepresults &quot;better...18&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10134' entity='sleep_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10134' entity='sleep_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10134' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -647,16 +647,16 @@
 									<message>   /sleepid &quot;19&quot; def</message>
 								</sleepID>
 								<sleepMeasurement>
-									<def id='10136' entity='sleep_Dev' name='sleepmeasurement'>558.0</def>
-									<message>   /sleepmeasurement &quot;558.0&quot; def</message>
+									<def id='10136' entity='sleep_Dev' name='sleepmeasurement'>610.0</def>
+									<message>   /sleepmeasurement &quot;610.0&quot; def</message>
 								</sleepMeasurement>
 								<sleepResults>
 									<def id='10136' entity='sleep_Dev' name='sleepresults'>&quot;better...19&quot;</def>
 									<message>   /sleepresults &quot;better...19&quot; def</message>
 								</sleepResults>
 								<dateTime>
-									<def id='10136' entity='sleep_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10136' entity='sleep_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10136' entity='sleep_Dev' name='devid_fk'>-1</def>
@@ -677,16 +677,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10138' entity='steps_Dev' name='steps'>6871.0</def>
-									<message>   /steps &quot;6871.0&quot; def</message>
+									<def id='10138' entity='steps_Dev' name='steps'>7892.0</def>
+									<message>   /steps &quot;7892.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10138' entity='steps_Dev' name='stepsid'>0</def>
 									<message>   /stepsid &quot;0&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10138' entity='steps_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0477&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10138' entity='steps_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0151&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10138' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -705,16 +705,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10140' entity='steps_Dev' name='steps'>9652.0</def>
-									<message>   /steps &quot;9652.0&quot; def</message>
+									<def id='10140' entity='steps_Dev' name='steps'>5899.0</def>
+									<message>   /steps &quot;5899.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10140' entity='steps_Dev' name='stepsid'>1</def>
 									<message>   /stepsid &quot;1&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10140' entity='steps_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10140' entity='steps_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10140' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -733,16 +733,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10142' entity='steps_Dev' name='steps'>9215.0</def>
-									<message>   /steps &quot;9215.0&quot; def</message>
+									<def id='10142' entity='steps_Dev' name='steps'>2379.0</def>
+									<message>   /steps &quot;2379.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10142' entity='steps_Dev' name='stepsid'>2</def>
 									<message>   /stepsid &quot;2&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10142' entity='steps_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10142' entity='steps_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10142' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -761,16 +761,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10144' entity='steps_Dev' name='steps'>234.0</def>
-									<message>   /steps &quot;234.0&quot; def</message>
+									<def id='10144' entity='steps_Dev' name='steps'>5517.0</def>
+									<message>   /steps &quot;5517.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10144' entity='steps_Dev' name='stepsid'>3</def>
 									<message>   /stepsid &quot;3&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10144' entity='steps_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10144' entity='steps_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10144' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -789,16 +789,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10146' entity='steps_Dev' name='steps'>5797.0</def>
-									<message>   /steps &quot;5797.0&quot; def</message>
+									<def id='10146' entity='steps_Dev' name='steps'>5959.0</def>
+									<message>   /steps &quot;5959.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10146' entity='steps_Dev' name='stepsid'>4</def>
 									<message>   /stepsid &quot;4&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10146' entity='steps_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10146' entity='steps_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10146' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -817,16 +817,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10148' entity='steps_Dev' name='steps'>1366.0</def>
-									<message>   /steps &quot;1366.0&quot; def</message>
+									<def id='10148' entity='steps_Dev' name='steps'>2950.0</def>
+									<message>   /steps &quot;2950.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10148' entity='steps_Dev' name='stepsid'>5</def>
 									<message>   /stepsid &quot;5&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10148' entity='steps_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10148' entity='steps_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10148' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -845,16 +845,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10150' entity='steps_Dev' name='steps'>5551.0</def>
-									<message>   /steps &quot;5551.0&quot; def</message>
+									<def id='10150' entity='steps_Dev' name='steps'>9019.0</def>
+									<message>   /steps &quot;9019.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10150' entity='steps_Dev' name='stepsid'>6</def>
 									<message>   /stepsid &quot;6&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10150' entity='steps_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10150' entity='steps_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10150' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -873,16 +873,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10152' entity='steps_Dev' name='steps'>6614.0</def>
-									<message>   /steps &quot;6614.0&quot; def</message>
+									<def id='10152' entity='steps_Dev' name='steps'>5482.0</def>
+									<message>   /steps &quot;5482.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10152' entity='steps_Dev' name='stepsid'>7</def>
 									<message>   /stepsid &quot;7&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10152' entity='steps_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10152' entity='steps_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10152' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -901,16 +901,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10154' entity='steps_Dev' name='steps'>6762.0</def>
-									<message>   /steps &quot;6762.0&quot; def</message>
+									<def id='10154' entity='steps_Dev' name='steps'>4736.0</def>
+									<message>   /steps &quot;4736.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10154' entity='steps_Dev' name='stepsid'>8</def>
 									<message>   /stepsid &quot;8&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10154' entity='steps_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10154' entity='steps_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10154' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -929,16 +929,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10156' entity='steps_Dev' name='steps'>8449.0</def>
-									<message>   /steps &quot;8449.0&quot; def</message>
+									<def id='10156' entity='steps_Dev' name='steps'>6447.0</def>
+									<message>   /steps &quot;6447.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10156' entity='steps_Dev' name='stepsid'>9</def>
 									<message>   /stepsid &quot;9&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10156' entity='steps_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10156' entity='steps_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10156' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -957,16 +957,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10158' entity='steps_Dev' name='steps'>6130.0</def>
-									<message>   /steps &quot;6130.0&quot; def</message>
+									<def id='10158' entity='steps_Dev' name='steps'>4737.0</def>
+									<message>   /steps &quot;4737.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10158' entity='steps_Dev' name='stepsid'>10</def>
 									<message>   /stepsid &quot;10&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10158' entity='steps_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10158' entity='steps_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10158' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -985,16 +985,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10160' entity='steps_Dev' name='steps'>7498.0</def>
-									<message>   /steps &quot;7498.0&quot; def</message>
+									<def id='10160' entity='steps_Dev' name='steps'>3027.0</def>
+									<message>   /steps &quot;3027.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10160' entity='steps_Dev' name='stepsid'>11</def>
 									<message>   /stepsid &quot;11&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10160' entity='steps_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10160' entity='steps_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10160' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1013,16 +1013,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10162' entity='steps_Dev' name='steps'>6471.0</def>
-									<message>   /steps &quot;6471.0&quot; def</message>
+									<def id='10162' entity='steps_Dev' name='steps'>3152.0</def>
+									<message>   /steps &quot;3152.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10162' entity='steps_Dev' name='stepsid'>12</def>
 									<message>   /stepsid &quot;12&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10162' entity='steps_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10162' entity='steps_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10162' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1041,16 +1041,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10164' entity='steps_Dev' name='steps'>7032.0</def>
-									<message>   /steps &quot;7032.0&quot; def</message>
+									<def id='10164' entity='steps_Dev' name='steps'>5519.0</def>
+									<message>   /steps &quot;5519.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10164' entity='steps_Dev' name='stepsid'>13</def>
 									<message>   /stepsid &quot;13&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10164' entity='steps_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10164' entity='steps_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10164' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1069,16 +1069,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10166' entity='steps_Dev' name='steps'>4326.0</def>
-									<message>   /steps &quot;4326.0&quot; def</message>
+									<def id='10166' entity='steps_Dev' name='steps'>935.0</def>
+									<message>   /steps &quot;935.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10166' entity='steps_Dev' name='stepsid'>14</def>
 									<message>   /stepsid &quot;14&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10166' entity='steps_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10166' entity='steps_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10166' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1097,16 +1097,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10168' entity='steps_Dev' name='steps'>349.0</def>
-									<message>   /steps &quot;349.0&quot; def</message>
+									<def id='10168' entity='steps_Dev' name='steps'>6589.0</def>
+									<message>   /steps &quot;6589.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10168' entity='steps_Dev' name='stepsid'>15</def>
 									<message>   /stepsid &quot;15&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10168' entity='steps_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10168' entity='steps_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10168' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1125,16 +1125,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10170' entity='steps_Dev' name='steps'>7706.0</def>
-									<message>   /steps &quot;7706.0&quot; def</message>
+									<def id='10170' entity='steps_Dev' name='steps'>4867.0</def>
+									<message>   /steps &quot;4867.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10170' entity='steps_Dev' name='stepsid'>16</def>
 									<message>   /stepsid &quot;16&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10170' entity='steps_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10170' entity='steps_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10170' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1153,16 +1153,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10172' entity='steps_Dev' name='steps'>1977.0</def>
-									<message>   /steps &quot;1977.0&quot; def</message>
+									<def id='10172' entity='steps_Dev' name='steps'>9572.0</def>
+									<message>   /steps &quot;9572.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10172' entity='steps_Dev' name='stepsid'>17</def>
 									<message>   /stepsid &quot;17&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10172' entity='steps_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10172' entity='steps_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10172' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1181,16 +1181,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10174' entity='steps_Dev' name='steps'>3190.0</def>
-									<message>   /steps &quot;3190.0&quot; def</message>
+									<def id='10174' entity='steps_Dev' name='steps'>7339.0</def>
+									<message>   /steps &quot;7339.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10174' entity='steps_Dev' name='stepsid'>18</def>
 									<message>   /stepsid &quot;18&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10174' entity='steps_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10174' entity='steps_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10174' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1209,16 +1209,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<steps>
-									<def id='10176' entity='steps_Dev' name='steps'>2482.0</def>
-									<message>   /steps &quot;2482.0&quot; def</message>
+									<def id='10176' entity='steps_Dev' name='steps'>5542.0</def>
+									<message>   /steps &quot;5542.0&quot; def</message>
 								</steps>
 								<stepsID>
 									<def id='10176' entity='steps_Dev' name='stepsid'>19</def>
 									<message>   /stepsid &quot;19&quot; def</message>
 								</stepsID>
 								<dateTime>
-									<def id='10176' entity='steps_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10176' entity='steps_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10176' entity='steps_Dev' name='devid_fk'>-1</def>
@@ -1243,12 +1243,12 @@
 									<message>   /bmiid &quot;0&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10178' entity='bMI_Dev' name='bmi'>30.2</def>
-									<message>   /bmi &quot;30.2&quot; def</message>
+									<def id='10178' entity='bMI_Dev' name='bmi'>36.2</def>
+									<message>   /bmi &quot;36.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10178' entity='bMI_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0478&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10178' entity='bMI_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0151&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10178' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1271,12 +1271,12 @@
 									<message>   /bmiid &quot;1&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10180' entity='bMI_Dev' name='bmi'>27.2</def>
-									<message>   /bmi &quot;27.2&quot; def</message>
+									<def id='10180' entity='bMI_Dev' name='bmi'>35.2</def>
+									<message>   /bmi &quot;35.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10180' entity='bMI_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10180' entity='bMI_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10180' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1299,12 +1299,12 @@
 									<message>   /bmiid &quot;2&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10182' entity='bMI_Dev' name='bmi'>29.2</def>
-									<message>   /bmi &quot;29.2&quot; def</message>
+									<def id='10182' entity='bMI_Dev' name='bmi'>37.2</def>
+									<message>   /bmi &quot;37.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10182' entity='bMI_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10182' entity='bMI_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10182' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1327,12 +1327,12 @@
 									<message>   /bmiid &quot;3&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10184' entity='bMI_Dev' name='bmi'>29.2</def>
-									<message>   /bmi &quot;29.2&quot; def</message>
+									<def id='10184' entity='bMI_Dev' name='bmi'>28.2</def>
+									<message>   /bmi &quot;28.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10184' entity='bMI_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10184' entity='bMI_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10184' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1355,12 +1355,12 @@
 									<message>   /bmiid &quot;4&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10186' entity='bMI_Dev' name='bmi'>39.2</def>
-									<message>   /bmi &quot;39.2&quot; def</message>
+									<def id='10186' entity='bMI_Dev' name='bmi'>23.2</def>
+									<message>   /bmi &quot;23.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10186' entity='bMI_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10186' entity='bMI_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10186' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1383,12 +1383,12 @@
 									<message>   /bmiid &quot;5&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10188' entity='bMI_Dev' name='bmi'>34.2</def>
-									<message>   /bmi &quot;34.2&quot; def</message>
+									<def id='10188' entity='bMI_Dev' name='bmi'>15.2</def>
+									<message>   /bmi &quot;15.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10188' entity='bMI_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10188' entity='bMI_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10188' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1411,12 +1411,12 @@
 									<message>   /bmiid &quot;6&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10190' entity='bMI_Dev' name='bmi'>25.2</def>
-									<message>   /bmi &quot;25.2&quot; def</message>
+									<def id='10190' entity='bMI_Dev' name='bmi'>33.2</def>
+									<message>   /bmi &quot;33.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10190' entity='bMI_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10190' entity='bMI_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10190' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1439,12 +1439,12 @@
 									<message>   /bmiid &quot;7&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10192' entity='bMI_Dev' name='bmi'>22.2</def>
-									<message>   /bmi &quot;22.2&quot; def</message>
+									<def id='10192' entity='bMI_Dev' name='bmi'>16.2</def>
+									<message>   /bmi &quot;16.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10192' entity='bMI_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10192' entity='bMI_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10192' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1467,12 +1467,12 @@
 									<message>   /bmiid &quot;8&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10194' entity='bMI_Dev' name='bmi'>21.2</def>
-									<message>   /bmi &quot;21.2&quot; def</message>
+									<def id='10194' entity='bMI_Dev' name='bmi'>38.2</def>
+									<message>   /bmi &quot;38.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10194' entity='bMI_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10194' entity='bMI_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10194' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1499,8 +1499,8 @@
 									<message>   /bmi &quot;37.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10196' entity='bMI_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10196' entity='bMI_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10196' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1523,12 +1523,12 @@
 									<message>   /bmiid &quot;10&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10198' entity='bMI_Dev' name='bmi'>27.2</def>
-									<message>   /bmi &quot;27.2&quot; def</message>
+									<def id='10198' entity='bMI_Dev' name='bmi'>34.2</def>
+									<message>   /bmi &quot;34.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10198' entity='bMI_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10198' entity='bMI_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10198' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1551,12 +1551,12 @@
 									<message>   /bmiid &quot;11&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10200' entity='bMI_Dev' name='bmi'>33.2</def>
-									<message>   /bmi &quot;33.2&quot; def</message>
+									<def id='10200' entity='bMI_Dev' name='bmi'>26.2</def>
+									<message>   /bmi &quot;26.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10200' entity='bMI_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10200' entity='bMI_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10200' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1579,12 +1579,12 @@
 									<message>   /bmiid &quot;12&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10202' entity='bMI_Dev' name='bmi'>36.2</def>
-									<message>   /bmi &quot;36.2&quot; def</message>
+									<def id='10202' entity='bMI_Dev' name='bmi'>35.2</def>
+									<message>   /bmi &quot;35.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10202' entity='bMI_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10202' entity='bMI_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10202' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1607,12 +1607,12 @@
 									<message>   /bmiid &quot;13&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10204' entity='bMI_Dev' name='bmi'>29.2</def>
-									<message>   /bmi &quot;29.2&quot; def</message>
+									<def id='10204' entity='bMI_Dev' name='bmi'>24.2</def>
+									<message>   /bmi &quot;24.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10204' entity='bMI_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10204' entity='bMI_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10204' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1635,12 +1635,12 @@
 									<message>   /bmiid &quot;14&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10206' entity='bMI_Dev' name='bmi'>27.2</def>
-									<message>   /bmi &quot;27.2&quot; def</message>
+									<def id='10206' entity='bMI_Dev' name='bmi'>33.2</def>
+									<message>   /bmi &quot;33.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10206' entity='bMI_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10206' entity='bMI_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10206' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1663,12 +1663,12 @@
 									<message>   /bmiid &quot;15&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10208' entity='bMI_Dev' name='bmi'>25.2</def>
-									<message>   /bmi &quot;25.2&quot; def</message>
+									<def id='10208' entity='bMI_Dev' name='bmi'>37.2</def>
+									<message>   /bmi &quot;37.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10208' entity='bMI_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10208' entity='bMI_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10208' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1691,12 +1691,12 @@
 									<message>   /bmiid &quot;16&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10210' entity='bMI_Dev' name='bmi'>25.2</def>
-									<message>   /bmi &quot;25.2&quot; def</message>
+									<def id='10210' entity='bMI_Dev' name='bmi'>21.2</def>
+									<message>   /bmi &quot;21.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10210' entity='bMI_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10210' entity='bMI_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10210' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1719,12 +1719,12 @@
 									<message>   /bmiid &quot;17&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10212' entity='bMI_Dev' name='bmi'>31.2</def>
-									<message>   /bmi &quot;31.2&quot; def</message>
+									<def id='10212' entity='bMI_Dev' name='bmi'>35.2</def>
+									<message>   /bmi &quot;35.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10212' entity='bMI_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10212' entity='bMI_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10212' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1747,12 +1747,12 @@
 									<message>   /bmiid &quot;18&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10214' entity='bMI_Dev' name='bmi'>16.2</def>
-									<message>   /bmi &quot;16.2&quot; def</message>
+									<def id='10214' entity='bMI_Dev' name='bmi'>22.2</def>
+									<message>   /bmi &quot;22.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10214' entity='bMI_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10214' entity='bMI_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10214' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1775,12 +1775,12 @@
 									<message>   /bmiid &quot;19&quot; def</message>
 								</bMIID>
 								<bMI>
-									<def id='10216' entity='bMI_Dev' name='bmi'>35.2</def>
-									<message>   /bmi &quot;35.2&quot; def</message>
+									<def id='10216' entity='bMI_Dev' name='bmi'>31.2</def>
+									<message>   /bmi &quot;31.2&quot; def</message>
 								</bMI>
 								<dateTime>
-									<def id='10216' entity='bMI_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10216' entity='bMI_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10216' entity='bMI_Dev' name='devid_fk'>-1</def>
@@ -1801,21 +1801,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10218' entity='hR_Dev' name='hr'>16818708</def>
-									<message>   /hr &quot;16818708&quot; def</message>
+									<def id='10218' entity='hR_Dev' name='hr'>1534416098</def>
+									<message>   /hr &quot;1534416098&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10218' entity='hR_Dev' name='hrid'>0</def>
+									<message>   /hrid &quot;0&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10218' entity='hR_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10218' entity='hR_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0152&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10218' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10218' entity='hR_Dev' name='hrid'>0</def>
-									<message>   /hrid &quot;0&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1829,21 +1829,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10220' entity='hR_Dev' name='hr'>-1070325665</def>
-									<message>   /hr &quot;-1070325665&quot; def</message>
+									<def id='10220' entity='hR_Dev' name='hr'>1265656513</def>
+									<message>   /hr &quot;1265656513&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10220' entity='hR_Dev' name='hrid'>1</def>
+									<message>   /hrid &quot;1&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10220' entity='hR_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10220' entity='hR_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10220' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10220' entity='hR_Dev' name='hrid'>1</def>
-									<message>   /hrid &quot;1&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1857,21 +1857,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10222' entity='hR_Dev' name='hr'>-1088865814</def>
-									<message>   /hr &quot;-1088865814&quot; def</message>
+									<def id='10222' entity='hR_Dev' name='hr'>-823485331</def>
+									<message>   /hr &quot;-823485331&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10222' entity='hR_Dev' name='hrid'>2</def>
+									<message>   /hrid &quot;2&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10222' entity='hR_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10222' entity='hR_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10222' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10222' entity='hR_Dev' name='hrid'>2</def>
-									<message>   /hrid &quot;2&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1885,21 +1885,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10224' entity='hR_Dev' name='hr'>1890728465</def>
-									<message>   /hr &quot;1890728465&quot; def</message>
+									<def id='10224' entity='hR_Dev' name='hr'>-38650448</def>
+									<message>   /hr &quot;-38650448&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10224' entity='hR_Dev' name='hrid'>3</def>
+									<message>   /hrid &quot;3&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10224' entity='hR_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10224' entity='hR_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10224' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10224' entity='hR_Dev' name='hrid'>3</def>
-									<message>   /hrid &quot;3&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1913,21 +1913,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10226' entity='hR_Dev' name='hr'>77304296</def>
-									<message>   /hr &quot;77304296&quot; def</message>
+									<def id='10226' entity='hR_Dev' name='hr'>983253388</def>
+									<message>   /hr &quot;983253388&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10226' entity='hR_Dev' name='hrid'>4</def>
+									<message>   /hrid &quot;4&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10226' entity='hR_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10226' entity='hR_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10226' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10226' entity='hR_Dev' name='hrid'>4</def>
-									<message>   /hrid &quot;4&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1941,21 +1941,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10228' entity='hR_Dev' name='hr'>543349618</def>
-									<message>   /hr &quot;543349618&quot; def</message>
+									<def id='10228' entity='hR_Dev' name='hr'>-1709415141</def>
+									<message>   /hr &quot;-1709415141&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10228' entity='hR_Dev' name='hrid'>5</def>
+									<message>   /hrid &quot;5&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10228' entity='hR_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10228' entity='hR_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10228' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10228' entity='hR_Dev' name='hrid'>5</def>
-									<message>   /hrid &quot;5&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1969,21 +1969,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10230' entity='hR_Dev' name='hr'>-887003638</def>
-									<message>   /hr &quot;-887003638&quot; def</message>
+									<def id='10230' entity='hR_Dev' name='hr'>-1209350739</def>
+									<message>   /hr &quot;-1209350739&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10230' entity='hR_Dev' name='hrid'>6</def>
+									<message>   /hrid &quot;6&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10230' entity='hR_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10230' entity='hR_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10230' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10230' entity='hR_Dev' name='hrid'>6</def>
-									<message>   /hrid &quot;6&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -1997,21 +1997,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10232' entity='hR_Dev' name='hr'>945311480</def>
-									<message>   /hr &quot;945311480&quot; def</message>
+									<def id='10232' entity='hR_Dev' name='hr'>1444036054</def>
+									<message>   /hr &quot;1444036054&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10232' entity='hR_Dev' name='hrid'>7</def>
+									<message>   /hrid &quot;7&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10232' entity='hR_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10232' entity='hR_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10232' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10232' entity='hR_Dev' name='hrid'>7</def>
-									<message>   /hrid &quot;7&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2025,21 +2025,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10234' entity='hR_Dev' name='hr'>-1169424271</def>
-									<message>   /hr &quot;-1169424271&quot; def</message>
+									<def id='10234' entity='hR_Dev' name='hr'>1149636213</def>
+									<message>   /hr &quot;1149636213&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10234' entity='hR_Dev' name='hrid'>8</def>
+									<message>   /hrid &quot;8&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10234' entity='hR_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10234' entity='hR_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10234' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10234' entity='hR_Dev' name='hrid'>8</def>
-									<message>   /hrid &quot;8&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2053,21 +2053,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10236' entity='hR_Dev' name='hr'>229537388</def>
-									<message>   /hr &quot;229537388&quot; def</message>
+									<def id='10236' entity='hR_Dev' name='hr'>825632717</def>
+									<message>   /hr &quot;825632717&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10236' entity='hR_Dev' name='hrid'>9</def>
+									<message>   /hrid &quot;9&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10236' entity='hR_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10236' entity='hR_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10236' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10236' entity='hR_Dev' name='hrid'>9</def>
-									<message>   /hrid &quot;9&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2081,21 +2081,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10238' entity='hR_Dev' name='hr'>1425484820</def>
-									<message>   /hr &quot;1425484820&quot; def</message>
+									<def id='10238' entity='hR_Dev' name='hr'>-1261544368</def>
+									<message>   /hr &quot;-1261544368&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10238' entity='hR_Dev' name='hrid'>10</def>
+									<message>   /hrid &quot;10&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10238' entity='hR_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10238' entity='hR_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10238' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10238' entity='hR_Dev' name='hrid'>10</def>
-									<message>   /hrid &quot;10&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2109,21 +2109,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10240' entity='hR_Dev' name='hr'>-964106820</def>
-									<message>   /hr &quot;-964106820&quot; def</message>
+									<def id='10240' entity='hR_Dev' name='hr'>-1339147857</def>
+									<message>   /hr &quot;-1339147857&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10240' entity='hR_Dev' name='hrid'>11</def>
+									<message>   /hrid &quot;11&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10240' entity='hR_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10240' entity='hR_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10240' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10240' entity='hR_Dev' name='hrid'>11</def>
-									<message>   /hrid &quot;11&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2137,21 +2137,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10242' entity='hR_Dev' name='hr'>-920126809</def>
-									<message>   /hr &quot;-920126809&quot; def</message>
+									<def id='10242' entity='hR_Dev' name='hr'>1582433853</def>
+									<message>   /hr &quot;1582433853&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10242' entity='hR_Dev' name='hrid'>12</def>
+									<message>   /hrid &quot;12&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10242' entity='hR_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10242' entity='hR_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10242' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10242' entity='hR_Dev' name='hrid'>12</def>
-									<message>   /hrid &quot;12&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2165,21 +2165,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10244' entity='hR_Dev' name='hr'>1854283520</def>
-									<message>   /hr &quot;1854283520&quot; def</message>
+									<def id='10244' entity='hR_Dev' name='hr'>-2120564775</def>
+									<message>   /hr &quot;-2120564775&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10244' entity='hR_Dev' name='hrid'>13</def>
+									<message>   /hrid &quot;13&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10244' entity='hR_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10244' entity='hR_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10244' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10244' entity='hR_Dev' name='hrid'>13</def>
-									<message>   /hrid &quot;13&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2193,21 +2193,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10246' entity='hR_Dev' name='hr'>894257613</def>
-									<message>   /hr &quot;894257613&quot; def</message>
+									<def id='10246' entity='hR_Dev' name='hr'>-346110252</def>
+									<message>   /hr &quot;-346110252&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10246' entity='hR_Dev' name='hrid'>14</def>
+									<message>   /hrid &quot;14&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10246' entity='hR_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10246' entity='hR_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10246' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10246' entity='hR_Dev' name='hrid'>14</def>
-									<message>   /hrid &quot;14&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2221,21 +2221,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10248' entity='hR_Dev' name='hr'>1295252428</def>
-									<message>   /hr &quot;1295252428&quot; def</message>
+									<def id='10248' entity='hR_Dev' name='hr'>-1551013242</def>
+									<message>   /hr &quot;-1551013242&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10248' entity='hR_Dev' name='hrid'>15</def>
+									<message>   /hrid &quot;15&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10248' entity='hR_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10248' entity='hR_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10248' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10248' entity='hR_Dev' name='hrid'>15</def>
-									<message>   /hrid &quot;15&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2249,21 +2249,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10250' entity='hR_Dev' name='hr'>-1842924677</def>
-									<message>   /hr &quot;-1842924677&quot; def</message>
+									<def id='10250' entity='hR_Dev' name='hr'>-448092519</def>
+									<message>   /hr &quot;-448092519&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10250' entity='hR_Dev' name='hrid'>16</def>
+									<message>   /hrid &quot;16&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10250' entity='hR_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10250' entity='hR_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10250' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10250' entity='hR_Dev' name='hrid'>16</def>
-									<message>   /hrid &quot;16&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2277,21 +2277,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10252' entity='hR_Dev' name='hr'>-1522626634</def>
-									<message>   /hr &quot;-1522626634&quot; def</message>
+									<def id='10252' entity='hR_Dev' name='hr'>1803507509</def>
+									<message>   /hr &quot;1803507509&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10252' entity='hR_Dev' name='hrid'>17</def>
+									<message>   /hrid &quot;17&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10252' entity='hR_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10252' entity='hR_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10252' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10252' entity='hR_Dev' name='hrid'>17</def>
-									<message>   /hrid &quot;17&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2305,21 +2305,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10254' entity='hR_Dev' name='hr'>-225061459</def>
-									<message>   /hr &quot;-225061459&quot; def</message>
+									<def id='10254' entity='hR_Dev' name='hr'>-1934766202</def>
+									<message>   /hr &quot;-1934766202&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10254' entity='hR_Dev' name='hrid'>18</def>
+									<message>   /hrid &quot;18&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10254' entity='hR_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10254' entity='hR_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10254' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10254' entity='hR_Dev' name='hrid'>18</def>
-									<message>   /hrid &quot;18&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2333,21 +2333,21 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10256' entity='hR_Dev' name='hr'>546050088</def>
-									<message>   /hr &quot;546050088&quot; def</message>
+									<def id='10256' entity='hR_Dev' name='hr'>1822384476</def>
+									<message>   /hr &quot;1822384476&quot; def</message>
 								</hR>
+								<hRID>
+									<def id='10256' entity='hR_Dev' name='hrid'>19</def>
+									<message>   /hrid &quot;19&quot; def</message>
+								</hRID>
 								<dateTime>
-									<def id='10256' entity='hR_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10256' entity='hR_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10256' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
-								<hRID>
-									<def id='10256' entity='hR_Dev' name='hrid'>19</def>
-									<message>   /hrid &quot;19&quot; def</message>
-								</hRID>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</hR_Dev>
@@ -2363,16 +2363,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10258' entity='floors_Dev' name='floors'>2</def>
-									<message>   /floors &quot;2&quot; def</message>
+									<def id='10258' entity='floors_Dev' name='floors'>0</def>
+									<message>   /floors &quot;0&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10258' entity='floors_Dev' name='floorsid'>0</def>
 									<message>   /floorsid &quot;0&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10258' entity='floors_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0478&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10258' entity='floors_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0152&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10258' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2391,16 +2391,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10260' entity='floors_Dev' name='floors'>6</def>
-									<message>   /floors &quot;6&quot; def</message>
+									<def id='10260' entity='floors_Dev' name='floors'>1</def>
+									<message>   /floors &quot;1&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10260' entity='floors_Dev' name='floorsid'>1</def>
 									<message>   /floorsid &quot;1&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10260' entity='floors_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10260' entity='floors_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10260' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2419,16 +2419,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10262' entity='floors_Dev' name='floors'>7</def>
-									<message>   /floors &quot;7&quot; def</message>
+									<def id='10262' entity='floors_Dev' name='floors'>9</def>
+									<message>   /floors &quot;9&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10262' entity='floors_Dev' name='floorsid'>2</def>
 									<message>   /floorsid &quot;2&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10262' entity='floors_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10262' entity='floors_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10262' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2447,16 +2447,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10264' entity='floors_Dev' name='floors'>4</def>
-									<message>   /floors &quot;4&quot; def</message>
+									<def id='10264' entity='floors_Dev' name='floors'>7</def>
+									<message>   /floors &quot;7&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10264' entity='floors_Dev' name='floorsid'>3</def>
 									<message>   /floorsid &quot;3&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10264' entity='floors_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10264' entity='floors_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10264' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2475,16 +2475,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10266' entity='floors_Dev' name='floors'>5</def>
-									<message>   /floors &quot;5&quot; def</message>
+									<def id='10266' entity='floors_Dev' name='floors'>3</def>
+									<message>   /floors &quot;3&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10266' entity='floors_Dev' name='floorsid'>4</def>
 									<message>   /floorsid &quot;4&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10266' entity='floors_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10266' entity='floors_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10266' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2503,16 +2503,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10268' entity='floors_Dev' name='floors'>7</def>
-									<message>   /floors &quot;7&quot; def</message>
+									<def id='10268' entity='floors_Dev' name='floors'>8</def>
+									<message>   /floors &quot;8&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10268' entity='floors_Dev' name='floorsid'>5</def>
 									<message>   /floorsid &quot;5&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10268' entity='floors_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10268' entity='floors_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10268' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2531,16 +2531,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10270' entity='floors_Dev' name='floors'>1</def>
-									<message>   /floors &quot;1&quot; def</message>
+									<def id='10270' entity='floors_Dev' name='floors'>6</def>
+									<message>   /floors &quot;6&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10270' entity='floors_Dev' name='floorsid'>6</def>
 									<message>   /floorsid &quot;6&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10270' entity='floors_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10270' entity='floors_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10270' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2559,16 +2559,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10272' entity='floors_Dev' name='floors'>4</def>
-									<message>   /floors &quot;4&quot; def</message>
+									<def id='10272' entity='floors_Dev' name='floors'>2</def>
+									<message>   /floors &quot;2&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10272' entity='floors_Dev' name='floorsid'>7</def>
 									<message>   /floorsid &quot;7&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10272' entity='floors_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10272' entity='floors_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10272' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2587,16 +2587,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10274' entity='floors_Dev' name='floors'>9</def>
-									<message>   /floors &quot;9&quot; def</message>
+									<def id='10274' entity='floors_Dev' name='floors'>0</def>
+									<message>   /floors &quot;0&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10274' entity='floors_Dev' name='floorsid'>8</def>
 									<message>   /floorsid &quot;8&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10274' entity='floors_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10274' entity='floors_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10274' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2615,16 +2615,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10276' entity='floors_Dev' name='floors'>0</def>
-									<message>   /floors &quot;0&quot; def</message>
+									<def id='10276' entity='floors_Dev' name='floors'>6</def>
+									<message>   /floors &quot;6&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10276' entity='floors_Dev' name='floorsid'>9</def>
 									<message>   /floorsid &quot;9&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10276' entity='floors_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10276' entity='floors_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10276' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2643,16 +2643,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10278' entity='floors_Dev' name='floors'>2</def>
-									<message>   /floors &quot;2&quot; def</message>
+									<def id='10278' entity='floors_Dev' name='floors'>7</def>
+									<message>   /floors &quot;7&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10278' entity='floors_Dev' name='floorsid'>10</def>
 									<message>   /floorsid &quot;10&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10278' entity='floors_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10278' entity='floors_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10278' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2671,16 +2671,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10280' entity='floors_Dev' name='floors'>1</def>
-									<message>   /floors &quot;1&quot; def</message>
+									<def id='10280' entity='floors_Dev' name='floors'>6</def>
+									<message>   /floors &quot;6&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10280' entity='floors_Dev' name='floorsid'>11</def>
 									<message>   /floorsid &quot;11&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10280' entity='floors_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10280' entity='floors_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10280' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2699,16 +2699,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10282' entity='floors_Dev' name='floors'>7</def>
-									<message>   /floors &quot;7&quot; def</message>
+									<def id='10282' entity='floors_Dev' name='floors'>6</def>
+									<message>   /floors &quot;6&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10282' entity='floors_Dev' name='floorsid'>12</def>
 									<message>   /floorsid &quot;12&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10282' entity='floors_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10282' entity='floors_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10282' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2727,16 +2727,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10284' entity='floors_Dev' name='floors'>0</def>
-									<message>   /floors &quot;0&quot; def</message>
+									<def id='10284' entity='floors_Dev' name='floors'>5</def>
+									<message>   /floors &quot;5&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10284' entity='floors_Dev' name='floorsid'>13</def>
 									<message>   /floorsid &quot;13&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10284' entity='floors_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10284' entity='floors_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10284' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2755,16 +2755,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10286' entity='floors_Dev' name='floors'>2</def>
-									<message>   /floors &quot;2&quot; def</message>
+									<def id='10286' entity='floors_Dev' name='floors'>5</def>
+									<message>   /floors &quot;5&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10286' entity='floors_Dev' name='floorsid'>14</def>
 									<message>   /floorsid &quot;14&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10286' entity='floors_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10286' entity='floors_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10286' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2783,16 +2783,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10288' entity='floors_Dev' name='floors'>0</def>
-									<message>   /floors &quot;0&quot; def</message>
+									<def id='10288' entity='floors_Dev' name='floors'>2</def>
+									<message>   /floors &quot;2&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10288' entity='floors_Dev' name='floorsid'>15</def>
 									<message>   /floorsid &quot;15&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10288' entity='floors_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10288' entity='floors_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10288' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2811,16 +2811,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10290' entity='floors_Dev' name='floors'>1</def>
-									<message>   /floors &quot;1&quot; def</message>
+									<def id='10290' entity='floors_Dev' name='floors'>4</def>
+									<message>   /floors &quot;4&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10290' entity='floors_Dev' name='floorsid'>16</def>
 									<message>   /floorsid &quot;16&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10290' entity='floors_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10290' entity='floors_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10290' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2839,16 +2839,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10292' entity='floors_Dev' name='floors'>0</def>
-									<message>   /floors &quot;0&quot; def</message>
+									<def id='10292' entity='floors_Dev' name='floors'>7</def>
+									<message>   /floors &quot;7&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10292' entity='floors_Dev' name='floorsid'>17</def>
 									<message>   /floorsid &quot;17&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10292' entity='floors_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10292' entity='floors_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10292' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2867,16 +2867,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10294' entity='floors_Dev' name='floors'>0</def>
-									<message>   /floors &quot;0&quot; def</message>
+									<def id='10294' entity='floors_Dev' name='floors'>4</def>
+									<message>   /floors &quot;4&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10294' entity='floors_Dev' name='floorsid'>18</def>
 									<message>   /floorsid &quot;18&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10294' entity='floors_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10294' entity='floors_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10294' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2895,16 +2895,16 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10296' entity='floors_Dev' name='floors'>3</def>
-									<message>   /floors &quot;3&quot; def</message>
+									<def id='10296' entity='floors_Dev' name='floors'>8</def>
+									<message>   /floors &quot;8&quot; def</message>
 								</floors>
 								<floorsID>
 									<def id='10296' entity='floors_Dev' name='floorsid'>19</def>
 									<message>   /floorsid &quot;19&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10296' entity='floors_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10296' entity='floors_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10296' entity='floors_Dev' name='devid_fk'>-1</def>
@@ -2929,12 +2929,12 @@
 									<message>   /weightid &quot;0&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10298' entity='weight_Dev' name='weight'>41.81812382917806</def>
-									<message>   /weight &quot;41.81812382917806&quot; def</message>
+									<def id='10298' entity='weight_Dev' name='weight'>48.31334597959247</def>
+									<message>   /weight &quot;48.31334597959247&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10298' entity='weight_Dev' name='datetime'>&quot;06/25/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 25 12:00:00 CST 2018&quot; def</message>
+									<def id='10298' entity='weight_Dev' name='datetime'>&quot;07/03/2018 14:08:21:0152&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jul 03 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10298' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -2957,12 +2957,12 @@
 									<message>   /weightid &quot;1&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10300' entity='weight_Dev' name='weight'>55.12015967158703</def>
-									<message>   /weight &quot;55.12015967158703&quot; def</message>
+									<def id='10300' entity='weight_Dev' name='weight'>65.62474422311348</def>
+									<message>   /weight &quot;65.62474422311348&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10300' entity='weight_Dev' name='datetime'>&quot;06/19/2018 12:00:00:0479&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 19 12:00:00 CST 2018&quot; def</message>
+									<def id='10300' entity='weight_Dev' name='datetime'>&quot;06/18/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 18 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10300' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -2985,12 +2985,12 @@
 									<message>   /weightid &quot;2&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10302' entity='weight_Dev' name='weight'>68.33747806964448</def>
-									<message>   /weight &quot;68.33747806964448&quot; def</message>
+									<def id='10302' entity='weight_Dev' name='weight'>30.757603874275304</def>
+									<message>   /weight &quot;30.757603874275304&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10302' entity='weight_Dev' name='datetime'>&quot;06/30/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 30 12:00:00 CST 2018&quot; def</message>
+									<def id='10302' entity='weight_Dev' name='datetime'>&quot;06/25/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10302' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3013,12 +3013,12 @@
 									<message>   /weightid &quot;3&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10304' entity='weight_Dev' name='weight'>74.8743167887612</def>
-									<message>   /weight &quot;74.8743167887612&quot; def</message>
+									<def id='10304' entity='weight_Dev' name='weight'>38.72041703342387</def>
+									<message>   /weight &quot;38.72041703342387&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10304' entity='weight_Dev' name='datetime'>&quot;06/23/2018 12:00:00:0480&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 23 12:00:00 CST 2018&quot; def</message>
+									<def id='10304' entity='weight_Dev' name='datetime'>&quot;06/22/2018 14:08:21:0153&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 22 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10304' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3041,12 +3041,12 @@
 									<message>   /weightid &quot;4&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10306' entity='weight_Dev' name='weight'>71.58215645091147</def>
-									<message>   /weight &quot;71.58215645091147&quot; def</message>
+									<def id='10306' entity='weight_Dev' name='weight'>69.89543379319826</def>
+									<message>   /weight &quot;69.89543379319826&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10306' entity='weight_Dev' name='datetime'>&quot;06/18/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jun 18 12:00:00 CST 2018&quot; def</message>
+									<def id='10306' entity='weight_Dev' name='datetime'>&quot;06/21/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 21 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10306' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3069,12 +3069,12 @@
 									<message>   /weightid &quot;5&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10308' entity='weight_Dev' name='weight'>59.581657862498815</def>
-									<message>   /weight &quot;59.581657862498815&quot; def</message>
+									<def id='10308' entity='weight_Dev' name='weight'>40.196212189994654</def>
+									<message>   /weight &quot;40.196212189994654&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10308' entity='weight_Dev' name='datetime'>&quot;06/24/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 24 12:00:00 CST 2018&quot; def</message>
+									<def id='10308' entity='weight_Dev' name='datetime'>&quot;06/30/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 30 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10308' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3097,12 +3097,12 @@
 									<message>   /weightid &quot;6&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10310' entity='weight_Dev' name='weight'>68.81846488074723</def>
-									<message>   /weight &quot;68.81846488074723&quot; def</message>
+									<def id='10310' entity='weight_Dev' name='weight'>38.73396401122999</def>
+									<message>   /weight &quot;38.73396401122999&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10310' entity='weight_Dev' name='datetime'>&quot;07/04/2018 12:00:00:0481&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jul 04 12:00:00 CST 2018&quot; def</message>
+									<def id='10310' entity='weight_Dev' name='datetime'>&quot;07/02/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jul 02 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10310' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3125,12 +3125,12 @@
 									<message>   /weightid &quot;7&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10312' entity='weight_Dev' name='weight'>65.35113232635382</def>
-									<message>   /weight &quot;65.35113232635382&quot; def</message>
+									<def id='10312' entity='weight_Dev' name='weight'>41.78847529157533</def>
+									<message>   /weight &quot;41.78847529157533&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10312' entity='weight_Dev' name='datetime'>&quot;06/17/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jun 17 12:00:00 CST 2018&quot; def</message>
+									<def id='10312' entity='weight_Dev' name='datetime'>&quot;06/26/2018 14:08:21:0154&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 26 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10312' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3153,12 +3153,12 @@
 									<message>   /weightid &quot;8&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10314' entity='weight_Dev' name='weight'>68.67193254013893</def>
-									<message>   /weight &quot;68.67193254013893&quot; def</message>
+									<def id='10314' entity='weight_Dev' name='weight'>52.05809674950994</def>
+									<message>   /weight &quot;52.05809674950994&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10314' entity='weight_Dev' name='datetime'>&quot;06/20/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 20 12:00:00 CST 2018&quot; def</message>
+									<def id='10314' entity='weight_Dev' name='datetime'>&quot;06/20/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 20 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10314' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3181,12 +3181,12 @@
 									<message>   /weightid &quot;9&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10316' entity='weight_Dev' name='weight'>60.370696086435956</def>
-									<message>   /weight &quot;60.370696086435956&quot; def</message>
+									<def id='10316' entity='weight_Dev' name='weight'>41.42077469359987</def>
+									<message>   /weight &quot;41.42077469359987&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10316' entity='weight_Dev' name='datetime'>&quot;06/22/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 22 12:00:00 CST 2018&quot; def</message>
+									<def id='10316' entity='weight_Dev' name='datetime'>&quot;06/19/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 19 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10316' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3209,12 +3209,12 @@
 									<message>   /weightid &quot;10&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10318' entity='weight_Dev' name='weight'>67.55518761920607</def>
-									<message>   /weight &quot;67.55518761920607&quot; def</message>
+									<def id='10318' entity='weight_Dev' name='weight'>53.71120124819588</def>
+									<message>   /weight &quot;53.71120124819588&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10318' entity='weight_Dev' name='datetime'>&quot;06/29/2018 12:00:00:0482&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 29 12:00:00 CST 2018&quot; def</message>
+									<def id='10318' entity='weight_Dev' name='datetime'>&quot;06/15/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10318' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3237,12 +3237,12 @@
 									<message>   /weightid &quot;11&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10320' entity='weight_Dev' name='weight'>44.0172530924234</def>
-									<message>   /weight &quot;44.0172530924234&quot; def</message>
+									<def id='10320' entity='weight_Dev' name='weight'>39.19414155484049</def>
+									<message>   /weight &quot;39.19414155484049&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10320' entity='weight_Dev' name='datetime'>&quot;06/21/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 21 12:00:00 CST 2018&quot; def</message>
+									<def id='10320' entity='weight_Dev' name='datetime'>&quot;06/17/2018 14:08:21:0155&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 17 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10320' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3265,12 +3265,12 @@
 									<message>   /weightid &quot;12&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10322' entity='weight_Dev' name='weight'>50.4592571838798</def>
-									<message>   /weight &quot;50.4592571838798&quot; def</message>
+									<def id='10322' entity='weight_Dev' name='weight'>76.50571207773277</def>
+									<message>   /weight &quot;76.50571207773277&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10322' entity='weight_Dev' name='datetime'>&quot;07/02/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Mon Jul 02 12:00:00 CST 2018&quot; def</message>
+									<def id='10322' entity='weight_Dev' name='datetime'>&quot;06/29/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 29 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10322' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3293,12 +3293,12 @@
 									<message>   /weightid &quot;13&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10324' entity='weight_Dev' name='weight'>60.74695447926073</def>
-									<message>   /weight &quot;60.74695447926073&quot; def</message>
+									<def id='10324' entity='weight_Dev' name='weight'>53.93657599423125</def>
+									<message>   /weight &quot;53.93657599423125&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10324' entity='weight_Dev' name='datetime'>&quot;06/26/2018 12:00:00:0483&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jun 26 12:00:00 CST 2018&quot; def</message>
+									<def id='10324' entity='weight_Dev' name='datetime'>&quot;07/01/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jul 01 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10324' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3321,12 +3321,12 @@
 									<message>   /weightid &quot;14&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10326' entity='weight_Dev' name='weight'>66.0015993983504</def>
-									<message>   /weight &quot;66.0015993983504&quot; def</message>
+									<def id='10326' entity='weight_Dev' name='weight'>34.691477212239896</def>
+									<message>   /weight &quot;34.691477212239896&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10326' entity='weight_Dev' name='datetime'>&quot;06/28/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Thu Jun 28 12:00:00 CST 2018&quot; def</message>
+									<def id='10326' entity='weight_Dev' name='datetime'>&quot;07/04/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jul 04 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10326' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3349,12 +3349,12 @@
 									<message>   /weightid &quot;15&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10328' entity='weight_Dev' name='weight'>45.571343482481424</def>
-									<message>   /weight &quot;45.571343482481424&quot; def</message>
+									<def id='10328' entity='weight_Dev' name='weight'>75.2277865366728</def>
+									<message>   /weight &quot;75.2277865366728&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10328' entity='weight_Dev' name='datetime'>&quot;06/16/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Sat Jun 16 12:00:00 CST 2018&quot; def</message>
+									<def id='10328' entity='weight_Dev' name='datetime'>&quot;06/24/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sun Jun 24 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10328' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3377,12 +3377,12 @@
 									<message>   /weightid &quot;16&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10330' entity='weight_Dev' name='weight'>32.125035009646595</def>
-									<message>   /weight &quot;32.125035009646595&quot; def</message>
+									<def id='10330' entity='weight_Dev' name='weight'>43.8147644170912</def>
+									<message>   /weight &quot;43.8147644170912&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10330' entity='weight_Dev' name='datetime'>&quot;06/27/2018 12:00:00:0484&quot; cvd</def>
-									<message>   /datetime &quot;Wed Jun 27 12:00:00 CST 2018&quot; def</message>
+									<def id='10330' entity='weight_Dev' name='datetime'>&quot;06/16/2018 14:08:21:0156&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 16 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10330' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3405,12 +3405,12 @@
 									<message>   /weightid &quot;17&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10332' entity='weight_Dev' name='weight'>65.33496423680617</def>
-									<message>   /weight &quot;65.33496423680617&quot; def</message>
+									<def id='10332' entity='weight_Dev' name='weight'>38.502268607311414</def>
+									<message>   /weight &quot;38.502268607311414&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10332' entity='weight_Dev' name='datetime'>&quot;06/15/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:00:00 CST 2018&quot; def</message>
+									<def id='10332' entity='weight_Dev' name='datetime'>&quot;06/23/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Sat Jun 23 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10332' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3433,12 +3433,12 @@
 									<message>   /weightid &quot;18&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10334' entity='weight_Dev' name='weight'>67.31178037379013</def>
-									<message>   /weight &quot;67.31178037379013&quot; def</message>
+									<def id='10334' entity='weight_Dev' name='weight'>38.492946248135254</def>
+									<message>   /weight &quot;38.492946248135254&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10334' entity='weight_Dev' name='datetime'>&quot;07/03/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Tue Jul 03 12:00:00 CST 2018&quot; def</message>
+									<def id='10334' entity='weight_Dev' name='datetime'>&quot;06/28/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Thu Jun 28 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10334' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3461,12 +3461,12 @@
 									<message>   /weightid &quot;19&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10336' entity='weight_Dev' name='weight'>38.180862625671004</def>
-									<message>   /weight &quot;38.180862625671004&quot; def</message>
+									<def id='10336' entity='weight_Dev' name='weight'>46.97842324191697</def>
+									<message>   /weight &quot;46.97842324191697&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10336' entity='weight_Dev' name='datetime'>&quot;07/01/2018 12:00:00:0485&quot; cvd</def>
-									<message>   /datetime &quot;Sun Jul 01 12:00:00 CST 2018&quot; def</message>
+									<def id='10336' entity='weight_Dev' name='datetime'>&quot;06/27/2018 14:08:21:0157&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 27 14:08:21 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10336' entity='weight_Dev' name='devid_fk'>-1</def>
@@ -3485,12 +3485,12 @@
 	<decisiontable name='Test_Heart_Rate'>
 		<context execute='{ { { /Test_Heart_Rate executeTable  } null allocate execute deallocate pop } &quot;CalculateHRAverage7&lt;int&gt;(&quot; patient entitypush patientID entitypop strconcat &quot;)&quot; strconcat  callfunction  cvr allocate execute deallocate pop } &quot;HRAskForExercise&lt;void&gt;()&quot;  callfunction cvb allocate execute deallocate pop'>
 			<execute_table>
-				<allocate index='0' value='true'></allocate>
+				<allocate index='0' value='false'></allocate>
 				<entitypush entity='patient' id='10096'></entitypush>
 				<entitypush value='patient' id='10096'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
-				<allocate index='1' value='2.0'></allocate>
+				<allocate index='1' value='77.8'></allocate>
 				<allocate index='2' value=''></allocate>
 				<initialActions>
 					<initialAction>
@@ -3502,34 +3502,34 @@
 						<local_store index='2' value='hR_Dev'></local_store>
 					</initialAction>
 				</initialActions>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
 				<Condition n='1' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
 				<Condition n='2' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
 				<Condition n='3' v='N'></Condition>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
 				<Condition n='4' v='N'></Condition>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
 				<Condition n='5' v='N'></Condition>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
 				<Condition n='6' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10228'></entitypush>
-				<entitypush value='hR_Dev' id='10228'></entitypush>
+				<entitypush entity='hR_Dev' id='10236'></entitypush>
+				<entitypush value='hR_Dev' id='10236'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
 				<Condition n='7' v='Y'></Condition>
@@ -3556,22 +3556,26 @@
 					<action n='11'>
 						<entitypush entity='result' id='10339'></entitypush>
 						<entitypush value='result' id='10339'></entitypush>
-						<def id='10339' entity='result' name='resultMessage'>&quot;Something wrong with your healt��Need to to to hospital to examine your heart or blood pressure.&quot;</def>
+						<def id='10339' entity='result' name='resultMessage'>&quot;Something wrong with your health... Need to to to hospital to examine your heart or blood pressure.&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
 					<action n='12'>
 						<entitypush entity='result' id='10339'></entitypush>
 						<entitypush value='result' id='10339'></entitypush>
-						<entitypush entity='hR_Dev' id='10228'></entitypush>
-						<entitypush value='hR_Dev' id='10228'></entitypush>
+						<entitypush entity='hR_Dev' id='10236'></entitypush>
+						<entitypush value='hR_Dev' id='10236'></entitypush>
+						<entitypop></entitypop>
+						<entitypop></entitypop>
+						<entitypush entity='hR_Dev' id='10236'></entitypush>
+						<entitypush value='hR_Dev' id='10236'></entitypush>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 						<entitypush entity='result' id='10339'></entitypush>
 						<entitypush value='result' id='10339'></entitypush>
-						<def id='10339' entity='result' name='resultMessage'>&quot;Something wrong with your healt��Need to to to hospital to examine your heart or blood pressure.    Recent date time is: 07/04/2018 12:00:00:0481&quot;</def>
+						<def id='10339' entity='result' name='resultMessage'>&quot;Something wrong with your health... Need to to to hospital to examine your heart or blood pressure....Your recent HR is: 825632717...And your recent data&apos;s average is: 77.8...Recent date time is: 07/04/2018 14:08:21:0155&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>

@@ -207,12 +207,12 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10110' entity='hR_Dev' name='hr'>87</def>
-									<message>   /hr &quot;87&quot; def</message>
+									<def id='10110' entity='hR_Dev' name='hr'>120</def>
+									<message>   /hr &quot;120&quot; def</message>
 								</hR>
 								<dateTime>
-									<def id='10110' entity='hR_Dev' name='datetime'>&quot;06/15/2018 12:06:30:0839&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 12:06:30 CST 2018&quot; def</message>
+									<def id='10110' entity='hR_Dev' name='datetime'>&quot;06/15/2018 14:12:42:0724&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 15 14:12:42 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10110' entity='hR_Dev' name='devid_fk'>-1</def>
@@ -235,19 +235,131 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10112' entity='hR_Dev' name='hr'>2</def>
-									<message>   /hr &quot;2&quot; def</message>
+									<def id='10112' entity='hR_Dev' name='hr'>73</def>
+									<message>   /hr &quot;73&quot; def</message>
 								</hR>
 								<dateTime>
-									<def id='10112' entity='hR_Dev' name='datetime'>&quot;04/17/2018 17:19:58:0000&quot; cvd</def>
-									<message>   /datetime &quot;Tue Apr 17 17:19:58 CST 2018&quot; def</message>
+									<def id='10112' entity='hR_Dev' name='datetime'>&quot;06/13/2018 14:02:20:0000&quot; cvd</def>
+									<message>   /datetime &quot;Wed Jun 13 14:02:20 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10112' entity='hR_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<hRID>
-									<def id='10112' entity='hR_Dev' name='hrid'>1</def>
+									<def id='10112' entity='hR_Dev' name='hrid'>5</def>
+									<message>   /hrid &quot;5&quot; def</message>
+								</hRID>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</hR_Dev>
+						<hR_Dev>
+							<createentity name='hR_Dev' id='10114'></createentity>
+							<addto arrayId='99'>/hR_Dev 10114 fce </addto>
+							<entitypush entity='hR_Dev' id='10114'></entitypush>
+							<mapCreateEntity name='hr_dev' data_id='10'>
+								<patientID_FK>
+									<def id='10114' entity='hR_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<hR>
+									<def id='10114' entity='hR_Dev' name='hr'>77</def>
+									<message>   /hr &quot;77&quot; def</message>
+								</hR>
+								<dateTime>
+									<def id='10114' entity='hR_Dev' name='datetime'>&quot;06/05/2018 14:02:03:0000&quot; cvd</def>
+									<message>   /datetime &quot;Tue Jun 05 14:02:03 CST 2018&quot; def</message>
+								</dateTime>
+								<devID_FK>
+									<def id='10114' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<hRID>
+									<def id='10114' entity='hR_Dev' name='hrid'>4</def>
+									<message>   /hrid &quot;4&quot; def</message>
+								</hRID>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</hR_Dev>
+						<hR_Dev>
+							<createentity name='hR_Dev' id='10116'></createentity>
+							<addto arrayId='99'>/hR_Dev 10116 fce </addto>
+							<entitypush entity='hR_Dev' id='10116'></entitypush>
+							<mapCreateEntity name='hr_dev' data_id='11'>
+								<patientID_FK>
+									<def id='10116' entity='hR_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<hR>
+									<def id='10116' entity='hR_Dev' name='hr'>83</def>
+									<message>   /hr &quot;83&quot; def</message>
+								</hR>
+								<dateTime>
+									<def id='10116' entity='hR_Dev' name='datetime'>&quot;06/04/2018 14:01:46:0000&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 04 14:01:46 CST 2018&quot; def</message>
+								</dateTime>
+								<devID_FK>
+									<def id='10116' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<hRID>
+									<def id='10116' entity='hR_Dev' name='hrid'>3</def>
+									<message>   /hrid &quot;3&quot; def</message>
+								</hRID>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</hR_Dev>
+						<hR_Dev>
+							<createentity name='hR_Dev' id='10118'></createentity>
+							<addto arrayId='99'>/hR_Dev 10118 fce </addto>
+							<entitypush entity='hR_Dev' id='10118'></entitypush>
+							<mapCreateEntity name='hr_dev' data_id='12'>
+								<patientID_FK>
+									<def id='10118' entity='hR_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<hR>
+									<def id='10118' entity='hR_Dev' name='hr'>76</def>
+									<message>   /hr &quot;76&quot; def</message>
+								</hR>
+								<dateTime>
+									<def id='10118' entity='hR_Dev' name='datetime'>&quot;06/01/2018 14:01:27:0000&quot; cvd</def>
+									<message>   /datetime &quot;Fri Jun 01 14:01:27 CST 2018&quot; def</message>
+								</dateTime>
+								<devID_FK>
+									<def id='10118' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<hRID>
+									<def id='10118' entity='hR_Dev' name='hrid'>2</def>
+									<message>   /hrid &quot;2&quot; def</message>
+								</hRID>
+								<entitypop></entitypop>
+							</mapCreateEntity>
+						</hR_Dev>
+						<hR_Dev>
+							<createentity name='hR_Dev' id='10120'></createentity>
+							<addto arrayId='99'>/hR_Dev 10120 fce </addto>
+							<entitypush entity='hR_Dev' id='10120'></entitypush>
+							<mapCreateEntity name='hr_dev' data_id='13'>
+								<patientID_FK>
+									<def id='10120' entity='hR_Dev' name='patientid_fk'>1</def>
+									<message>   /patientid_fk &quot;1&quot; def</message>
+								</patientID_FK>
+								<hR>
+									<def id='10120' entity='hR_Dev' name='hr'>80</def>
+									<message>   /hr &quot;80&quot; def</message>
+								</hR>
+								<dateTime>
+									<def id='10120' entity='hR_Dev' name='datetime'>&quot;04/17/2018 17:19:58:0000&quot; cvd</def>
+									<message>   /datetime &quot;Tue Apr 17 17:19:58 CST 2018&quot; def</message>
+								</dateTime>
+								<devID_FK>
+									<def id='10120' entity='hR_Dev' name='devid_fk'>-1</def>
+									<message>   /devid_fk &quot;-1&quot; def</message>
+								</devID_FK>
+								<hRID>
+									<def id='10120' entity='hR_Dev' name='hrid'>1</def>
 									<message>   /hrid &quot;1&quot; def</message>
 								</hRID>
 								<entitypop></entitypop>
@@ -256,28 +368,28 @@
 					</hR_Devs>
 					<floors_Devs>
 						<floors_Dev>
-							<createentity name='floors_Dev' id='10114'></createentity>
-							<addto arrayId='98'>/floors_Dev 10114 fce </addto>
-							<entitypush entity='floors_Dev' id='10114'></entitypush>
-							<mapCreateEntity name='floors_dev' data_id='10'>
+							<createentity name='floors_Dev' id='10122'></createentity>
+							<addto arrayId='98'>/floors_Dev 10122 fce </addto>
+							<entitypush entity='floors_Dev' id='10122'></entitypush>
+							<mapCreateEntity name='floors_dev' data_id='14'>
 								<patientID_FK>
-									<def id='10114' entity='floors_Dev' name='patientid_fk'>1</def>
+									<def id='10122' entity='floors_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<floors>
-									<def id='10114' entity='floors_Dev' name='floors'>5</def>
+									<def id='10122' entity='floors_Dev' name='floors'>5</def>
 									<message>   /floors &quot;5&quot; def</message>
 								</floors>
 								<floorsID>
-									<def id='10114' entity='floors_Dev' name='floorsid'>1</def>
+									<def id='10122' entity='floors_Dev' name='floorsid'>1</def>
 									<message>   /floorsid &quot;1&quot; def</message>
 								</floorsID>
 								<dateTime>
-									<def id='10114' entity='floors_Dev' name='datetime'>&quot;04/04/2018 17:19:40:0000&quot; cvd</def>
+									<def id='10122' entity='floors_Dev' name='datetime'>&quot;04/04/2018 17:19:40:0000&quot; cvd</def>
 									<message>   /datetime &quot;Wed Apr 04 17:19:40 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
-									<def id='10114' entity='floors_Dev' name='devid_fk'>-1</def>
+									<def id='10122' entity='floors_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<entitypop></entitypop>
@@ -286,112 +398,112 @@
 					</floors_Devs>
 					<weight_Devs>
 						<weight_Dev>
-							<createentity name='weight_Dev' id='10116'></createentity>
-							<addto arrayId='103'>/weight_Dev 10116 fce </addto>
-							<entitypush entity='weight_Dev' id='10116'></entitypush>
-							<mapCreateEntity name='weight_dev' data_id='11'>
+							<createentity name='weight_Dev' id='10124'></createentity>
+							<addto arrayId='103'>/weight_Dev 10124 fce </addto>
+							<entitypush entity='weight_Dev' id='10124'></entitypush>
+							<mapCreateEntity name='weight_dev' data_id='15'>
 								<patientID_FK>
-									<def id='10116' entity='weight_Dev' name='patientid_fk'>1</def>
+									<def id='10124' entity='weight_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<weightID>
-									<def id='10116' entity='weight_Dev' name='weightid'>5</def>
+									<def id='10124' entity='weight_Dev' name='weightid'>5</def>
 									<message>   /weightid &quot;5&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10116' entity='weight_Dev' name='weight'>62.3</def>
+									<def id='10124' entity='weight_Dev' name='weight'>62.3</def>
 									<message>   /weight &quot;62.3&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10116' entity='weight_Dev' name='datetime'>&quot;06/13/2018 15:25:54:0000&quot; cvd</def>
+									<def id='10124' entity='weight_Dev' name='datetime'>&quot;06/13/2018 15:25:54:0000&quot; cvd</def>
 									<message>   /datetime &quot;Wed Jun 13 15:25:54 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
-									<def id='10116' entity='weight_Dev' name='devid_fk'>-1</def>
+									<def id='10124' entity='weight_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</weight_Dev>
 						<weight_Dev>
-							<createentity name='weight_Dev' id='10118'></createentity>
-							<addto arrayId='103'>/weight_Dev 10118 fce </addto>
-							<entitypush entity='weight_Dev' id='10118'></entitypush>
-							<mapCreateEntity name='weight_dev' data_id='12'>
+							<createentity name='weight_Dev' id='10126'></createentity>
+							<addto arrayId='103'>/weight_Dev 10126 fce </addto>
+							<entitypush entity='weight_Dev' id='10126'></entitypush>
+							<mapCreateEntity name='weight_dev' data_id='16'>
 								<patientID_FK>
-									<def id='10118' entity='weight_Dev' name='patientid_fk'>1</def>
+									<def id='10126' entity='weight_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<weightID>
-									<def id='10118' entity='weight_Dev' name='weightid'>4</def>
+									<def id='10126' entity='weight_Dev' name='weightid'>4</def>
 									<message>   /weightid &quot;4&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10118' entity='weight_Dev' name='weight'>61.5</def>
+									<def id='10126' entity='weight_Dev' name='weight'>61.5</def>
 									<message>   /weight &quot;61.5&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10118' entity='weight_Dev' name='datetime'>&quot;06/12/2018 15:25:30:0000&quot; cvd</def>
+									<def id='10126' entity='weight_Dev' name='datetime'>&quot;06/12/2018 15:25:30:0000&quot; cvd</def>
 									<message>   /datetime &quot;Tue Jun 12 15:25:30 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
-									<def id='10118' entity='weight_Dev' name='devid_fk'>-1</def>
+									<def id='10126' entity='weight_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</weight_Dev>
 						<weight_Dev>
-							<createentity name='weight_Dev' id='10120'></createentity>
-							<addto arrayId='103'>/weight_Dev 10120 fce </addto>
-							<entitypush entity='weight_Dev' id='10120'></entitypush>
-							<mapCreateEntity name='weight_dev' data_id='13'>
+							<createentity name='weight_Dev' id='10128'></createentity>
+							<addto arrayId='103'>/weight_Dev 10128 fce </addto>
+							<entitypush entity='weight_Dev' id='10128'></entitypush>
+							<mapCreateEntity name='weight_dev' data_id='17'>
 								<patientID_FK>
-									<def id='10120' entity='weight_Dev' name='patientid_fk'>1</def>
+									<def id='10128' entity='weight_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<weightID>
-									<def id='10120' entity='weight_Dev' name='weightid'>2</def>
+									<def id='10128' entity='weight_Dev' name='weightid'>2</def>
 									<message>   /weightid &quot;2&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10120' entity='weight_Dev' name='weight'>61.0</def>
+									<def id='10128' entity='weight_Dev' name='weight'>61.0</def>
 									<message>   /weight &quot;61.0&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10120' entity='weight_Dev' name='datetime'>&quot;06/11/2018 15:25:15:0000&quot; cvd</def>
+									<def id='10128' entity='weight_Dev' name='datetime'>&quot;06/11/2018 15:25:15:0000&quot; cvd</def>
 									<message>   /datetime &quot;Mon Jun 11 15:25:15 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
-									<def id='10120' entity='weight_Dev' name='devid_fk'>-1</def>
+									<def id='10128' entity='weight_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<entitypop></entitypop>
 							</mapCreateEntity>
 						</weight_Dev>
 						<weight_Dev>
-							<createentity name='weight_Dev' id='10122'></createentity>
-							<addto arrayId='103'>/weight_Dev 10122 fce </addto>
-							<entitypush entity='weight_Dev' id='10122'></entitypush>
-							<mapCreateEntity name='weight_dev' data_id='14'>
+							<createentity name='weight_Dev' id='10130'></createentity>
+							<addto arrayId='103'>/weight_Dev 10130 fce </addto>
+							<entitypush entity='weight_Dev' id='10130'></entitypush>
+							<mapCreateEntity name='weight_dev' data_id='18'>
 								<patientID_FK>
-									<def id='10122' entity='weight_Dev' name='patientid_fk'>1</def>
+									<def id='10130' entity='weight_Dev' name='patientid_fk'>1</def>
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<weightID>
-									<def id='10122' entity='weight_Dev' name='weightid'>1</def>
+									<def id='10130' entity='weight_Dev' name='weightid'>1</def>
 									<message>   /weightid &quot;1&quot; def</message>
 								</weightID>
 								<weight>
-									<def id='10122' entity='weight_Dev' name='weight'>62.0</def>
+									<def id='10130' entity='weight_Dev' name='weight'>62.0</def>
 									<message>   /weight &quot;62.0&quot; def</message>
 								</weight>
 								<dateTime>
-									<def id='10122' entity='weight_Dev' name='datetime'>&quot;04/16/2018 17:21:00:0000&quot; cvd</def>
+									<def id='10130' entity='weight_Dev' name='datetime'>&quot;04/16/2018 17:21:00:0000&quot; cvd</def>
 									<message>   /datetime &quot;Mon Apr 16 17:21:00 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
-									<def id='10122' entity='weight_Dev' name='devid_fk'>-1</def>
+									<def id='10130' entity='weight_Dev' name='devid_fk'>-1</def>
 									<message>   /devid_fk &quot;-1&quot; def</message>
 								</devID_FK>
 								<entitypop></entitypop>
@@ -412,12 +524,12 @@
 				<entitypush value='patient' id='10096'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
-				<allocate index='1' value='2.0'></allocate>
+				<allocate index='1' value='77.8'></allocate>
 				<allocate index='2' value=''></allocate>
 				<initialActions>
 					<initialAction>
 						<formal>sort hR_Devs in descending order by $dateTime</formal>
-						<sortentities length='2' by='dateTime' arrayId='99'>false</sortentities>
+						<sortentities length='6' by='dateTime' arrayId='99'>false</sortentities>
 					</initialAction>
 					<initialAction>
 						<formal>set recentHR = hR_Devs[0]</formal>
@@ -432,68 +544,50 @@
 				<entitypush value='hR_Dev' id='10110'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
-				<Condition n='1' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10110'></entitypush>
-				<entitypush value='hR_Dev' id='10110'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<entitypush entity='hR_Dev' id='10110'></entitypush>
-				<entitypush value='hR_Dev' id='10110'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<Condition n='2' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10110'></entitypush>
-				<entitypush value='hR_Dev' id='10110'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<Condition n='3' v='N'></Condition>
-				<Condition n='4' v='N'></Condition>
-				<Condition n='5' v='N'></Condition>
-				<Condition n='6' v='N'></Condition>
-				<entitypush entity='hR_Dev' id='10110'></entitypush>
-				<entitypush value='hR_Dev' id='10110'></entitypush>
-				<entitypop></entitypop>
-				<entitypop></entitypop>
-				<Condition n='7' v='Y'></Condition>
-				<column n='7 '>
+				<Condition n='1' v='Y'></Condition>
+				<column n='1 '>
 					<action n='1'>
-						<createentity name='result' id='10125'></createentity>
-						<entitypush entity='result' id='10125'></entitypush>
-						<entitypush value='result' id='10125'></entitypush>
+						<createentity name='result' id='10133'></createentity>
+						<entitypush entity='result' id='10133'></entitypush>
+						<entitypush value='result' id='10133'></entitypush>
 					</action>
 					<action n='2'>
 						<entitypush entity='patient' id='10096'></entitypush>
 						<entitypush value='patient' id='10096'></entitypush>
-						<addto arrayId='100'>/result 10125 fce </addto>
+						<addto arrayId='100'>/result 10133 fce </addto>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
-					<action n='10'>
-						<entitypush entity='result' id='10125'></entitypush>
-						<entitypush value='result' id='10125'></entitypush>
-						<def id='10125' entity='result' name='resultCode'>13</def>
+					<action n='3'>
+						<entitypush entity='result' id='10133'></entitypush>
+						<entitypush value='result' id='10133'></entitypush>
+						<def id='10133' entity='result' name='resultCode'>10</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
-					<action n='11'>
-						<entitypush entity='result' id='10125'></entitypush>
-						<entitypush value='result' id='10125'></entitypush>
-						<def id='10125' entity='result' name='resultMessage'>&quot;Something wrong with your health... Need to to to hospital to examine your heart or blood pressure.&quot;</def>
+					<action n='4'>
+						<entitypush entity='result' id='10133'></entitypush>
+						<entitypush value='result' id='10133'></entitypush>
+						<def id='10133' entity='result' name='resultMessage'>&quot;Normal...&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
 					<action n='12'>
-						<entitypush entity='result' id='10125'></entitypush>
-						<entitypush value='result' id='10125'></entitypush>
+						<entitypush entity='result' id='10133'></entitypush>
+						<entitypush value='result' id='10133'></entitypush>
+						<entitypush entity='hR_Dev' id='10110'></entitypush>
+						<entitypush value='hR_Dev' id='10110'></entitypush>
+						<entitypop></entitypop>
+						<entitypop></entitypop>
 						<entitypush entity='hR_Dev' id='10110'></entitypush>
 						<entitypush value='hR_Dev' id='10110'></entitypush>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
-						<entitypush entity='result' id='10125'></entitypush>
-						<entitypush value='result' id='10125'></entitypush>
-						<def id='10125' entity='result' name='resultMessage'>&quot;Something wrong with your health... Need to to to hospital to examine your heart or blood pressure.    Recent date time is: 06/15/2018 12:06:30:0839&quot;</def>
+						<entitypush entity='result' id='10133'></entitypush>
+						<entitypush value='result' id='10133'></entitypush>
+						<def id='10133' entity='result' name='resultMessage'>&quot;Normal......Your recent HR is: 120...And your recent data&apos;s average is: 77.8...Recent date time is: 06/15/2018 14:12:42:0724&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
