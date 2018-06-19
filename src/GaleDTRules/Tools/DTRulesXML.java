@@ -6,11 +6,15 @@
 package GaleDTRules.Tools;
 
 import edu.dhu.DTRules.entities.ExaminResult;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.LinkedList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
@@ -278,7 +282,10 @@ public class DTRulesXML {
             }
             copyFileToCertainDir(dtfile);
             edu.dhu.DTRules.DTRulesCompiler.getInstance().setWorkingPath(BASEPATH);
+            PrintStream original = System.out;
+            System.setOut(new PrintStream(BASEPATH+WORKINGDIR+"/compileMessage.txt"));
             ExaminResult er = edu.dhu.DTRules.DTRulesCompiler.getInstance().Compile(new String[] {"main"});
+            System.setOut(original);
             return er;
         } catch (Exception e) {
             throw e;
@@ -365,6 +372,22 @@ public class DTRulesXML {
         fis.read(content);
         fis.close();
         return new String(content,"utf-8");
+    }
+
+    public String getCompileMessage() throws FileNotFoundException, IOException {
+        StringBuilder sb = new StringBuilder();
+        File txt = new File(BASEPATH+WORKINGDIR+"/compileMessage.txt");
+        FileInputStream fis = new FileInputStream(txt);
+        InputStreamReader isr = new InputStreamReader(fis);
+        BufferedReader br = new BufferedReader(isr);
+        String strtmp = null;
+        while((strtmp = br.readLine())!=null){
+            if(strtmp.contains("Starting: "))
+                sb.append(strtmp.trim()).append("\n");
+            else
+                sb.append(strtmp).append("\n");
+        }
+        return sb.toString();
     }
     
 }

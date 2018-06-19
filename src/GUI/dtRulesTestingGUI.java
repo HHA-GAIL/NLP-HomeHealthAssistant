@@ -17,8 +17,10 @@ import GaleDTRules.DAO.GaleWeightDevDAO;
 import GaleDTRules.Tools.DTRulesXML;
 import edu.dhu.DTRules.DTRulesCompiler;
 import edu.dhu.DTRules.entities.ExaminResult;
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.OutputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.io.PrintStream;
@@ -555,25 +557,9 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
 //            }
             dtrxml.createDTRules(RuleSetString);
             //Compile the decision table
-            //Set System.out PrintStream and get the compile messages
-            ByteArrayOutputStream baos = new ByteArrayOutputStream(2048);
-            PrintStream cacheout = new PrintStream(baos);
-            PrintStream original = System.out;
-//            PipedInputStream pipedIS = new PipedInputStream();
-//            PipedOutputStream pipedOS = new PipedOutputStream();
-//            pipedOS.connect(pipedIS); 
-//            PrintStream ps = new PrintStream(pipedOS); 
-//            System.setOut(ps); 
-//            System.setErr(ps);
-            System.setOut(cacheout);
             ExaminResult er = dtrxml.Compile(dtFile);
-            System.setOut(original);
-//            byte[] readed = new byte[pipedIS.available()];
-//            pipedIS.read(readed, 0, pipedIS.available());
-//            WriteTA(TA_CompileMsg, new String(readed));
-            WriteTA(TA_CompileMsg, baos.toString());
-            System.out.println("out...");
-            
+            WriteTA(TA_CompileMsg, dtrxml.getCompileMessage());
+
             if(er.getStatus().equals(ExaminResult.FAIL)){
                 WriteTA(TA_CompileMsg, "\n\n"+er.getMessage());
                 return;
