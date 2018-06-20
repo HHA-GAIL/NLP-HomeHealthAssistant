@@ -281,10 +281,11 @@ public class DTRulesXML {
                 fir.delete();
             }
             copyFileToCertainDir(dtfile);
-            edu.dhu.DTRules.DTRulesCompiler.getInstance().setWorkingPath(BASEPATH);
+            File compilemsgfile = new File(BASEPATH+WORKINGDIR+"/compileMessage.txt");
             PrintStream original = System.out;
-            System.setOut(new PrintStream(BASEPATH+WORKINGDIR+"/compileMessage.txt"));
+            System.setOut(new PrintStream(compilemsgfile));
             ExaminResult er = edu.dhu.DTRules.DTRulesCompiler.getInstance().Compile(new String[] {"main"});
+            System.out.flush();
             System.setOut(original);
             return er;
         } catch (Exception e) {
@@ -387,7 +388,15 @@ public class DTRulesXML {
             else
                 sb.append(strtmp).append("\n");
         }
+        br.close();
+        isr.close();
+        fis.close();
         return sb.toString();
+    }
+
+    public void deleteCompileMessageFile() {
+        File txt = new File(BASEPATH+WORKINGDIR+"/compileMessage.txt");
+        txt.deleteOnExit();
     }
     
 }

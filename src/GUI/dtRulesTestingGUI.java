@@ -559,6 +559,7 @@ public class dtRulesTestingGUI extends javax.swing.JFrame {
             //Compile the decision table
             ExaminResult er = dtrxml.Compile(dtFile);
             WriteTA(TA_CompileMsg, dtrxml.getCompileMessage());
+//            dtrxml.deleteCompileMessageFile();
 
             if(er.getStatus().equals(ExaminResult.FAIL)){
                 WriteTA(TA_CompileMsg, "\n\n"+er.getMessage());
