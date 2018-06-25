@@ -282,10 +282,11 @@ public class DTRulesXML {
             }
             copyFileToCertainDir(dtfile);
             File compilemsgfile = new File(BASEPATH+WORKINGDIR+"/compileMessage.txt");
+            FileOutputStream fos = new FileOutputStream(compilemsgfile);
             PrintStream original = System.out;
-            System.setOut(new PrintStream(compilemsgfile));
+            System.setOut(new PrintStream(fos));
             ExaminResult er = edu.dhu.DTRules.DTRulesCompiler.getInstance().Compile(new String[] {"main"});
-            System.out.flush();
+            fos.flush();
             System.setOut(original);
             return er;
         } catch (Exception e) {

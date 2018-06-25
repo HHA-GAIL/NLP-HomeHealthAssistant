@@ -23,19 +23,24 @@
 				<context_comment></context_comment>
 				<context_description>local entity recentHR</context_description>
 			</context_details>
+			<context_details>
+				<context_number>4</context_number>
+				<context_comment></context_comment>
+				<context_description>local string str = &quot;asdfasdfFF&quot;</context_description>
+			</context_details>
 		</contexts>
 		<initial_actions>
 			<initial_action_details>
 				<intial_action_number>1</intial_action_number>
 				<initial_action_comment></initial_action_comment>
 				<initial_action_requirement></initial_action_requirement>
-				<initial_action_description>sort hR_Devs in descending order by $dateTime</initial_action_description>
+				<initial_action_description>sort HR_Devs in descending order by $DateTime</initial_action_description>
 			</initial_action_details>
 			<initial_action_details>
 				<intial_action_number>2</intial_action_number>
 				<initial_action_comment></initial_action_comment>
 				<initial_action_requirement></initial_action_requirement>
-				<initial_action_description>set recentHR = hR_Devs[0]</initial_action_description>
+				<initial_action_description>set recentHR = HR_Devs[0]</initial_action_description>
 			</initial_action_details>
 		</initial_actions>
 		<conditions>
@@ -87,6 +92,13 @@
 				<condition_requirement></condition_requirement>
 				<condition_description>recentHR&apos;s hR &gt; 2*average</condition_description>
 				<condition_column column_number='7' column_value='Y'></condition_column>
+			</condition_details>
+			<condition_details>
+				<condition_number>8</condition_number>
+				<condition_comment></condition_comment>
+				<condition_requirement></condition_requirement>
+				<condition_description>str matches &quot;asdf&quot;</condition_description>
+				<condition_column column_number='8' column_value='Y'></condition_column>
 			</condition_details>
 		</conditions>
 		<actions>

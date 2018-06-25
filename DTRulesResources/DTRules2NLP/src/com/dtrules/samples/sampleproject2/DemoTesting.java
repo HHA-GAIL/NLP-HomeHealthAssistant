@@ -40,10 +40,10 @@ public class DemoTesting {
 			if(er.getStatus().equals(ExaminResult.FAIL)){
                             System.out.println(er.getMessage());
                         }else{
-                            edu.dhu.DTRules.entities.Patient patient = DataGenerater.GenerateDTRulesPatient();
-                            DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
-                            dtpd.setWorkingPath(basePath);
-                            dtpd.doExamine(patient, er.getMessage(), "Test_Heart_Rate");
+//                            edu.dhu.DTRules.entities.Patient patient = DataGenerater.GenerateDTRulesPatient();
+//                            DTRulesPatientDev dtpd = DTRulesPatientDev.getInstance();
+//                            dtpd.setWorkingPath(basePath);
+//                            dtpd.doExamine(patient, er.getMessage(), "Test_Heart_Rate");
 //                            dtpd.doExamine(patient, er.getMessage(), dtpd.EntryTable);
                         }
 		} catch (Exception e) {

@@ -207,12 +207,12 @@
 									<message>   /patientid_fk &quot;1&quot; def</message>
 								</patientID_FK>
 								<hR>
-									<def id='10110' entity='hR_Dev' name='hr'>120</def>
-									<message>   /hr &quot;120&quot; def</message>
+									<def id='10110' entity='hR_Dev' name='hr'>87</def>
+									<message>   /hr &quot;87&quot; def</message>
 								</hR>
 								<dateTime>
-									<def id='10110' entity='hR_Dev' name='datetime'>&quot;06/15/2018 14:12:42:0724&quot; cvd</def>
-									<message>   /datetime &quot;Fri Jun 15 14:12:42 CST 2018&quot; def</message>
+									<def id='10110' entity='hR_Dev' name='datetime'>&quot;06/25/2018 10:01:53:0344&quot; cvd</def>
+									<message>   /datetime &quot;Mon Jun 25 10:01:53 CST 2018&quot; def</message>
 								</dateTime>
 								<devID_FK>
 									<def id='10110' entity='hR_Dev' name='devid_fk'>-1</def>
@@ -540,12 +540,18 @@
 				<entitypush value='hR_Dev' id='10110'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
+				<Condition n='1' v='N'></Condition>
 				<entitypush entity='hR_Dev' id='10110'></entitypush>
 				<entitypush value='hR_Dev' id='10110'></entitypush>
 				<entitypop></entitypop>
 				<entitypop></entitypop>
-				<Condition n='1' v='Y'></Condition>
-				<column n='1 '>
+				<Condition n='2' v='N'></Condition>
+				<entitypush entity='hR_Dev' id='10110'></entitypush>
+				<entitypush value='hR_Dev' id='10110'></entitypush>
+				<entitypop></entitypop>
+				<entitypop></entitypop>
+				<Condition n='3' v='Y'></Condition>
+				<column n='3 '>
 					<action n='1'>
 						<createentity name='result' id='10133'></createentity>
 						<entitypush entity='result' id='10133'></entitypush>
@@ -558,17 +564,17 @@
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
-					<action n='3'>
+					<action n='5'>
 						<entitypush entity='result' id='10133'></entitypush>
 						<entitypush value='result' id='10133'></entitypush>
-						<def id='10133' entity='result' name='resultCode'>10</def>
+						<def id='10133' entity='result' name='resultCode'>11</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
-					<action n='4'>
+					<action n='7'>
 						<entitypush entity='result' id='10133'></entitypush>
 						<entitypush value='result' id='10133'></entitypush>
-						<def id='10133' entity='result' name='resultMessage'>&quot;Normal...&quot;</def>
+						<def id='10133' entity='result' name='resultMessage'>&quot;Very excellent Health...&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>
@@ -587,7 +593,7 @@
 						<entitypop></entitypop>
 						<entitypush entity='result' id='10133'></entitypush>
 						<entitypush value='result' id='10133'></entitypush>
-						<def id='10133' entity='result' name='resultMessage'>&quot;Normal......Your recent HR is: 120...And your recent data&apos;s average is: 77.8...Recent date time is: 06/15/2018 14:12:42:0724&quot;</def>
+						<def id='10133' entity='result' name='resultMessage'>&quot;Very excellent Health......Your recent HR is: 87...And your recent data&apos;s average is: 77.8...Recent date time is: 06/25/2018 10:01:53:0344&quot;</def>
 						<entitypop></entitypop>
 						<entitypop></entitypop>
 					</action>

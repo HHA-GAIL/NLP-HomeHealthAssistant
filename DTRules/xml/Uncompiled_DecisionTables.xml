@@ -29,13 +29,13 @@
 				<intial_action_number>1</intial_action_number>
 				<initial_action_comment></initial_action_comment>
 				<initial_action_requirement></initial_action_requirement>
-				<initial_action_description>sort hR_Devs in descending order by $dateTime</initial_action_description>
+				<initial_action_description>sort HR_Devs in descending order by $DateTime</initial_action_description>
 			</initial_action_details>
 			<initial_action_details>
 				<intial_action_number>2</intial_action_number>
 				<initial_action_comment></initial_action_comment>
 				<initial_action_requirement></initial_action_requirement>
-				<initial_action_description>set recentHR = hR_Devs[0]</initial_action_description>
+				<initial_action_description>set recentHR = HR_Devs[0]</initial_action_description>
 			</initial_action_details>
 		</initial_actions>
 		<conditions>
